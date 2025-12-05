@@ -5,6 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { HullNews } from "@/components/HullNews";
+import { WhatsOnToday } from "@/components/WhatsOnToday";
+import { CurrencyConverter } from "@/components/CurrencyConverter";
 import { Link } from "wouter";
 import { Calendar, MapPin, Utensils, Hotel, Ship, Search, ArrowRight, Star } from "lucide-react";
 import { useState } from "react";
@@ -298,6 +301,57 @@ export default function Home() {
             <Button className="bg-[oklch(0.70_0.15_200)] hover:bg-[oklch(0.65_0.15_200)] text-white">
               Subscribe
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* What's On Today */}
+      <WhatsOnToday />
+
+      {/* Latest Hull News */}
+      <HullNews />
+
+      {/* Currency Converter & Practical Info */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-8 text-center">Plan Your Visit</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <CurrencyConverter />
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold">First Time in Hull?</h3>
+              <p className="text-muted-foreground">
+                Hull is a vibrant maritime city with a rich history and modern attractions. Most city center attractions are within walking distance, making it easy to explore on foot.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
+                  <div>
+                    <div className="font-semibold">Getting Around</div>
+                    <div className="text-sm text-muted-foreground">Excellent bus network and bike-friendly city center</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
+                  <div>
+                    <div className="font-semibold">Best Time to Visit</div>
+                    <div className="text-sm text-muted-foreground">Summer (June-August) for festivals, year-round for museums</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
+                  <div>
+                    <div className="font-semibold">Must-See Attractions</div>
+                    <div className="text-sm text-muted-foreground">The Deep, Hull Old Town, Humber Bridge, Maritime Museum</div>
+                  </div>
+                </div>
+              </div>
+              <Link href="/travel-info">
+                <Button variant="outline" className="w-full">
+                  View Full Travel Guide
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

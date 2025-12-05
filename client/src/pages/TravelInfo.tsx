@@ -1,6 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { WeatherWidget } from "@/components/WeatherWidget";
+import { PracticalInfo } from "@/components/PracticalInfo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Train, Car, Plane, Bus, Cloud, MapPin, Info, Phone } from "lucide-react";
 
@@ -114,8 +116,20 @@ export default function TravelInfo() {
         </div>
       </section>
 
+      {/* Weather Widget */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <WeatherWidget />
+          </div>
+        </div>
+      </section>
+
+      {/* Practical Information */}
+      <PracticalInfo />
+
       {/* Getting Around */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container">
           <h2 className="text-4xl font-bold mb-8 text-center">Getting Around Hull</h2>
           <p className="text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">

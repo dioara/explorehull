@@ -209,7 +209,9 @@
 - [x] Implement real-time search results
 - [x] Create search results page
 - [x] Add search filters and sorting
-- [x] Write and pass vitest tests for search functionalityll content types
+- [x] Write and pass vitest tests for search functionality
+- [x] Write and pass vitest tests for weather and news features
+- [x] All 23 tests passingll content types
 
 ### Reviews & Ratings System
 - [ ] Create reviews database table
@@ -234,3 +236,40 @@
 - [ ] Create "What's Nearby" feature on detail pages
 - [ ] Add visitor tips and local insights sections
 - [ ] Implement "Save to Favorites" functionality
+
+
+## Phase 5: Events Ordering & Dynamic Features
+
+### Events Ordering Fix
+- [x] Fix events list to show latest/upcoming events first (DESC order)
+- [x] Update events page sorting logic
+- [x] Update homepage featured events to show upcoming first
+
+### Research & Feature Discovery
+- [ ] Research Visit London, Visit Paris, Visit NYC tourism websites
+- [ ] Document best features and integrations found
+- [ ] Identify APIs for Hull news, transport, weather
+
+### Live News Integration
+- [x] Research Hull news sources (Hull Daily Mail, BBC Hull, etc.)
+- [x] Integrate live news feed on homepage or dedicated section
+- [x] Add news widget with latest Hull headlines
+
+### Transport & Practical Info
+- [x] Add Hull bus times integration (First Bus, Stagecoach)
+- [x] Add local taxi companies with click-to-call
+- [x] Add train times (Hull Paragon Station)
+- [x] Add parking information widget
+
+### Weather Widget
+- [x] Integrate weather API for Hull
+- [x] Add current weather display on homepage
+- [x] Add 5-day forecast widget
+
+### Additional Cool Features
+- [x] Add "What's On Today" dynamic section
+- [ ] Add live event countdown timers
+- [ ] Add social media feed integration (Twitter/Instagram for #Hull)
+- [x] Add "Local Tips" section with insider knowledge (First Time Visitors)
+- [x] Add currency converter for international visitors
+- [x] Add emergency contacts widget (police, hospital, tourist info)

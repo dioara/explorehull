@@ -4,7 +4,9 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
-import { generateSitemap } from "./sitemap";
+import { generateSitemap } from './sitemap';
+import { getHullNews } from './news';
+import { getCurrentWeather, getWeatherForecast } from './weather';
 
 export const appRouter = router({
   system: systemRouter,
@@ -198,6 +200,24 @@ ${input.message}
         
         return { success: true };
       }),
+  }),
+
+  news: router({
+    getLatest: publicProcedure
+      .input(z.object({ limit: z.number().optional() }).optional())
+      .query(async ({ input }) => {
+        const limit = input?.limit || 10;
+        return await getHullNews(limit);
+      }),
+  }),
+
+  weather: router({
+    current: publicProcedure.query(async () => {
+      return await getCurrentWeather();
+    }),
+    forecast: publicProcedure.query(async () => {
+      return await getWeatherForecast();
+    }),
   }),
 
   sitemap: publicProcedure.query(async () => {

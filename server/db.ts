@@ -146,7 +146,8 @@ export async function createAttraction(attraction: InsertAttraction) {
 export async function getAllEvents() {
   const db = await getDb();
   if (!db) return [];
-  return db.select().from(events).orderBy(desc(events.featured), events.startDate);
+  // Order by: featured first, then by start date descending (latest/upcoming first)
+  return db.select().from(events).orderBy(desc(events.featured), desc(events.startDate));
 }
 
 export async function getUpcomingEvents(limit?: number) {
@@ -173,7 +174,8 @@ export async function getEventBySlug(slug: string) {
 export async function getEventsByCategory(category: string) {
   const db = await getDb();
   if (!db) return [];
-  return db.select().from(events).where(eq(events.category, category)).orderBy(events.startDate);
+  // Order by start date descending (latest/upcoming first)
+  return db.select().from(events).where(eq(events.category, category)).orderBy(desc(events.startDate));
 }
 
 export async function createEvent(event: InsertEvent) {
