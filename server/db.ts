@@ -16,7 +16,9 @@ import {
   blogPosts,
   InsertBlogPost,
   newsletterSubscriptions,
-  InsertNewsletterSubscription
+  InsertNewsletterSubscription,
+  contactSubmissions,
+  InsertContactSubmission
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -307,6 +309,21 @@ export async function subscribeToNewsletter(email: string) {
     if (error.code === 'ER_DUP_ENTRY') {
       return { success: false, error: 'Email already subscribed' };
     }
+    throw error;
+  }
+}
+
+// ===== Contact Submissions =====
+
+export async function saveContactSubmission(data: Omit<InsertContactSubmission, 'id' | 'submittedAt'>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  try {
+    await db.insert(contactSubmissions).values(data);
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to save contact submission:", error);
     throw error;
   }
 }

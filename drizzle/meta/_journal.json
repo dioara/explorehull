@@ -15,6 +15,13 @@
       "when": 1764961090673,
       "tag": "0001_exotic_quasar",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1764964476669,
+      "tag": "0002_crazy_alex_wilder",
+      "breakpoints": true
     }
   ]
 }

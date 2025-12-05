@@ -19,7 +19,7 @@ export default function Contact() {
     message: "",
   });
 
-  const contactMutation = trpc.system.notifyOwner.useMutation({
+  const contactMutation = trpc.contact.submit.useMutation({
     onSuccess: () => {
       toast.success("Message sent successfully! We'll get back to you soon.");
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -38,8 +38,10 @@ export default function Contact() {
     }
 
     contactMutation.mutate({
-      title: `Contact Form: ${formData.subject || "General Inquiry"}`,
-      content: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject || "General Inquiry",
+      message: formData.message,
     });
   };
 

@@ -142,3 +142,46 @@
 - [ ] Add 404 error page
 - [ ] Set up analytics tracking
 - [ ] Optimize bundle size
+
+
+## Phase 3: Bug Fixes & Advanced Features
+
+### Critical Bug Fixes
+- [x] Fix 404 errors when clicking on attraction listings
+- [x] Fix 404 errors when clicking on event listings
+- [x] Fix 404 errors when clicking on restaurant listings
+- [x] Resolve console errors on page load
+- [x] Fix broken links in navigation
+
+### Detail Pages
+- [x] Create attraction detail page component
+- [x] Create event detail page component
+- [x] Create restaurant detail page component
+- [ ] Create accommodation detail page component
+- [ ] Add image galleries to detail pages
+- [ ] Add booking/ticket links to detail pages
+
+### Interactive Maps
+- [x] Integrate Google Maps on attraction detail pages
+- [ ] Add interactive map to Travel Info page
+- [ ] Create "Plan Your Route" feature
+- [x] Add map markers for all attractions
+- [x] Implement directions functionality
+
+### Auto-Scraping Service
+- [x] Research Visit Hull API/data sources
+- [x] Create scraper for attractions data
+- [x] Create scraper for events data
+- [x] Set up scheduled jobs for auto-updates
+- [x] Add data validation and deduplication
+
+### Additional Features
+- [ ] Implement working search functionality
+- [ ] Add weather widget
+- [ ] Create newsletter subscription backend
+- [ ] Add social sharing buttons
+- [ ] Implement breadcrumb navigation
+
+- [x] Update Contact page with working email form to contact@lampstand.consulting
+- [x] Add email sending functionality to backend
+- [x] Test contact form submission

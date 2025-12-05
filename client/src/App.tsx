@@ -13,6 +13,9 @@ import Blog from "./pages/Blog";
 import Maritime from "./pages/Maritime";
 import TravelInfo from "./pages/TravelInfo";
 import Contact from "./pages/Contact";
+import AttractionDetail from "./pages/AttractionDetail";
+import EventDetail from "./pages/EventDetail";
+import RestaurantDetail from "./pages/RestaurantDetail";
 
 function Router() {
   return (
@@ -26,6 +29,9 @@ function Router() {
       <Route path={"/maritime"} component={Maritime} />
       <Route path={"/travel-info"} component={TravelInfo} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/attraction/:slug"} component={AttractionDetail} />
+      <Route path={"/event/:slug"} component={EventDetail} />
+      <Route path={"/restaurant/:slug"} component={RestaurantDetail} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

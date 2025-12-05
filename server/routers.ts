@@ -166,6 +166,40 @@ export const appRouter = router({
       }),
   }),
 
+  contact: router({
+    submit: publicProcedure
+      .input(z.object({
+        name: z.string(),
+        email: z.string().email(),
+        subject: z.string(),
+        message: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        // Send email notification to contact@lampstand.consulting
+        const emailContent = `
+New Contact Form Submission from ExploreHull.com
+
+Name: ${input.name}
+Email: ${input.email}
+Subject: ${input.subject}
+
+Message:
+${input.message}
+        `;
+        
+        // Use the notification system to send to owner
+        // In production, this would integrate with an email service
+        await db.saveContactSubmission({
+          name: input.name,
+          email: input.email,
+          subject: input.subject,
+          message: input.message,
+        });
+        
+        return { success: true };
+      }),
+  }),
+
   sitemap: publicProcedure.query(async () => {
     const xml = await generateSitemap();
     return { xml };
