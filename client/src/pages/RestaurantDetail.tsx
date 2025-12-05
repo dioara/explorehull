@@ -149,7 +149,7 @@ export default function RestaurantDetail() {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <p className="font-semibold">Phone</p>
-                        <p className="text-sm text-muted-foreground">{restaurant.phone}</p>
+                        <a href={`tel:${restaurant.phone}`} className="text-sm text-primary hover:underline">{restaurant.phone}</a>
                       </div>
                     </div>
                   )}

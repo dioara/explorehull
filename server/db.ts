@@ -332,11 +332,11 @@ export async function saveContactSubmission(data: Omit<InsertContactSubmission, 
 
 export async function searchContent(query: string) {
   const db = await getDb();
-  if (!db) return { attractions: [], events: [], restaurants: [], blogPosts: [] };
+  if (!db) return { attractions: [], events: [], restaurants: [], accommodations: [], blogPosts: [] };
   
   const searchPattern = `%${query}%`;
   
-  const [attractionResults, eventResults, restaurantResults, blogResults] = await Promise.all([
+  const [attractionResults, eventResults, restaurantResults, accommodationResults, blogResults] = await Promise.all([
     db.select().from(attractions).where(
       or(
         like(attractions.name, searchPattern),
@@ -355,6 +355,12 @@ export async function searchContent(query: string) {
         like(restaurants.description, searchPattern)
       )
     ).limit(5),
+    db.select().from(accommodations).where(
+      or(
+        like(accommodations.name, searchPattern),
+        like(accommodations.description, searchPattern)
+      )
+    ).limit(5),
     db.select().from(blogPosts).where(
       or(
         like(blogPosts.title, searchPattern),
@@ -367,6 +373,7 @@ export async function searchContent(query: string) {
     attractions: attractionResults,
     events: eventResults,
     restaurants: restaurantResults,
+    accommodations: accommodationResults,
     blogPosts: blogResults,
   };
 }

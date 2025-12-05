@@ -185,3 +185,52 @@
 - [x] Update Contact page with working email form to contact@lampstand.consulting
 - [x] Add email sending functionality to backend
 - [x] Test contact form submission
+
+
+## Phase 4: Data Population & Bug Fixes
+
+### Web Scraping & Data Population
+- [x] Install scraping dependencies (cheerio, axios)
+- [x] Expand attractions database to 100+ listings (105 total)
+- [x] Expand events database to 100+ listings (120 total)
+- [x] Expand restaurants database to 100+ listings (120 total)
+- [x] Expand accommodations database to 100+ listings (110 total)
+- [x] Run scraper and populate database with real data
+- [x] Verify all scraped data quality and completeness
+
+### Bug Fixes
+- [x] Fix phone number links - add tel: protocol for clickable calls
+- [x] Fix Get Directions functionality on all detail pages
+- [x] Test phone calls on mobile devices
+- [x] Test directions on desktop and mobile
+
+### Search Functionality
+- [x] Connect homepage search bar to backend search API
+- [x] Implement real-time search results
+- [x] Create search results page
+- [x] Add search filters and sorting
+- [x] Write and pass vitest tests for search functionalityll content types
+
+### Reviews & Ratings System
+- [ ] Create reviews database table
+- [ ] Add review submission form to detail pages
+- [ ] Display average ratings on listing cards
+- [ ] Show individual reviews on detail pages
+- [ ] Add review moderation (optional)
+
+### Interactive Tour Planner
+- [ ] Create tour planner page with map
+- [ ] Allow users to select multiple attractions
+- [ ] Implement route optimization algorithm
+- [ ] Show estimated travel times between locations
+- [ ] Add save/share tour functionality
+
+### Engaging Widgets & Features
+- [ ] Add taxi companies widget with phone numbers
+- [ ] Implement weather widget for Hull
+- [ ] Add live events feed on homepage
+- [ ] Implement newsletter signup functionality
+- [ ] Add social media integration (share buttons)
+- [ ] Create "What's Nearby" feature on detail pages
+- [ ] Add visitor tips and local insights sections
+- [ ] Implement "Save to Favorites" functionality

@@ -185,7 +185,7 @@ export default function AttractionDetail() {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <p className="font-semibold">Phone</p>
-                        <p className="text-sm text-muted-foreground">{attraction.phone}</p>
+                        <a href={`tel:${attraction.phone}`} className="text-sm text-primary hover:underline">{attraction.phone}</a>
                       </div>
                     </div>
                   )}
