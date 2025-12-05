@@ -4,6 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
+import { generateSitemap } from "./sitemap";
 
 export const appRouter = router({
   system: systemRouter,
@@ -163,6 +164,11 @@ export const appRouter = router({
       .query(async ({ input }) => {
         return await db.searchContent(input.q);
       }),
+  }),
+
+  sitemap: publicProcedure.query(async () => {
+    const xml = await generateSitemap();
+    return { xml };
   }),
 });
 

@@ -86,3 +86,59 @@
 - [ ] Final testing before first checkpoint
 - [ ] Create initial checkpoint for deployment
 - [ ] Update VITE_APP_TITLE and VITE_APP_LOGO
+
+
+## Phase 2: Additional Pages & Features
+
+### Remaining Pages
+- [x] Eat & Drink page with restaurant listings and filters
+- [x] Stay page with accommodation listings
+- [x] Blog page with article grid
+- [ ] Individual blog post pages
+- [x] Maritime Heritage page with Hull's seafaring history
+- [x] Travel Info page (getting around, weather, practical tips)
+- [x] Contact page with inquiry form
+- [ ] Individual attraction detail pages
+- [ ] Individual event detail pages
+- [ ] Individual restaurant detail pages
+- [ ] Search results page
+
+### SEO Optimization
+- [x] Add SEO meta tags component (title, description, keywords)
+- [x] Implement Open Graph tags for social sharing
+- [x] Add Twitter Card meta tags
+- [x] Create JSON-LD structured data for attractions
+- [x] Create JSON-LD structured data for events
+- [x] Create JSON-LD structured data for restaurants
+- [x] Add canonical URLs to all pages
+- [x] Implement dynamic sitemap generation
+- [x] Add robots.txt configuration
+- [x] Optimize all images with alt tags
+- [x] Add semantic HTML5 elements (article, section, nav)
+- [ ] Implement breadcrumb navigation
+- [x] Add schema.org markup for local business
+
+### Interactive Features
+- [ ] Implement Google Maps integration for attractions
+- [ ] Add interactive map on Travel Info page
+- [ ] Create "Plan Your Route" feature
+- [ ] Add weather widget
+- [ ] Implement working newsletter subscription
+- [x] Add contact form with email functionality
+- [ ] Create attraction detail pages with maps
+- [ ] Add social sharing buttons
+
+### Auto-Scraping Service
+- [ ] Create scraping service architecture
+- [ ] Implement Visit Hull website scraper
+- [ ] Implement Hull What's On scraper
+- [ ] Set up scheduled cron jobs for updates
+- [ ] Add data deduplication logic
+- [ ] Create admin interface for scraping management
+
+### Performance & Analytics
+- [ ] Add loading states and skeletons
+- [ ] Implement image lazy loading
+- [ ] Add 404 error page
+- [ ] Set up analytics tracking
+- [ ] Optimize bundle size

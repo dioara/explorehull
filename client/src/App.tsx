@@ -7,6 +7,12 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Events from "./pages/Events";
+import EatDrink from "./pages/EatDrink";
+import Stay from "./pages/Stay";
+import Blog from "./pages/Blog";
+import Maritime from "./pages/Maritime";
+import TravelInfo from "./pages/TravelInfo";
+import Contact from "./pages/Contact";
 
 function Router() {
   return (
@@ -14,6 +20,12 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/explore"} component={Explore} />
       <Route path={"/events"} component={Events} />
+      <Route path={"/eat-drink"} component={EatDrink} />
+      <Route path={"/stay"} component={Stay} />
+      <Route path={"/blog"} component={Blog} />
+      <Route path={"/maritime"} component={Maritime} />
+      <Route path={"/travel-info"} component={TravelInfo} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
