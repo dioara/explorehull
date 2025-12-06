@@ -5,7 +5,8 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { MapPin, ExternalLink, Star, Hotel, Home, Building, Grid3x3, Map as MapIcon } from "lucide-react";
+import { MapPin, ExternalLink, Phone, Star, Bed, Grid3x3, Map as MapIcon, Hotel } from "lucide-react";
+import { BookNowButton } from "@/components/BookNowButton";
 import { useState, useRef } from "react";
 import { MapView } from "@/components/Map";
 
@@ -222,6 +223,12 @@ export default function Stay() {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     )}
+                    {accommodation.featured && (
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1.5 shadow-md">
+                        <Star className="w-3.5 h-3.5 fill-current" />
+                        Featured
+                      </div>
+                    )}
                     <div className="absolute top-4 left-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-md">
                       {accommodation.type}
                     </div>
@@ -253,15 +260,14 @@ export default function Stay() {
                         {accommodation.priceRange}
                       </span>
                       {accommodation.bookingUrl && (
-                        <a 
-                          href={accommodation.bookingUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-accent font-semibold flex items-center gap-2 text-sm hover:gap-3 transition-all"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Book Now <ExternalLink className="w-4 h-4" />
-                        </a>
+                        <div onClick={(e) => e.stopPropagation()}>
+                          <BookNowButton
+                            bookingUrl={accommodation.bookingUrl}
+                            businessName={accommodation.name}
+                            type="accommodation"
+                            size="sm"
+                          />
+                        </div>
                       )}
                     </div>
                   </CardContent>

@@ -82,6 +82,7 @@ export const restaurants = mysqlTable("restaurants", {
   imageUrl: text("imageUrl"),
   logo: text("logo"),
   website: varchar("website", { length: 500 }),
+  bookingUrl: varchar("bookingUrl", { length: 500 }),
   phone: varchar("phone", { length: 50 }),
   featured: boolean("featured").default(false),
   createdAt: timestamp("createdAt").defaultNow().notNull(),

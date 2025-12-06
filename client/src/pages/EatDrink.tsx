@@ -231,6 +231,12 @@ export default function EatDrink() {
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                         )}
+                        {restaurant.featured && (
+                          <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1.5 shadow-md">
+                            <Star className="w-3.5 h-3.5 fill-current" />
+                            Featured
+                          </div>
+                        )}
                         <div className="absolute top-4 left-4 bg-[oklch(0.70_0.12_30)] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
                           {restaurant.cuisine}
                         </div>

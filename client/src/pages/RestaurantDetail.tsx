@@ -14,6 +14,7 @@ import {
   Utensils,
   Navigation2
 } from "lucide-react";
+import { BookNowButton } from "@/components/BookNowButton";
 
 export default function RestaurantDetail() {
   const [, params] = useRoute("/restaurant/:slug");
@@ -176,6 +177,15 @@ export default function RestaurantDetail() {
               <Card>
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-bold">Visit</h3>
+                  {restaurant.bookingUrl && (
+                    <BookNowButton
+                      bookingUrl={restaurant.bookingUrl}
+                      businessName={restaurant.name}
+                      type="restaurant"
+                      className="w-full"
+                      size="lg"
+                    />
+                  )}
                   <Button className="w-full" size="lg">
                     <Navigation2 className="mr-2 h-5 w-5" />
                     Get Directions

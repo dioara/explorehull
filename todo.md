@@ -519,3 +519,27 @@
 - [x] Add Partner link to footer
 - [x] Test all partner page functionality
 - [x] All 27 tests passing
+
+## Featured Listings & Booking Integration (User Request)
+
+### Featured Listings System
+- [x] Verify featured flag exists in database schema (attractions, restaurants, accommodations)
+- [x] Add backend logic to prioritize featured listings in search/browse results (already implemented)
+- [x] Create "Featured" badge component
+- [x] Add highlighted card styling for featured listings
+- [x] Update Explore page to show featured listings first (already implemented)
+- [x] Update Eat & Drink page to show featured listings first
+- [x] Update Stay page to show featured listings first
+- [x] Update search results to prioritize featured listings (backend handles this)
+- [x] Test featured listing display and sorting
+
+### Book Now Integration
+- [x] Add booking URL field to accommodations schema (already exists)
+- [x] Add booking URL field to restaurants schema
+- [x] Create "Book Now" button component with affiliate tracking
+- [x] Add Book Now buttons to accommodation cards
+- [x] Add Book Now buttons to restaurant detail pages
+- [x] Implement affiliate link tracking (adds ?ref=explorehull parameter)
+- [x] Implement Google Analytics event tracking for booking clicks
+- [x] Test booking button functionality
+- [x] All 27 tests passing
