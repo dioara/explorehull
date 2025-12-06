@@ -653,3 +653,17 @@
 - [x] Add progress bar to route transitions
 - [x] Test all navigation enhancements
 - [x] All 27 tests passing
+
+## Remove Made with Manus Badge
+
+- [ ] Find Made with Manus floating badge component
+- [ ] Remove badge from website
+- [ ] Test website without badge
+
+## External Deployment Preparation
+
+- [ ] Push latest code to GitHub (dioara/errors-ai)
+- [ ] Create deployment guide for Vercel/Railway
+- [ ] Document required environment variables
+- [ ] Document database setup instructions
+- [ ] Document auth replacement options
