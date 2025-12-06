@@ -1,4 +1,4 @@
-import { useParams, useRoute } from "wouter";
+import { useRoute } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -6,7 +6,6 @@ import { SEO } from "@/components/SEO";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { SaveToItinerary } from "@/components/SaveToItinerary";
 import { MapView } from "@/components/Map";
-import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,9 +15,9 @@ import {
   DollarSign, 
   Phone, 
   Globe, 
-  Calendar,
   Star,
-  Navigation2
+  Navigation2,
+  ChevronLeft
 } from "lucide-react";
 
 export default function AttractionDetail() {
@@ -32,7 +31,7 @@ export default function AttractionDetail() {
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-1 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
         </main>
         <Footer />
       </div>
@@ -44,10 +43,12 @@ export default function AttractionDetail() {
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-1 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Attraction Not Found</h1>
-            <p className="text-muted-foreground mb-6">The attraction you're looking for doesn't exist.</p>
-            <Button onClick={() => window.location.href = "/explore"}>Back to Explore</Button>
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl font-bold">Attraction Not Found</h1>
+            <p className="text-muted-foreground">The attraction you're looking for doesn't exist.</p>
+            <Button onClick={() => window.location.href = "/explore"} size="lg" className="rounded-xl">
+              Back to Explore
+            </Button>
           </div>
         </main>
         <Footer />
@@ -79,43 +80,62 @@ export default function AttractionDetail() {
       <Navigation />
       
       <main className="flex-1">
-        {/* Hero Image */}
-        <div className="relative h-[60vh] w-full overflow-hidden">
+        {/* Breadcrumb */}
+        <div className="bg-card border-b">
+          <div className="container py-4">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={() => window.location.href = "/explore"}
+              className="hover:bg-secondary rounded-lg"
+            >
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              Back to Explore
+            </Button>
+          </div>
+        </div>
+
+        {/* Hero Image - Modern Design */}
+        <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
           <img
             src={images[0] || "/images/hero_the_deep.png"}
             alt={attraction.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8">
+          <div className="absolute inset-0 gradient-overlay" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
             <div className="container">
-              <Badge className="mb-4 bg-primary/90 text-white">
-                {attraction.category}
-              </Badge>
-              <h1 className="text-5xl font-bold text-white mb-4">{attraction.name}</h1>
-              <div className="flex items-center gap-4 text-white/90">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5" />
-                  <span>{attraction.address}</span>
-                </div>
-                {attraction.featured && (
+              <div className="max-w-4xl space-y-4">
+                <Badge className="bg-accent/90 text-accent-foreground hover:bg-accent px-4 py-2 text-sm font-semibold rounded-full">
+                  {attraction.category}
+                </Badge>
+                <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                  {attraction.name}
+                </h1>
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 text-white/90">
                   <div className="flex items-center gap-2">
-                    <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    <span>Featured</span>
+                    <MapPin className="h-5 w-5 flex-shrink-0" />
+                    <span className="text-sm md:text-base">{attraction.address}</span>
                   </div>
-                )}
+                  {attraction.featured && (
+                    <div className="flex items-center gap-2">
+                      <Star className="h-5 w-5 fill-[oklch(0.68_0.10_55)] text-[oklch(0.68_0.10_55)]" />
+                      <span className="text-sm md:text-base font-semibold">Featured</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Content */}
-        <div className="container py-12">
-          <div className="grid lg:grid-cols-3 gap-8">
+        <div className="container py-12 md:py-16">
+          <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              <section>
-                <h2 className="text-3xl font-bold mb-4">About</h2>
+            <div className="lg:col-span-2 space-y-10">
+              <section className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">About</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {attraction.description}
                 </p>
@@ -123,16 +143,17 @@ export default function AttractionDetail() {
 
               {/* Image Gallery */}
               {images.length > 1 && (
-                <section>
-                  <h2 className="text-3xl font-bold mb-4">Gallery</h2>
-                  <div className="grid grid-cols-2 gap-4">
+                <section className="space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-bold">Gallery</h2>
+                  <div className="grid grid-cols-2 gap-4 md:gap-6">
                     {images.slice(1).map((img: string, idx: number) => (
-                      <img
-                        key={idx}
-                        src={img}
-                        alt={`${attraction.name} ${idx + 1}`}
-                        className="w-full h-64 object-cover rounded-lg"
-                      />
+                      <div key={idx} className="relative overflow-hidden rounded-2xl group">
+                        <img
+                          src={img}
+                          alt={`${attraction.name} ${idx + 1}`}
+                          className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
                     ))}
                   </div>
                 </section>
@@ -141,19 +162,22 @@ export default function AttractionDetail() {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold">Visitor Information</h3>
+              {/* Visitor Information Card */}
+              <Card className="rounded-2xl border-border/50 shadow-soft">
+                <CardContent className="p-6 space-y-6">
+                  <h3 className="text-2xl font-bold">Visitor Information</h3>
                   
                   {attraction.openingHours && (
-                    <div className="flex items-start gap-3">
-                      <Clock className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <p className="font-semibold mb-2">Opening Hours</p>
-                        <div className="text-sm text-muted-foreground space-y-1">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold mb-3">Opening Hours</p>
+                        <div className="text-sm text-muted-foreground space-y-2">
                           {Object.entries(openingHours).map(([day, hours]) => (
-                            <div key={day} className="flex justify-between">
-                              <span className="capitalize">{day}:</span>
+                            <div key={day} className="flex justify-between gap-4">
+                              <span className="capitalize font-medium">{day}:</span>
                               <span>{hours as string}</span>
                             </div>
                           ))}
@@ -163,45 +187,58 @@ export default function AttractionDetail() {
                   )}
 
                   {attraction.pricing && (
-                    <div className="flex items-start gap-3">
-                      <DollarSign className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <p className="font-semibold">Pricing</p>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <DollarSign className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold mb-1">Pricing</p>
                         <p className="text-sm text-muted-foreground">{attraction.pricing}</p>
                       </div>
                     </div>
                   )}
 
                   {attraction.address && (
-                    <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <p className="font-semibold">Address</p>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold mb-1">Address</p>
                         <p className="text-sm text-muted-foreground">{attraction.address}</p>
                       </div>
                     </div>
                   )}
 
                   {attraction.phone && (
-                    <div className="flex items-start gap-3">
-                      <Phone className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <p className="font-semibold">Phone</p>
-                        <a href={`tel:${attraction.phone}`} className="text-sm text-primary hover:underline">{attraction.phone}</a>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Phone className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold mb-1">Phone</p>
+                        <a 
+                          href={`tel:${attraction.phone}`} 
+                          className="text-sm text-accent hover:underline font-medium"
+                        >
+                          {attraction.phone}
+                        </a>
                       </div>
                     </div>
                   )}
 
                   {attraction.website && (
-                    <div className="flex items-start gap-3">
-                      <Globe className="h-5 w-5 text-primary mt-1" />
-                      <div>
-                        <p className="font-semibold">Website</p>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Globe className="h-5 w-5 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold mb-1">Website</p>
                         <a 
                           href={attraction.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-sm text-primary hover:underline"
+                          className="text-sm text-accent hover:underline font-medium"
                         >
                           Visit Website
                         </a>
@@ -213,11 +250,11 @@ export default function AttractionDetail() {
 
               {/* Interactive Map */}
               {attraction.latitude && attraction.longitude && (
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-4">Location Map</h3>
+                <Card className="rounded-2xl border-border/50 shadow-soft overflow-hidden">
+                  <CardContent className="p-6 space-y-4">
+                    <h3 className="text-xl font-bold">Location Map</h3>
                     <MapView
-                      className="h-[400px] rounded-lg"
+                      className="h-[300px] rounded-xl"
                       initialCenter={{
                         lat: parseFloat(attraction.latitude),
                         lng: parseFloat(attraction.longitude),
@@ -239,7 +276,8 @@ export default function AttractionDetail() {
                 </Card>
               )}
 
-              <Card>
+              {/* Plan Your Visit Card */}
+              <Card className="rounded-2xl border-border/50 shadow-soft bg-gradient-to-br from-accent/5 to-accent/10">
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-bold">Plan Your Visit</h3>
                   <SaveToItinerary
@@ -249,7 +287,7 @@ export default function AttractionDetail() {
                     size="lg"
                   />
                   <Button 
-                    className="w-full" 
+                    className="w-full rounded-xl shadow-sm" 
                     size="lg"
                     onClick={() => {
                       if (attraction.latitude && attraction.longitude) {
@@ -262,7 +300,7 @@ export default function AttractionDetail() {
                     Get Directions
                   </Button>
                   {attraction.website && (
-                    <Button variant="outline" className="w-full" size="lg" asChild>
+                    <Button variant="outline" className="w-full rounded-xl" size="lg" asChild>
                       <a href={attraction.website} target="_blank" rel="noopener noreferrer">
                         <Globe className="mr-2 h-5 w-5" />
                         Book Tickets
@@ -275,7 +313,7 @@ export default function AttractionDetail() {
           </div>
           
           {/* Reviews Section */}
-          <div className="mt-12">
+          <div className="mt-16">
             <ReviewsSection
               itemType="attraction"
               itemId={attraction.id}
