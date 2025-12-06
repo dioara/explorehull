@@ -332,3 +332,28 @@
 - [x] Add GTM noscript to HTML body section
 - [x] Test GTM implementation
 - [x] Verify tracking is working
+
+
+## Phase 9: Comprehensive Logo Expansion
+
+### Real Data Collection
+- [x] Research actual Hull hotels from Visit Hull, TripAdvisor, Google Maps (24 real hotels identified)
+- [x] Research actual Hull restaurants and cafes from local sources (28 real restaurants identified)
+- [ ] Research actual Hull attractions with real details
+- [x] Search and download real logos for major hotel chains (DoubleTree, Holiday Inn, Premier Inn, Ibis, Mercure)
+- [x] Search and download real logos for Hull restaurants (Sebu, Hearth)
+- [ ] Search and download real images for all attractions
+- [x] Organize all logos by category in /client/public/logos/
+
+### Database Updates
+- [ ] Update all 110 accommodation listings with logo URLs
+- [ ] Update all 120 restaurant listings with logo URLs
+- [ ] Update all 105 attraction listings with logo/image URLs
+- [ ] Verify all logo URLs are working
+
+### UI Updates
+- [ ] Ensure Stay page displays all hotel logos consistently
+- [ ] Ensure Eat & Drink page displays all restaurant logos consistently
+- [ ] Ensure Explore page displays all attraction images consistently
+- [ ] Test logo display on all listing cards
+- [ ] Test logo display on all detail pages
