@@ -681,3 +681,15 @@
 - [x] Check database schema - verify if images field stores JSON array or single imageUrl
 - [x] Fix seed script to match actual database schema (use imageUrl not images)
 - [ ] Reseed database with correct format
+
+
+## Production Data - Real Hull Listings Only
+
+- [ ] Research and verify real Hull attractions (museums, galleries, landmarks, parks)
+- [ ] Research and verify real Hull restaurants with accurate addresses and cuisine
+- [ ] Research and verify real Hull accommodations (hotels, B&Bs, guesthouses)
+- [ ] Research and verify real Hull events and festivals
+- [ ] Research and verify real Hull tour operators
+- [ ] Create production seed script with ONLY verified real data
+- [ ] Remove all fake/generated listings
+- [ ] Test and deploy production seed to Railway database
