@@ -222,7 +222,7 @@ function generateAttractions(): any[] {
       address: attr.address,
       latitude: attr.lat,
       longitude: attr.lng,
-      images: JSON.stringify(["/images/hull_old_town.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200"]),
       openingHours: attr.hours,
       pricing: attr.price,
       website: attr.website,
@@ -244,7 +244,7 @@ function generateAttractions(): any[] {
       address: `${i + 10} High Street, Hull, HU1 ${(i % 9) + 1}XX`,
       latitude: 53.74 + (Math.random() * 0.02 - 0.01),
       longitude: -0.33 + (Math.random() * 0.02 - 0.01),
-      images: JSON.stringify(["/images/hull_old_town.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200"]),
       openingHours: i % 3 === 0 ? "Daily 10:00 AM - 5:00 PM" : "Mon-Sat 10:00 AM - 6:00 PM, Sun 11:00 AM - 4:00 PM",
       pricing: i % 4 === 0 ? "Free admission" : `Adults £${5 + (i % 15)}, Children £${3 + (i % 8)}`,
       website: `https://www.${baseAttr.name.toLowerCase().replace(/[^a-z0-9]+/g, '')}.co.uk`,
@@ -292,7 +292,7 @@ function generateEvents(): any[] {
       endDate: new Date(year, month, day + (i % 3), 18 + (i % 5), 0, 0),
       location: `${(i % 20) + 1} Queen Victoria Square, Hull, HU1 ${(i % 9) + 1}XX`,
       category,
-      image: "/images/hull_events_festival.png",
+      image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200",
       ticketUrl: `https://www.tickets.com/${baseName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
       featured: i % 10 === 0
     });
@@ -339,7 +339,7 @@ function generateRestaurants(): any[] {
       latitude: 53.742 + (Math.random() * 0.015 - 0.0075),
       longitude: -0.329 + (Math.random() * 0.015 - 0.0075),
       priceRange: priceRanges[i % priceRanges.length],
-      images: JSON.stringify(["/images/hull_dining_restaurant.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200"]),
       website: `https://www.${name.toLowerCase().replace(/[^a-z0-9]+/g, '')}.co.uk`,
       phone: `+44 1482 ${200000 + i * 100}`,
       featured: i % 12 === 0
@@ -381,7 +381,7 @@ function generateAccommodations(): any[] {
       latitude: 53.745 + (Math.random() * 0.015 - 0.0075),
       longitude: -0.342 + (Math.random() * 0.015 - 0.0075),
       priceRange: priceRanges[i % priceRanges.length],
-      images: JSON.stringify(["/images/hull_marina_waterfront.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200"]),
       bookingUrl: `https://www.booking.com/${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
       featured: i % 11 === 0
     });
@@ -398,7 +398,7 @@ function generateTours(): any[] {
       description: "Discover Hull's fascinating history on this guided walking tour through the Old Town.",
       duration: "2 hours",
       price: "12.50",
-      images: JSON.stringify(["/images/hull_old_town.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200"]),
       bookingUrl: "https://www.visithull.org/tours",
       featured: true
     },
@@ -408,7 +408,7 @@ function generateTours(): any[] {
       description: "Explore Hull's rich maritime history including the docks and museums.",
       duration: "3 hours",
       price: "18.00",
-      images: JSON.stringify(["/images/hull_marina_waterfront.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200"]),
       bookingUrl: "https://www.visithull.org/tours",
       featured: true
     },
@@ -418,7 +418,7 @@ function generateTours(): any[] {
       description: "Visit the iconic Humber Bridge and learn about its construction.",
       duration: "2.5 hours",
       price: "15.00",
-      images: JSON.stringify(["/images/humber_bridge_sunset.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200"]),
       bookingUrl: "https://www.visithull.org/tours",
       featured: true
     },
@@ -428,7 +428,7 @@ function generateTours(): any[] {
       description: "Guided tour of Hull's free museums and galleries.",
       duration: "3.5 hours",
       price: "20.00",
-      images: JSON.stringify(["/images/ferens_art_gallery.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1564399579883-451a5d44ec08?w=1200"]),
       bookingUrl: "https://www.visithull.org/tours",
       featured: true
     },
@@ -438,7 +438,7 @@ function generateTours(): any[] {
       description: "Sample the best of Hull's culinary scene on this delicious walking tour.",
       duration: "3 hours",
       price: "35.00",
-      images: JSON.stringify(["/images/hull_dining_restaurant.png"]),
+      images: JSON.stringify(["https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200"]),
       bookingUrl: "https://www.visithull.org/tours",
       featured: true
     }
@@ -454,7 +454,7 @@ function generateBlogPosts(): any[] {
       author: "ExploreHull Team",
       publishedDate: new Date("2024-01-15"),
       category: "Travel Tips",
-      featuredImage: "/images/hero_the_deep.png",
+      featuredImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200",
       featured: true
     },
     {
@@ -464,7 +464,7 @@ function generateBlogPosts(): any[] {
       author: "ExploreHull Team",
       publishedDate: new Date("2024-02-01"),
       category: "History",
-      featuredImage: "/images/hull_marina_waterfront.png",
+      featuredImage: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200",
       featured: true
     },
     {
@@ -474,7 +474,7 @@ function generateBlogPosts(): any[] {
       author: "ExploreHull Team",
       publishedDate: new Date("2024-03-10"),
       category: "Food & Drink",
-      featuredImage: "/images/hull_dining_restaurant.png",
+      featuredImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200",
       featured: true
     },
     {
@@ -484,7 +484,7 @@ function generateBlogPosts(): any[] {
       author: "ExploreHull Team",
       publishedDate: new Date("2024-04-05"),
       category: "Travel Tips",
-      featuredImage: "/images/hull_old_town.png",
+      featuredImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200",
       featured: true
     },
     {
