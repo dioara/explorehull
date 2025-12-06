@@ -104,8 +104,7 @@ export default function Home() {
               { icon: Hotel, label: "Stay", href: "/stay", color: "oklch(0.22_0.04_240)" },
               { icon: Ship, label: "Maritime Heritage", href: "/maritime", color: "oklch(0.65_0.12_195)" },
             ].map((item) => (
-              <Link key={item.label} href={item.href}>
-                <a className="card-modern flex flex-col items-center gap-4 p-6 md:p-8 group">
+              <Link key={item.label} href={item.href} className="card-modern flex flex-col items-center gap-4 p-6 md:p-8 group">
                   <div 
                     className="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110" 
                     style={{ backgroundColor: `${item.color}15` }}
@@ -115,7 +114,6 @@ export default function Home() {
                   <span className="font-semibold text-center text-sm md:text-base group-hover:text-accent transition-colors">
                     {item.label}
                   </span>
-                </a>
               </Link>
             ))}
           </div>
@@ -133,10 +131,8 @@ export default function Home() {
               </p>
             </div>
             <Button asChild variant="outline" size="lg" className="rounded-xl self-start md:self-auto">
-              <Link href="/explore">
-                <a className="flex items-center gap-2">
-                  View All <ArrowRight className="w-4 h-4" />
-                </a>
+              <Link href="/explore" className="flex items-center gap-2">
+                View All <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
           </div>
@@ -156,8 +152,7 @@ export default function Home() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {featuredAttractions?.map((attraction) => (
-                <Link key={attraction.id} href={`/attraction/${attraction.slug}`}>
-                  <a className="block group">
+                <Link key={attraction.id} href={`/attraction/${attraction.slug}`} className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1">
                       <div className="relative h-64 overflow-hidden bg-muted">
                         <img 
@@ -185,7 +180,6 @@ export default function Home() {
                         </p>
                       </CardContent>
                     </Card>
-                  </a>
                 </Link>
               ))}
             </div>
@@ -204,10 +198,8 @@ export default function Home() {
               </p>
             </div>
             <Button asChild variant="outline" size="lg" className="rounded-xl self-start md:self-auto">
-              <Link href="/events">
-                <a className="flex items-center gap-2">
-                  View All <ArrowRight className="w-4 h-4" />
-                </a>
+              <Link href="/events" className="flex items-center gap-2">
+                View All <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
           </div>
@@ -227,8 +219,7 @@ export default function Home() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {upcomingEvents?.map((event) => (
-                <Link key={event.id} href={`/event/${event.slug}`}>
-                  <a className="block group">
+                <Link key={event.id} href={`/event/${event.slug}`} className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1 flex flex-col md:flex-row h-full">
                       <div className="relative w-full md:w-56 h-56 md:h-auto overflow-hidden flex-shrink-0 bg-muted">
                         <img 
@@ -262,7 +253,6 @@ export default function Home() {
                         </div>
                       </CardContent>
                     </Card>
-                  </a>
                 </Link>
               ))}
             </div>
@@ -280,11 +270,9 @@ export default function Home() {
                 Savor Hull's diverse culinary scene
               </p>
             </div>
-            <Button asChild variant="outline" size="lg" className="rounded-xl self-start md:self-auto">
-              <Link href="/eat-drink">
-                <a className="flex items-center gap-2">
-                  View All <ArrowRight className="w-4 h-4" />
-                </a>
+             <Button asChild variant="outline" size="lg" className="rounded-xl self-start md:self-auto">
+              <Link href="/eat-drink" className="flex items-center gap-2">
+                View All <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
           </div>
@@ -304,8 +292,7 @@ export default function Home() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {featuredRestaurants?.map((restaurant) => (
-                <Link key={restaurant.id} href={`/restaurant/${restaurant.slug}`}>
-                  <a className="block group">
+                <Link key={restaurant.id} href={`/restaurant/${restaurant.slug}`} className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1">
                       <div className="relative h-64 overflow-hidden bg-muted">
                         <img 
@@ -333,7 +320,6 @@ export default function Home() {
                         </div>
                       </CardContent>
                     </Card>
-                  </a>
                 </Link>
               ))}
             </div>
