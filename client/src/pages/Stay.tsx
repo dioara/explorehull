@@ -94,11 +94,21 @@ export default function Stay() {
               {filteredAccommodations.map((accommodation) => (
                 <Card key={accommodation.id} className="overflow-hidden hover:shadow-lg transition-shadow group h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={accommodation.imageUrl || '/images/hull_marina_waterfront.png'} 
-                      alt={`${accommodation.name} - ${accommodation.type} in Hull`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    {accommodation.logo ? (
+                      <div className="w-full h-full bg-white flex items-center justify-center p-8">
+                        <img
+                          src={accommodation.logo}
+                          alt={`${accommodation.name} logo`}
+                          className="max-h-40 max-w-full object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <img 
+                        src={accommodation.imageUrl || '/images/hull_marina_waterfront.png'} 
+                        alt={`${accommodation.name} - ${accommodation.type} in Hull`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
                     {accommodation.featured && (
                       <div className="absolute top-3 right-3 bg-[oklch(0.72_0.12_60)] text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
                         <Star className="w-4 h-4 fill-current" />

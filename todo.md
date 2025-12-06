@@ -273,3 +273,16 @@
 - [x] Add "Local Tips" section with insider knowledge (First Time Visitors)
 - [x] Add currency converter for international visitors
 - [x] Add emergency contacts widget (police, hospital, tourist info)
+
+
+## Phase 6: Add Real Hotel & Restaurant Logos
+
+### Logo Collection
+- [x] Search for Hull hotel logos (Premier Inn, Holiday Inn, DoubleTree, etc.)
+- [x] Search for Hull restaurant logos (1884 Dock Street Kitchen, etc.)
+- [x] Download and save logos to project
+- [x] Update database schema to include logo URLs
+- [x] Update accommodation listings with logo URLs
+- [x] Update restaurant listings with logo URLs
+- [x] Update Stay page UI to display hotel logos
+- [x] Update Eat & Drink page UI to display restaurant logos

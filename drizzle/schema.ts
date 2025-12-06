@@ -80,6 +80,7 @@ export const restaurants = mysqlTable("restaurants", {
   longitude: varchar("longitude", { length: 50 }),
   priceRange: varchar("priceRange", { length: 20 }), // e.g., "£", "££", "£££"
   imageUrl: text("imageUrl"),
+  logo: text("logo"),
   website: varchar("website", { length: 500 }),
   phone: varchar("phone", { length: 50 }),
   featured: boolean("featured").default(false),
@@ -104,6 +105,7 @@ export const accommodations = mysqlTable("accommodations", {
   longitude: varchar("longitude", { length: 50 }),
   priceRange: varchar("priceRange", { length: 20 }),
   imageUrl: text("imageUrl"),
+  logo: text("logo"),
   bookingUrl: varchar("bookingUrl", { length: 500 }),
   phone: varchar("phone", { length: 50 }),
   featured: boolean("featured").default(false),
