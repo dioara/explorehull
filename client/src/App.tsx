@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { ScrollToTop } from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import SearchResults from "./pages/SearchResults";
 import Explore from "./pages/Explore";
@@ -25,7 +26,9 @@ import RestaurantDetail from "./pages/RestaurantDetail";
 
 function Router() {
   return (
-    <Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
       <Route path={"/"} component={Home} />
       <Route path="/search" component={SearchResults} />
       <Route path={"/explore"} component={Explore} />
@@ -46,7 +49,8 @@ function Router() {
       <Route path={"/restaurant/:slug"} component={RestaurantDetail} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
-    </Switch>
+      </Switch>
+    </>
   );
 }
 

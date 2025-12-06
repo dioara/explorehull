@@ -636,3 +636,10 @@
 - [x] Remove nested Link components
 - [x] Test homepage for errors
 - [x] All 27 tests passing
+
+## Scroll-to-Top on Navigation
+
+- [x] Create ScrollToTop component
+- [x] Add scroll-to-top on route change
+- [x] Test navigation between pages
+- [x] All 27 tests passing
