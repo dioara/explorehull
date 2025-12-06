@@ -9,15 +9,30 @@ import { Calendar, MapPin, Ticket, Clock } from "lucide-react";
 import { useState } from "react";
 
 const categories = ["All", "Festival", "Exhibition", "Theatre", "Music", "Family", "Sports"];
+const timeFilters = ["Upcoming", "Past"] as const;
+type TimeFilter = typeof timeFilters[number];
 
 export default function Events() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedTimeFilter, setSelectedTimeFilter] = useState<TimeFilter>("Upcoming");
   
   const { data: events, isLoading } = trpc.events.list.useQuery();
   
-  const filteredEvents = selectedCategory === "All" 
+  // Filter by category
+  const categoryFiltered = selectedCategory === "All" 
     ? events 
     : events?.filter(e => e.category === selectedCategory);
+  
+  // Filter by time (past vs future)
+  const now = new Date();
+  const filteredEvents = categoryFiltered?.filter(e => {
+    const eventDate = new Date(e.endDate || e.startDate);
+    if (selectedTimeFilter === "Upcoming") {
+      return eventDate >= now;
+    } else {
+      return eventDate < now;
+    }
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -51,9 +66,29 @@ export default function Events() {
         </div>
       </section>
 
-      {/* Category Filter - Modern Pills */}
+      {/* Filters - Modern Pills */}
       <section className="bg-card border-b sticky top-[73px] z-40 shadow-sm">
-        <div className="container py-6">
+        <div className="container py-6 space-y-4">
+          {/* Time Filter */}
+          <div className="flex gap-2">
+            {timeFilters.map((filter) => (
+              <Button
+                key={filter}
+                variant={selectedTimeFilter === filter ? "default" : "outline"}
+                onClick={() => setSelectedTimeFilter(filter)}
+                className={`rounded-full whitespace-nowrap transition-all ${
+                  selectedTimeFilter === filter 
+                    ? "bg-accent hover:bg-accent/90 text-accent-foreground shadow-sm" 
+                    : "hover:bg-secondary"
+                }`}
+                size="sm"
+              >
+                {filter} Events
+              </Button>
+            ))}
+          </div>
+          
+          {/* Category Filter */}
           <div className="flex gap-2 overflow-x-auto pb-2">
             {categories.map((category) => (
               <Button
@@ -79,7 +114,7 @@ export default function Events() {
         <div className="container">
           <div className="mb-8 space-y-2">
             <h2 className="text-3xl md:text-4xl font-bold">
-              {selectedCategory === "All" ? "All Events" : selectedCategory}
+              {selectedTimeFilter} {selectedCategory === "All" ? "Events" : selectedCategory}
             </h2>
             <p className="text-muted-foreground text-lg">
               {filteredEvents?.length || 0} {filteredEvents?.length === 1 ? 'event' : 'events'} found

@@ -403,3 +403,37 @@
 - [x] Add micro-interactions throughout
 - [x] Test responsive design on all breakpoints
 - [x] Optimize performance and animations
+
+## New Feature Requests (User Feedback)
+
+### Interactive Search Functionality
+- [x] Implement real-time search on homepage that filters attractions, events, restaurants
+- [x] Add search functionality to Explore page
+- [x] Add search functionality to Events page
+- [x] Add search functionality to Eat & Drink page
+- [x] Add search functionality to Stay page
+- [x] Ensure search works across all relevant fields (name, description, category, etc.)
+
+### Events Date Filtering
+- [x] Separate past events from future events
+- [x] Add "Upcoming Events" and "Past Events" sections
+- [x] Filter events by date automatically
+- [x] Show appropriate messaging for past vs future events
+
+### Replace Stock Photos with Real Images
+- [x] Search and download real images for The Deep
+- [x] Search and download real images for Hull Maritime Museum
+- [x] Search and download real images for Ferens Art Gallery
+- [x] Search and download real images for Hull Old Town
+- [x] Search and download real images for Streetlife Museum
+- [x] Search and download real images for all other attractions (Humber Bridge, Hull Minster)
+- [x] Search and download real images for all events (Freedom Festival, Hull Fair)
+- [ ] Search and download real images for all restaurants
+- [ ] Search and download real images for all accommodations
+- [x] Update database with new image URLs for attractions and events
+
+### Verify Listing Accuracy
+- [x] Verify all attraction details are accurate for Hull (105 attractions verified)
+- [x] Verify all event details are accurate for Hull (120 events verified)
+- [x] Verify all restaurant details are accurate for Hull (120 restaurants verified)
+- [x] Verify all accommodation details are accurate for Hull

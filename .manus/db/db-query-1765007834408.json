@@ -1,0 +1,1090 @@
+{
+  "query": "SELECT id, title, slug, category, location, startDate, endDate FROM events ORDER BY title;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user aVmfAzGaFwUYThZ.03868022cba3 --database SGg5rWqvWgGGYNh8QMBiqU --execute SELECT id, title, slug, category, location, startDate, endDate FROM events ORDER BY title;",
+  "rows": [
+    {
+      "id": "30363",
+      "title": "Art Exhibition 1/2025",
+      "slug": "art-exhibition-1-2025-72",
+      "category": "Festival",
+      "location": "13 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-01-17 17:00:00",
+      "endDate": "2025-01-18 01:00:00"
+    },
+    {
+      "id": "30331",
+      "title": "Art Exhibition 5/2025",
+      "slug": "art-exhibition-5-2025-40",
+      "category": "Workshop",
+      "location": "1 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-05-13 14:00:00",
+      "endDate": "2025-05-14 22:00:00"
+    },
+    {
+      "id": "30395",
+      "title": "Art Exhibition 9/2025",
+      "slug": "art-exhibition-9-2025-104",
+      "category": "Cultural",
+      "location": "5 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-09-21 18:00:00",
+      "endDate": "2025-09-24 02:00:00"
+    },
+    {
+      "id": "30299",
+      "title": "Art Exhibition 9/2025",
+      "slug": "art-exhibition-9-2025-8",
+      "category": "Theatre",
+      "location": "9 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-09-09 22:00:00",
+      "endDate": "2025-09-12 01:00:00"
+    },
+    {
+      "id": "30384",
+      "title": "Blues Night 10/2025",
+      "slug": "blues-night-10-2025-93",
+      "category": "Market",
+      "location": "14 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-10-10 17:00:00",
+      "endDate": "2025-10-11 01:00:00"
+    },
+    {
+      "id": "30352",
+      "title": "Blues Night 2/2025",
+      "slug": "blues-night-2-2025-61",
+      "category": "Comedy",
+      "location": "2 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-02-06 16:00:00",
+      "endDate": "2025-02-08 00:00:00"
+    },
+    {
+      "id": "30320",
+      "title": "Blues Night 6/2025",
+      "slug": "blues-night-6-2025-29",
+      "category": "Food & Drink",
+      "location": "10 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-06-02 23:00:00",
+      "endDate": "2025-06-05 02:00:00"
+    },
+    {
+      "id": "30313",
+      "title": "Book Launch 11/2025",
+      "slug": "book-launch-11-2025-22",
+      "category": "Workshop",
+      "location": "3 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-11-23 17:00:00",
+      "endDate": "2025-11-25 01:00:00"
+    },
+    {
+      "id": "30409",
+      "title": "Book Launch 11/2025",
+      "slug": "book-launch-11-2025-118",
+      "category": "Art",
+      "location": "19 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-11-07 23:00:00",
+      "endDate": "2025-11-09 02:00:00"
+    },
+    {
+      "id": "30377",
+      "title": "Book Launch 3/2025",
+      "slug": "book-launch-3-2025-86",
+      "category": "Cultural",
+      "location": "7 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-03-03 21:00:00",
+      "endDate": "2025-03-06 00:00:00"
+    },
+    {
+      "id": "30345",
+      "title": "Book Launch 7/2025",
+      "slug": "book-launch-7-2025-54",
+      "category": "Festival",
+      "location": "15 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-07-27 18:00:00",
+      "endDate": "2025-07-28 02:00:00"
+    },
+    {
+      "id": "30338",
+      "title": "Car Boot Sale 12/2025",
+      "slug": "car-boot-sale-12-2025-47",
+      "category": "Food & Drink",
+      "location": "8 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-12-20 22:00:00",
+      "endDate": "2025-12-23 01:00:00"
+    },
+    {
+      "id": "30402",
+      "title": "Car Boot Sale 4/2025",
+      "slug": "car-boot-sale-4-2025-111",
+      "category": "Market",
+      "location": "12 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-04-28 15:00:00",
+      "endDate": "2025-04-28 23:00:00"
+    },
+    {
+      "id": "30306",
+      "title": "Car Boot Sale 4/2025",
+      "slug": "car-boot-sale-4-2025-15",
+      "category": "Community",
+      "location": "16 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-04-16 19:00:00",
+      "endDate": "2025-04-16 22:00:00"
+    },
+    {
+      "id": "30370",
+      "title": "Car Boot Sale 8/2025",
+      "slug": "car-boot-sale-8-2025-79",
+      "category": "Comedy",
+      "location": "20 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-08-24 23:00:00",
+      "endDate": "2025-08-26 02:00:00"
+    },
+    {
+      "id": "30339",
+      "title": "Charity Run 1/2025",
+      "slug": "charity-run-1-2025-48",
+      "category": "Family",
+      "location": "9 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-01-21 23:00:00",
+      "endDate": "2025-01-22 02:00:00"
+    },
+    {
+      "id": "30307",
+      "title": "Charity Run 5/2025",
+      "slug": "charity-run-5-2025-16",
+      "category": "Charity",
+      "location": "17 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-05-17 20:00:00",
+      "endDate": "2025-05-18 23:00:00"
+    },
+    {
+      "id": "30403",
+      "title": "Charity Run 5/2025",
+      "slug": "charity-run-5-2025-112",
+      "category": "Workshop",
+      "location": "13 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-05-01 16:00:00",
+      "endDate": "2025-05-03 00:00:00"
+    },
+    {
+      "id": "30371",
+      "title": "Charity Run 9/2025",
+      "slug": "charity-run-9-2025-80",
+      "category": "Theatre",
+      "location": "1 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-09-25 14:00:00",
+      "endDate": "2025-09-27 22:00:00"
+    },
+    {
+      "id": "30361",
+      "title": "Christmas Markets 11/2025",
+      "slug": "christmas-markets-11-2025-70",
+      "category": "Charity",
+      "location": "11 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-11-15 15:00:00",
+      "endDate": "2025-11-16 23:00:00"
+    },
+    {
+      "id": "30329",
+      "title": "Christmas Markets 3/2025",
+      "slug": "christmas-markets-3-2025-38",
+      "category": "Exhibition",
+      "location": "19 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-03-11 22:00:00",
+      "endDate": "2025-03-14 01:00:00"
+    },
+    {
+      "id": "30393",
+      "title": "Christmas Markets 7/2025",
+      "slug": "christmas-markets-7-2025-102",
+      "category": "Family",
+      "location": "3 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-07-19 16:00:00",
+      "endDate": "2025-07-20 00:00:00"
+    },
+    {
+      "id": "30297",
+      "title": "Christmas Markets 7/2025",
+      "slug": "christmas-markets-7-2025-6",
+      "category": "Performance",
+      "location": "7 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-07-07 20:00:00",
+      "endDate": "2025-07-07 23:00:00"
+    },
+    {
+      "id": "30348",
+      "title": "Classical Concert 10/2025",
+      "slug": "classical-concert-10-2025-57",
+      "category": "Market",
+      "location": "18 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-10-02 21:00:00",
+      "endDate": "2025-10-03 00:00:00"
+    },
+    {
+      "id": "30316",
+      "title": "Classical Concert 2/2025",
+      "slug": "classical-concert-2-2025-25",
+      "category": "Comedy",
+      "location": "6 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-02-26 20:00:00",
+      "endDate": "2025-02-27 23:00:00"
+    },
+    {
+      "id": "30380",
+      "title": "Classical Concert 6/2025",
+      "slug": "classical-concert-6-2025-89",
+      "category": "Educational",
+      "location": "10 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-06-06 23:00:00",
+      "endDate": "2025-06-09 02:00:00"
+    },
+    {
+      "id": "30302",
+      "title": "Comedy Night 12/2025",
+      "slug": "comedy-night-12-2025-11",
+      "category": "Food & Drink",
+      "location": "12 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-12-12 16:00:00",
+      "endDate": "2025-12-15 00:00:00"
+    },
+    {
+      "id": "30398",
+      "title": "Comedy Night 12/2025",
+      "slug": "comedy-night-12-2025-107",
+      "category": "Educational",
+      "location": "8 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-12-24 22:00:00",
+      "endDate": "2025-12-27 01:00:00"
+    },
+    {
+      "id": "30366",
+      "title": "Comedy Night 4/2025",
+      "slug": "comedy-night-4-2025-75",
+      "category": "Market",
+      "location": "16 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-04-20 19:00:00",
+      "endDate": "2025-04-20 22:00:00"
+    },
+    {
+      "id": "30334",
+      "title": "Comedy Night 8/2025",
+      "slug": "comedy-night-8-2025-43",
+      "category": "Comedy",
+      "location": "4 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-08-16 17:00:00",
+      "endDate": "2025-08-18 01:00:00"
+    },
+    {
+      "id": "30372",
+      "title": "Community Event 10/2025",
+      "slug": "community-event-10-2025-81",
+      "category": "Music",
+      "location": "2 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-10-26 15:00:00",
+      "endDate": "2025-10-26 23:00:00"
+    },
+    {
+      "id": "30340",
+      "title": "Community Event 2/2025",
+      "slug": "community-event-2-2025-49",
+      "category": "Sports",
+      "location": "10 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-02-23 00:00:00",
+      "endDate": "2025-02-24 03:00:00"
+    },
+    {
+      "id": "30404",
+      "title": "Community Event 6/2025",
+      "slug": "community-event-6-2025-113",
+      "category": "Tour",
+      "location": "14 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-06-02 17:00:00",
+      "endDate": "2025-06-05 01:00:00"
+    },
+    {
+      "id": "30308",
+      "title": "Community Event 6/2025",
+      "slug": "community-event-6-2025-17",
+      "category": "Educational",
+      "location": "18 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-06-18 21:00:00",
+      "endDate": "2025-06-21 00:00:00"
+    },
+    {
+      "id": "30399",
+      "title": "Craft Fair 1/2025",
+      "slug": "craft-fair-1-2025-108",
+      "category": "Festival",
+      "location": "9 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-01-25 23:00:00",
+      "endDate": "2025-01-26 02:00:00"
+    },
+    {
+      "id": "30303",
+      "title": "Craft Fair 1/2025",
+      "slug": "craft-fair-1-2025-12",
+      "category": "Family",
+      "location": "13 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-01-13 17:00:00",
+      "endDate": "2025-01-14 01:00:00"
+    },
+    {
+      "id": "30367",
+      "title": "Craft Fair 5/2025",
+      "slug": "craft-fair-5-2025-76",
+      "category": "Workshop",
+      "location": "17 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-05-21 20:00:00",
+      "endDate": "2025-05-22 23:00:00"
+    },
+    {
+      "id": "30335",
+      "title": "Craft Fair 9/2025",
+      "slug": "craft-fair-9-2025-44",
+      "category": "Theatre",
+      "location": "5 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-09-17 18:00:00",
+      "endDate": "2025-09-20 02:00:00"
+    },
+    {
+      "id": "30314",
+      "title": "Dance Performance 12/2025",
+      "slug": "dance-performance-12-2025-23",
+      "category": "Tour",
+      "location": "4 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-12-24 18:00:00",
+      "endDate": "2025-12-27 02:00:00"
+    },
+    {
+      "id": "30410",
+      "title": "Dance Performance 12/2025",
+      "slug": "dance-performance-12-2025-119",
+      "category": "Food & Drink",
+      "location": "20 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-12-09 00:00:00",
+      "endDate": "2025-12-11 03:00:00"
+    },
+    {
+      "id": "30378",
+      "title": "Dance Performance 4/2025",
+      "slug": "dance-performance-4-2025-87",
+      "category": "Community",
+      "location": "8 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-04-04 21:00:00",
+      "endDate": "2025-04-05 00:00:00"
+    },
+    {
+      "id": "30346",
+      "title": "Dance Performance 8/2025",
+      "slug": "dance-performance-8-2025-55",
+      "category": "Concert",
+      "location": "16 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-08-28 19:00:00",
+      "endDate": "2025-08-29 22:00:00"
+    },
+    {
+      "id": "30386",
+      "title": "Electronic Music Night 12/2025",
+      "slug": "electronic-music-night-12-2025-95",
+      "category": "Tour",
+      "location": "16 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-12-12 20:00:00",
+      "endDate": "2025-12-14 23:00:00"
+    },
+    {
+      "id": "30354",
+      "title": "Electronic Music Night 4/2025",
+      "slug": "electronic-music-night-4-2025-63",
+      "category": "Music",
+      "location": "4 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-04-08 17:00:00",
+      "endDate": "2025-04-09 01:00:00"
+    },
+    {
+      "id": "30322",
+      "title": "Electronic Music Night 8/2025",
+      "slug": "electronic-music-night-8-2025-31",
+      "category": "Sports",
+      "location": "12 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-08-04 15:00:00",
+      "endDate": "2025-08-05 23:00:00"
+    },
+    {
+      "id": "30336",
+      "title": "Farmers Market 10/2025",
+      "slug": "farmers-market-10-2025-45",
+      "category": "Music",
+      "location": "6 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-10-18 19:00:00",
+      "endDate": "2025-10-18 22:00:00"
+    },
+    {
+      "id": "30400",
+      "title": "Farmers Market 2/2025",
+      "slug": "farmers-market-2-2025-109",
+      "category": "Concert",
+      "location": "10 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-02-27 00:00:00",
+      "endDate": "2025-02-28 03:00:00"
+    },
+    {
+      "id": "30304",
+      "title": "Farmers Market 2/2025",
+      "slug": "farmers-market-2-2025-13",
+      "category": "Sports",
+      "location": "14 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-02-14 18:00:00",
+      "endDate": "2025-02-16 02:00:00"
+    },
+    {
+      "id": "30368",
+      "title": "Farmers Market 6/2025",
+      "slug": "farmers-market-6-2025-77",
+      "category": "Tour",
+      "location": "18 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-06-22 21:00:00",
+      "endDate": "2025-06-25 00:00:00"
+    },
+    {
+      "id": "30375",
+      "title": "Film Screening 1/2025",
+      "slug": "film-screening-1-2025-84",
+      "category": "Family",
+      "location": "5 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-01-01 19:00:00",
+      "endDate": "2025-01-02 03:00:00"
+    },
+    {
+      "id": "30343",
+      "title": "Film Screening 5/2025",
+      "slug": "film-screening-5-2025-52",
+      "category": "Charity",
+      "location": "13 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-05-25 16:00:00",
+      "endDate": "2025-05-27 00:00:00"
+    },
+    {
+      "id": "30311",
+      "title": "Film Screening 9/2025",
+      "slug": "film-screening-9-2025-20",
+      "category": "Exhibition",
+      "location": "1 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-09-21 14:00:00",
+      "endDate": "2025-09-23 22:00:00"
+    },
+    {
+      "id": "30407",
+      "title": "Film Screening 9/2025",
+      "slug": "film-screening-9-2025-116",
+      "category": "Theatre",
+      "location": "17 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-09-05 20:00:00",
+      "endDate": "2025-09-07 23:00:00"
+    },
+    {
+      "id": "30351",
+      "title": "Folk Festival 1/2025",
+      "slug": "folk-festival-1-2025-60",
+      "category": "Performance",
+      "location": "1 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-01-05 15:00:00",
+      "endDate": "2025-01-05 23:00:00"
+    },
+    {
+      "id": "30319",
+      "title": "Folk Festival 5/2025",
+      "slug": "folk-festival-5-2025-28",
+      "category": "Art",
+      "location": "9 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-05-01 22:00:00",
+      "endDate": "2025-05-03 01:00:00"
+    },
+    {
+      "id": "30383",
+      "title": "Folk Festival 9/2025",
+      "slug": "folk-festival-9-2025-92",
+      "category": "Exhibition",
+      "location": "13 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-09-09 16:00:00",
+      "endDate": "2025-09-12 00:00:00"
+    },
+    {
+      "id": "30362",
+      "title": "Food Festival 12/2025",
+      "slug": "food-festival-12-2025-71",
+      "category": "Educational",
+      "location": "12 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-12-16 16:00:00",
+      "endDate": "2025-12-19 00:00:00"
+    },
+    {
+      "id": "30330",
+      "title": "Food Festival 4/2025",
+      "slug": "food-festival-4-2025-39",
+      "category": "Market",
+      "location": "20 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-04-12 23:00:00",
+      "endDate": "2025-04-13 02:00:00"
+    },
+    {
+      "id": "30298",
+      "title": "Food Festival 8/2025",
+      "slug": "food-festival-8-2025-7",
+      "category": "Comedy",
+      "location": "8 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-08-08 21:00:00",
+      "endDate": "2025-08-10 00:00:00"
+    },
+    {
+      "id": "30394",
+      "title": "Food Festival 8/2025",
+      "slug": "food-festival-8-2025-103",
+      "category": "Sports",
+      "location": "4 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-08-20 17:00:00",
+      "endDate": "2025-08-22 01:00:00"
+    },
+    {
+      "id": "30374",
+      "title": "Guided Tour 12/2025",
+      "slug": "guided-tour-12-2025-83",
+      "category": "Food & Drink",
+      "location": "4 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-12-28 18:00:00",
+      "endDate": "2025-12-31 02:00:00"
+    },
+    {
+      "id": "30342",
+      "title": "Guided Tour 4/2025",
+      "slug": "guided-tour-4-2025-51",
+      "category": "Community",
+      "location": "12 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-04-24 15:00:00",
+      "endDate": "2025-04-24 23:00:00"
+    },
+    {
+      "id": "30406",
+      "title": "Guided Tour 8/2025",
+      "slug": "guided-tour-8-2025-115",
+      "category": "Comedy",
+      "location": "16 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-08-04 19:00:00",
+      "endDate": "2025-08-05 22:00:00"
+    },
+    {
+      "id": "30310",
+      "title": "Guided Tour 8/2025",
+      "slug": "guided-tour-8-2025-19",
+      "category": "Concert",
+      "location": "20 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-08-20 23:00:00",
+      "endDate": "2025-08-22 02:00:00"
+    },
+    {
+      "id": "30360",
+      "title": "Hull Fair 10/2025",
+      "slug": "hull-fair-10-2025-69",
+      "category": "Community",
+      "location": "10 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-10-14 23:00:00",
+      "endDate": "2025-10-15 02:00:00"
+    },
+    {
+      "id": "30328",
+      "title": "Hull Fair 2/2025",
+      "slug": "hull-fair-2-2025-37",
+      "category": "Concert",
+      "location": "18 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-02-10 22:00:00",
+      "endDate": "2025-02-12 01:00:00"
+    },
+    {
+      "id": "30296",
+      "title": "Hull Fair 6/2025",
+      "slug": "hull-fair-6-2025-5",
+      "category": "Tour",
+      "location": "6 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-06-06 19:00:00",
+      "endDate": "2025-06-08 22:00:00"
+    },
+    {
+      "id": "30392",
+      "title": "Hull Fair 6/2025",
+      "slug": "hull-fair-6-2025-101",
+      "category": "Food & Drink",
+      "location": "2 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-06-18 15:00:00",
+      "endDate": "2025-06-20 23:00:00"
+    },
+    {
+      "id": "30291",
+      "title": "Hull Freedom Festival 1/2025",
+      "slug": "hull-freedom-festival-1-2025-0",
+      "category": "Festival",
+      "location": "1 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-01-01 15:00:00",
+      "endDate": "2025-01-01 23:00:00"
+    },
+    {
+      "id": "30387",
+      "title": "Hull Freedom Festival 1/2025",
+      "slug": "hull-freedom-festival-1-2025-96",
+      "category": "Performance",
+      "location": "17 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-01-13 21:00:00",
+      "endDate": "2025-01-14 00:00:00"
+    },
+    {
+      "id": "30355",
+      "title": "Hull Freedom Festival 5/2025",
+      "slug": "hull-freedom-festival-5-2025-64",
+      "category": "Art",
+      "location": "5 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-05-09 18:00:00",
+      "endDate": "2025-05-11 02:00:00"
+    },
+    {
+      "id": "30323",
+      "title": "Hull Freedom Festival 9/2025",
+      "slug": "hull-freedom-festival-9-2025-32",
+      "category": "Cultural",
+      "location": "13 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-09-05 16:00:00",
+      "endDate": "2025-09-08 00:00:00"
+    },
+    {
+      "id": "30326",
+      "title": "Hull Jazz Festival 12/2025",
+      "slug": "hull-jazz-festival-12-2025-35",
+      "category": "Educational",
+      "location": "16 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-12-08 20:00:00",
+      "endDate": "2025-12-10 23:00:00"
+    },
+    {
+      "id": "30294",
+      "title": "Hull Jazz Festival 4/2025",
+      "slug": "hull-jazz-festival-4-2025-3",
+      "category": "Market",
+      "location": "4 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-04-04 17:00:00",
+      "endDate": "2025-04-05 01:00:00"
+    },
+    {
+      "id": "30390",
+      "title": "Hull Jazz Festival 4/2025",
+      "slug": "hull-jazz-festival-4-2025-99",
+      "category": "Music",
+      "location": "20 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-04-16 23:00:00",
+      "endDate": "2025-04-17 02:00:00"
+    },
+    {
+      "id": "30358",
+      "title": "Hull Jazz Festival 8/2025",
+      "slug": "hull-jazz-festival-8-2025-67",
+      "category": "Sports",
+      "location": "8 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-08-12 21:00:00",
+      "endDate": "2025-08-14 00:00:00"
+    },
+    {
+      "id": "30327",
+      "title": "Hull Literature Festival 1/2025",
+      "slug": "hull-literature-festival-1-2025-36",
+      "category": "Festival",
+      "location": "17 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-01-09 21:00:00",
+      "endDate": "2025-01-10 00:00:00"
+    },
+    {
+      "id": "30295",
+      "title": "Hull Literature Festival 5/2025",
+      "slug": "hull-literature-festival-5-2025-4",
+      "category": "Workshop",
+      "location": "5 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-05-05 18:00:00",
+      "endDate": "2025-05-07 02:00:00"
+    },
+    {
+      "id": "30391",
+      "title": "Hull Literature Festival 5/2025",
+      "slug": "hull-literature-festival-5-2025-100",
+      "category": "Art",
+      "location": "1 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-05-17 14:00:00",
+      "endDate": "2025-05-18 22:00:00"
+    },
+    {
+      "id": "30359",
+      "title": "Hull Literature Festival 9/2025",
+      "slug": "hull-literature-festival-9-2025-68",
+      "category": "Cultural",
+      "location": "9 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-09-13 22:00:00",
+      "endDate": "2025-09-16 01:00:00"
+    },
+    {
+      "id": "30324",
+      "title": "Hull Pride 10/2025",
+      "slug": "hull-pride-10-2025-33",
+      "category": "Community",
+      "location": "14 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-10-06 17:00:00",
+      "endDate": "2025-10-07 01:00:00"
+    },
+    {
+      "id": "30292",
+      "title": "Hull Pride 2/2025",
+      "slug": "hull-pride-2-2025-1",
+      "category": "Concert",
+      "location": "2 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-02-02 16:00:00",
+      "endDate": "2025-02-04 00:00:00"
+    },
+    {
+      "id": "30388",
+      "title": "Hull Pride 2/2025",
+      "slug": "hull-pride-2-2025-97",
+      "category": "Comedy",
+      "location": "18 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-02-14 22:00:00",
+      "endDate": "2025-02-16 01:00:00"
+    },
+    {
+      "id": "30356",
+      "title": "Hull Pride 6/2025",
+      "slug": "hull-pride-6-2025-65",
+      "category": "Food & Drink",
+      "location": "6 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-06-10 19:00:00",
+      "endDate": "2025-06-12 22:00:00"
+    },
+    {
+      "id": "30325",
+      "title": "Humber Street Sesh 11/2025",
+      "slug": "humber-street-sesh-11-2025-34",
+      "category": "Charity",
+      "location": "15 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-11-07 19:00:00",
+      "endDate": "2025-11-09 03:00:00"
+    },
+    {
+      "id": "30293",
+      "title": "Humber Street Sesh 3/2025",
+      "slug": "humber-street-sesh-3-2025-2",
+      "category": "Exhibition",
+      "location": "3 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-03-03 17:00:00",
+      "endDate": "2025-03-06 01:00:00"
+    },
+    {
+      "id": "30389",
+      "title": "Humber Street Sesh 3/2025",
+      "slug": "humber-street-sesh-3-2025-98",
+      "category": "Theatre",
+      "location": "19 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-03-15 22:00:00",
+      "endDate": "2025-03-18 01:00:00"
+    },
+    {
+      "id": "30357",
+      "title": "Humber Street Sesh 7/2025",
+      "slug": "humber-street-sesh-7-2025-66",
+      "category": "Family",
+      "location": "7 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-07-11 20:00:00",
+      "endDate": "2025-07-11 23:00:00"
+    },
+    {
+      "id": "30300",
+      "title": "Music Concert 10/2025",
+      "slug": "music-concert-10-2025-9",
+      "category": "Music",
+      "location": "10 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-10-10 23:00:00",
+      "endDate": "2025-10-11 02:00:00"
+    },
+    {
+      "id": "30396",
+      "title": "Music Concert 10/2025",
+      "slug": "music-concert-10-2025-105",
+      "category": "Community",
+      "location": "6 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-10-22 19:00:00",
+      "endDate": "2025-10-22 22:00:00"
+    },
+    {
+      "id": "30364",
+      "title": "Music Concert 2/2025",
+      "slug": "music-concert-2-2025-73",
+      "category": "Concert",
+      "location": "14 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-02-18 18:00:00",
+      "endDate": "2025-02-20 02:00:00"
+    },
+    {
+      "id": "30332",
+      "title": "Music Concert 6/2025",
+      "slug": "music-concert-6-2025-41",
+      "category": "Tour",
+      "location": "2 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-06-14 15:00:00",
+      "endDate": "2025-06-16 23:00:00"
+    },
+    {
+      "id": "30315",
+      "title": "Opera Night 1/2025",
+      "slug": "opera-night-1-2025-24",
+      "category": "Performance",
+      "location": "5 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-01-25 19:00:00",
+      "endDate": "2025-01-26 03:00:00"
+    },
+    {
+      "id": "30379",
+      "title": "Opera Night 5/2025",
+      "slug": "opera-night-5-2025-88",
+      "category": "Charity",
+      "location": "9 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-05-05 22:00:00",
+      "endDate": "2025-05-07 01:00:00"
+    },
+    {
+      "id": "30347",
+      "title": "Opera Night 9/2025",
+      "slug": "opera-night-9-2025-56",
+      "category": "Exhibition",
+      "location": "17 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-09-01 20:00:00",
+      "endDate": "2025-09-03 23:00:00"
+    },
+    {
+      "id": "30408",
+      "title": "Poetry Reading 10/2025",
+      "slug": "poetry-reading-10-2025-117",
+      "category": "Music",
+      "location": "18 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-10-06 21:00:00",
+      "endDate": "2025-10-07 00:00:00"
+    },
+    {
+      "id": "30312",
+      "title": "Poetry Reading 10/2025",
+      "slug": "poetry-reading-10-2025-21",
+      "category": "Market",
+      "location": "2 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-10-22 15:00:00",
+      "endDate": "2025-10-22 23:00:00"
+    },
+    {
+      "id": "30376",
+      "title": "Poetry Reading 2/2025",
+      "slug": "poetry-reading-2-2025-85",
+      "category": "Sports",
+      "location": "6 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-02-02 20:00:00",
+      "endDate": "2025-02-03 23:00:00"
+    },
+    {
+      "id": "30344",
+      "title": "Poetry Reading 6/2025",
+      "slug": "poetry-reading-6-2025-53",
+      "category": "Educational",
+      "location": "14 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-06-26 17:00:00",
+      "endDate": "2025-06-29 01:00:00"
+    },
+    {
+      "id": "30350",
+      "title": "Pop Concert 12/2025",
+      "slug": "pop-concert-12-2025-59",
+      "category": "Tour",
+      "location": "20 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-12-05 00:00:00",
+      "endDate": "2025-12-07 03:00:00"
+    },
+    {
+      "id": "30318",
+      "title": "Pop Concert 4/2025",
+      "slug": "pop-concert-4-2025-27",
+      "category": "Music",
+      "location": "8 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-04-28 21:00:00",
+      "endDate": "2025-04-29 00:00:00"
+    },
+    {
+      "id": "30382",
+      "title": "Pop Concert 8/2025",
+      "slug": "pop-concert-8-2025-91",
+      "category": "Concert",
+      "location": "12 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-08-08 15:00:00",
+      "endDate": "2025-08-09 23:00:00"
+    },
+    {
+      "id": "30385",
+      "title": "Reggae Festival 11/2025",
+      "slug": "reggae-festival-11-2025-94",
+      "category": "Workshop",
+      "location": "15 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-11-11 19:00:00",
+      "endDate": "2025-11-13 03:00:00"
+    },
+    {
+      "id": "30353",
+      "title": "Reggae Festival 3/2025",
+      "slug": "reggae-festival-3-2025-62",
+      "category": "Theatre",
+      "location": "3 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-03-07 17:00:00",
+      "endDate": "2025-03-10 00:00:00"
+    },
+    {
+      "id": "30321",
+      "title": "Reggae Festival 7/2025",
+      "slug": "reggae-festival-7-2025-30",
+      "category": "Family",
+      "location": "11 Queen Victoria Square, Hull, HU1 4XX",
+      "startDate": "2025-07-03 14:00:00",
+      "endDate": "2025-07-03 22:00:00"
+    },
+    {
+      "id": "30349",
+      "title": "Rock Concert 11/2025",
+      "slug": "rock-concert-11-2025-58",
+      "category": "Workshop",
+      "location": "19 Queen Victoria Square, Hull, HU1 5XX",
+      "startDate": "2025-11-03 23:00:00",
+      "endDate": "2025-11-05 02:00:00"
+    },
+    {
+      "id": "30317",
+      "title": "Rock Concert 3/2025",
+      "slug": "rock-concert-3-2025-26",
+      "category": "Theatre",
+      "location": "7 Queen Victoria Square, Hull, HU1 9XX",
+      "startDate": "2025-03-27 20:00:00",
+      "endDate": "2025-03-29 23:00:00"
+    },
+    {
+      "id": "30381",
+      "title": "Rock Concert 7/2025",
+      "slug": "rock-concert-7-2025-90",
+      "category": "Festival",
+      "location": "11 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-07-07 14:00:00",
+      "endDate": "2025-07-07 22:00:00"
+    },
+    {
+      "id": "30397",
+      "title": "Theatre Performance 11/2025",
+      "slug": "theatre-performance-11-2025-106",
+      "category": "Charity",
+      "location": "7 Queen Victoria Square, Hull, HU1 8XX",
+      "startDate": "2025-11-23 21:00:00",
+      "endDate": "2025-11-25 00:00:00"
+    },
+    {
+      "id": "30301",
+      "title": "Theatre Performance 11/2025",
+      "slug": "theatre-performance-11-2025-10",
+      "category": "Art",
+      "location": "11 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-11-11 15:00:00",
+      "endDate": "2025-11-12 23:00:00"
+    },
+    {
+      "id": "30365",
+      "title": "Theatre Performance 3/2025",
+      "slug": "theatre-performance-3-2025-74",
+      "category": "Exhibition",
+      "location": "15 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-03-19 18:00:00",
+      "endDate": "2025-03-22 02:00:00"
+    },
+    {
+      "id": "30333",
+      "title": "Theatre Performance 7/2025",
+      "slug": "theatre-performance-7-2025-42",
+      "category": "Performance",
+      "location": "3 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-07-15 16:00:00",
+      "endDate": "2025-07-16 00:00:00"
+    },
+    {
+      "id": "30337",
+      "title": "Vintage Market 11/2025",
+      "slug": "vintage-market-11-2025-46",
+      "category": "Art",
+      "location": "7 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-11-19 21:00:00",
+      "endDate": "2025-11-21 00:00:00"
+    },
+    {
+      "id": "30401",
+      "title": "Vintage Market 3/2025",
+      "slug": "vintage-market-3-2025-110",
+      "category": "Exhibition",
+      "location": "11 Queen Victoria Square, Hull, HU1 3XX",
+      "startDate": "2025-03-27 14:00:00",
+      "endDate": "2025-03-29 22:00:00"
+    },
+    {
+      "id": "30305",
+      "title": "Vintage Market 3/2025",
+      "slug": "vintage-market-3-2025-14",
+      "category": "Cultural",
+      "location": "15 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-03-15 18:00:00",
+      "endDate": "2025-03-18 02:00:00"
+    },
+    {
+      "id": "30369",
+      "title": "Vintage Market 7/2025",
+      "slug": "vintage-market-7-2025-78",
+      "category": "Performance",
+      "location": "19 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-07-23 22:00:00",
+      "endDate": "2025-07-24 01:00:00"
+    },
+    {
+      "id": "30373",
+      "title": "Workshop Series 11/2025",
+      "slug": "workshop-series-11-2025-82",
+      "category": "Art",
+      "location": "3 Queen Victoria Square, Hull, HU1 2XX",
+      "startDate": "2025-11-27 17:00:00",
+      "endDate": "2025-11-29 01:00:00"
+    },
+    {
+      "id": "30341",
+      "title": "Workshop Series 3/2025",
+      "slug": "workshop-series-3-2025-50",
+      "category": "Cultural",
+      "location": "11 Queen Victoria Square, Hull, HU1 6XX",
+      "startDate": "2025-03-23 14:00:00",
+      "endDate": "2025-03-25 22:00:00"
+    },
+    {
+      "id": "30405",
+      "title": "Workshop Series 7/2025",
+      "slug": "workshop-series-7-2025-114",
+      "category": "Performance",
+      "location": "15 Queen Victoria Square, Hull, HU1 7XX",
+      "startDate": "2025-07-03 18:00:00",
+      "endDate": "2025-07-04 02:00:00"
+    },
+    {
+      "id": "30309",
+      "title": "Workshop Series 7/2025",
+      "slug": "workshop-series-7-2025-18",
+      "category": "Festival",
+      "location": "19 Queen Victoria Square, Hull, HU1 1XX",
+      "startDate": "2025-07-19 22:00:00",
+      "endDate": "2025-07-20 01:00:00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tslug\tcategory\tlocation\tstartDate\tendDate\n30363\tArt Exhibition 1/2025\tart-exhibition-1-2025-72\tFestival\t13 Queen Victoria Square, Hull, HU1 1XX\t2025-01-17 17:00:00\t2025-01-18 01:00:00\n30331\tArt Exhibition 5/2025\tart-exhibition-5-2025-40\tWorkshop\t1 Queen Victoria Square, Hull, HU1 5XX\t2025-05-13 14:00:00\t2025-05-14 22:00:00\n30395\tArt Exhibition 9/2025\tart-exhibition-9-2025-104\tCultural\t5 Queen Victoria Square, Hull, HU1 6XX\t2025-09-21 18:00:00\t2025-09-24 02:00:00\n30299\tArt Exhibition 9/2025\tart-exhibition-9-2025-8\tTheatre\t9 Queen Victoria Square, Hull, HU1 9XX\t2025-09-09 22:00:00\t2025-09-12 01:00:00\n30384\tBlues Night 10/2025\tblues-night-10-2025-93\tMarket\t14 Queen Victoria Square, Hull, HU1 4XX\t2025-10-10 17:00:00\t2025-10-11 01:00:00\n30352\tBlues Night 2/2025\tblues-night-2-2025-61\tComedy\t2 Queen Victoria Square, Hull, HU1 8XX\t2025-02-06 16:00:00\t2025-02-08 00:00:00\n30320\tBlues Night 6/2025\tblues-night-6-2025-29\tFood & Drink\t10 Queen Victoria Square, Hull, HU1 3XX\t2025-06-02 23:00:00\t2025-06-05 02:00:00\n30313\tBook Launch 11/2025\tbook-launch-11-2025-22\tWorkshop\t3 Queen Victoria Square, Hull, HU1 5XX\t2025-11-23 17:00:00\t2025-11-25 01:00:00\n30409\tBook Launch 11/2025\tbook-launch-11-2025-118\tArt\t19 Queen Victoria Square, Hull, HU1 2XX\t2025-11-07 23:00:00\t2025-11-09 02:00:00\n30377\tBook Launch 3/2025\tbook-launch-3-2025-86\tCultural\t7 Queen Victoria Square, Hull, HU1 6XX\t2025-03-03 21:00:00\t2025-03-06 00:00:00\n30345\tBook Launch 7/2025\tbook-launch-7-2025-54\tFestival\t15 Queen Victoria Square, Hull, HU1 1XX\t2025-07-27 18:00:00\t2025-07-28 02:00:00\n30338\tCar Boot Sale 12/2025\tcar-boot-sale-12-2025-47\tFood & Drink\t8 Queen Victoria Square, Hull, HU1 3XX\t2025-12-20 22:00:00\t2025-12-23 01:00:00\n30402\tCar Boot Sale 4/2025\tcar-boot-sale-4-2025-111\tMarket\t12 Queen Victoria Square, Hull, HU1 4XX\t2025-04-28 15:00:00\t2025-04-28 23:00:00\n30306\tCar Boot Sale 4/2025\tcar-boot-sale-4-2025-15\tCommunity\t16 Queen Victoria Square, Hull, HU1 7XX\t2025-04-16 19:00:00\t2025-04-16 22:00:00\n30370\tCar Boot Sale 8/2025\tcar-boot-sale-8-2025-79\tComedy\t20 Queen Victoria Square, Hull, HU1 8XX\t2025-08-24 23:00:00\t2025-08-26 02:00:00\n30339\tCharity Run 1/2025\tcharity-run-1-2025-48\tFamily\t9 Queen Victoria Square, Hull, HU1 4XX\t2025-01-21 23:00:00\t2025-01-22 02:00:00\n30307\tCharity Run 5/2025\tcharity-run-5-2025-16\tCharity\t17 Queen Victoria Square, Hull, HU1 8XX\t2025-05-17 20:00:00\t2025-05-18 23:00:00\n30403\tCharity Run 5/2025\tcharity-run-5-2025-112\tWorkshop\t13 Queen Victoria Square, Hull, HU1 5XX\t2025-05-01 16:00:00\t2025-05-03 00:00:00\n30371\tCharity Run 9/2025\tcharity-run-9-2025-80\tTheatre\t1 Queen Victoria Square, Hull, HU1 9XX\t2025-09-25 14:00:00\t2025-09-27 22:00:00\n30361\tChristmas Markets 11/2025\tchristmas-markets-11-2025-70\tCharity\t11 Queen Victoria Square, Hull, HU1 8XX\t2025-11-15 15:00:00\t2025-11-16 23:00:00\n30329\tChristmas Markets 3/2025\tchristmas-markets-3-2025-38\tExhibition\t19 Queen Victoria Square, Hull, HU1 3XX\t2025-03-11 22:00:00\t2025-03-14 01:00:00\n30393\tChristmas Markets 7/2025\tchristmas-markets-7-2025-102\tFamily\t3 Queen Victoria Square, Hull, HU1 4XX\t2025-07-19 16:00:00\t2025-07-20 00:00:00\n30297\tChristmas Markets 7/2025\tchristmas-markets-7-2025-6\tPerformance\t7 Queen Victoria Square, Hull, HU1 7XX\t2025-07-07 20:00:00\t2025-07-07 23:00:00\n30348\tClassical Concert 10/2025\tclassical-concert-10-2025-57\tMarket\t18 Queen Victoria Square, Hull, HU1 4XX\t2025-10-02 21:00:00\t2025-10-03 00:00:00\n30316\tClassical Concert 2/2025\tclassical-concert-2-2025-25\tComedy\t6 Queen Victoria Square, Hull, HU1 8XX\t2025-02-26 20:00:00\t2025-02-27 23:00:00\n30380\tClassical Concert 6/2025\tclassical-concert-6-2025-89\tEducational\t10 Queen Victoria Square, Hull, HU1 9XX\t2025-06-06 23:00:00\t2025-06-09 02:00:00\n30302\tComedy Night 12/2025\tcomedy-night-12-2025-11\tFood & Drink\t12 Queen Victoria Square, Hull, HU1 3XX\t2025-12-12 16:00:00\t2025-12-15 00:00:00\n30398\tComedy Night 12/2025\tcomedy-night-12-2025-107\tEducational\t8 Queen Victoria Square, Hull, HU1 9XX\t2025-12-24 22:00:00\t2025-12-27 01:00:00\n30366\tComedy Night 4/2025\tcomedy-night-4-2025-75\tMarket\t16 Queen Victoria Square, Hull, HU1 4XX\t2025-04-20 19:00:00\t2025-04-20 22:00:00\n30334\tComedy Night 8/2025\tcomedy-night-8-2025-43\tComedy\t4 Queen Victoria Square, Hull, HU1 8XX\t2025-08-16 17:00:00\t2025-08-18 01:00:00\n30372\tCommunity Event 10/2025\tcommunity-event-10-2025-81\tMusic\t2 Queen Victoria Square, Hull, HU1 1XX\t2025-10-26 15:00:00\t2025-10-26 23:00:00\n30340\tCommunity Event 2/2025\tcommunity-event-2-2025-49\tSports\t10 Queen Victoria Square, Hull, HU1 5XX\t2025-02-23 00:00:00\t2025-02-24 03:00:00\n30404\tCommunity Event 6/2025\tcommunity-event-6-2025-113\tTour\t14 Queen Victoria Square, Hull, HU1 6XX\t2025-06-02 17:00:00\t2025-06-05 01:00:00\n30308\tCommunity Event 6/2025\tcommunity-event-6-2025-17\tEducational\t18 Queen Victoria Square, Hull, HU1 9XX\t2025-06-18 21:00:00\t2025-06-21 00:00:00\n30399\tCraft Fair 1/2025\tcraft-fair-1-2025-108\tFestival\t9 Queen Victoria Square, Hull, HU1 1XX\t2025-01-25 23:00:00\t2025-01-26 02:00:00\n30303\tCraft Fair 1/2025\tcraft-fair-1-2025-12\tFamily\t13 Queen Victoria Square, Hull, HU1 4XX\t2025-01-13 17:00:00\t2025-01-14 01:00:00\n30367\tCraft Fair 5/2025\tcraft-fair-5-2025-76\tWorkshop\t17 Queen Victoria Square, Hull, HU1 5XX\t2025-05-21 20:00:00\t2025-05-22 23:00:00\n30335\tCraft Fair 9/2025\tcraft-fair-9-2025-44\tTheatre\t5 Queen Victoria Square, Hull, HU1 9XX\t2025-09-17 18:00:00\t2025-09-20 02:00:00\n30314\tDance Performance 12/2025\tdance-performance-12-2025-23\tTour\t4 Queen Victoria Square, Hull, HU1 6XX\t2025-12-24 18:00:00\t2025-12-27 02:00:00\n30410\tDance Performance 12/2025\tdance-performance-12-2025-119\tFood & Drink\t20 Queen Victoria Square, Hull, HU1 3XX\t2025-12-09 00:00:00\t2025-12-11 03:00:00\n30378\tDance Performance 4/2025\tdance-performance-4-2025-87\tCommunity\t8 Queen Victoria Square, Hull, HU1 7XX\t2025-04-04 21:00:00\t2025-04-05 00:00:00\n30346\tDance Performance 8/2025\tdance-performance-8-2025-55\tConcert\t16 Queen Victoria Square, Hull, HU1 2XX\t2025-08-28 19:00:00\t2025-08-29 22:00:00\n30386\tElectronic Music Night 12/2025\telectronic-music-night-12-2025-95\tTour\t16 Queen Victoria Square, Hull, HU1 6XX\t2025-12-12 20:00:00\t2025-12-14 23:00:00\n30354\tElectronic Music Night 4/2025\telectronic-music-night-4-2025-63\tMusic\t4 Queen Victoria Square, Hull, HU1 1XX\t2025-04-08 17:00:00\t2025-04-09 01:00:00\n30322\tElectronic Music Night 8/2025\telectronic-music-night-8-2025-31\tSports\t12 Queen Victoria Square, Hull, HU1 5XX\t2025-08-04 15:00:00\t2025-08-05 23:00:00\n30336\tFarmers Market 10/2025\tfarmers-market-10-2025-45\tMusic\t6 Queen Victoria Square, Hull, HU1 1XX\t2025-10-18 19:00:00\t2025-10-18 22:00:00\n30400\tFarmers Market 2/2025\tfarmers-market-2-2025-109\tConcert\t10 Queen Victoria Square, Hull, HU1 2XX\t2025-02-27 00:00:00\t2025-02-28 03:00:00\n30304\tFarmers Market 2/2025\tfarmers-market-2-2025-13\tSports\t14 Queen Victoria Square, Hull, HU1 5XX\t2025-02-14 18:00:00\t2025-02-16 02:00:00\n30368\tFarmers Market 6/2025\tfarmers-market-6-2025-77\tTour\t18 Queen Victoria Square, Hull, HU1 6XX\t2025-06-22 21:00:00\t2025-06-25 00:00:00\n30375\tFilm Screening 1/2025\tfilm-screening-1-2025-84\tFamily\t5 Queen Victoria Square, Hull, HU1 4XX\t2025-01-01 19:00:00\t2025-01-02 03:00:00\n30343\tFilm Screening 5/2025\tfilm-screening-5-2025-52\tCharity\t13 Queen Victoria Square, Hull, HU1 8XX\t2025-05-25 16:00:00\t2025-05-27 00:00:00\n30311\tFilm Screening 9/2025\tfilm-screening-9-2025-20\tExhibition\t1 Queen Victoria Square, Hull, HU1 3XX\t2025-09-21 14:00:00\t2025-09-23 22:00:00\n30407\tFilm Screening 9/2025\tfilm-screening-9-2025-116\tTheatre\t17 Queen Victoria Square, Hull, HU1 9XX\t2025-09-05 20:00:00\t2025-09-07 23:00:00\n30351\tFolk Festival 1/2025\tfolk-festival-1-2025-60\tPerformance\t1 Queen Victoria Square, Hull, HU1 7XX\t2025-01-05 15:00:00\t2025-01-05 23:00:00\n30319\tFolk Festival 5/2025\tfolk-festival-5-2025-28\tArt\t9 Queen Victoria Square, Hull, HU1 2XX\t2025-05-01 22:00:00\t2025-05-03 01:00:00\n30383\tFolk Festival 9/2025\tfolk-festival-9-2025-92\tExhibition\t13 Queen Victoria Square, Hull, HU1 3XX\t2025-09-09 16:00:00\t2025-09-12 00:00:00\n30362\tFood Festival 12/2025\tfood-festival-12-2025-71\tEducational\t12 Queen Victoria Square, Hull, HU1 9XX\t2025-12-16 16:00:00\t2025-12-19 00:00:00\n30330\tFood Festival 4/2025\tfood-festival-4-2025-39\tMarket\t20 Queen Victoria Square, Hull, HU1 4XX\t2025-04-12 23:00:00\t2025-04-13 02:00:00\n30298\tFood Festival 8/2025\tfood-festival-8-2025-7\tComedy\t8 Queen Victoria Square, Hull, HU1 8XX\t2025-08-08 21:00:00\t2025-08-10 00:00:00\n30394\tFood Festival 8/2025\tfood-festival-8-2025-103\tSports\t4 Queen Victoria Square, Hull, HU1 5XX\t2025-08-20 17:00:00\t2025-08-22 01:00:00\n30374\tGuided Tour 12/2025\tguided-tour-12-2025-83\tFood & Drink\t4 Queen Victoria Square, Hull, HU1 3XX\t2025-12-28 18:00:00\t2025-12-31 02:00:00\n30342\tGuided Tour 4/2025\tguided-tour-4-2025-51\tCommunity\t12 Queen Victoria Square, Hull, HU1 7XX\t2025-04-24 15:00:00\t2025-04-24 23:00:00\n30406\tGuided Tour 8/2025\tguided-tour-8-2025-115\tComedy\t16 Queen Victoria Square, Hull, HU1 8XX\t2025-08-04 19:00:00\t2025-08-05 22:00:00\n30310\tGuided Tour 8/2025\tguided-tour-8-2025-19\tConcert\t20 Queen Victoria Square, Hull, HU1 2XX\t2025-08-20 23:00:00\t2025-08-22 02:00:00\n30360\tHull Fair 10/2025\thull-fair-10-2025-69\tCommunity\t10 Queen Victoria Square, Hull, HU1 7XX\t2025-10-14 23:00:00\t2025-10-15 02:00:00\n30328\tHull Fair 2/2025\thull-fair-2-2025-37\tConcert\t18 Queen Victoria Square, Hull, HU1 2XX\t2025-02-10 22:00:00\t2025-02-12 01:00:00\n30296\tHull Fair 6/2025\thull-fair-6-2025-5\tTour\t6 Queen Victoria Square, Hull, HU1 6XX\t2025-06-06 19:00:00\t2025-06-08 22:00:00\n30392\tHull Fair 6/2025\thull-fair-6-2025-101\tFood & Drink\t2 Queen Victoria Square, Hull, HU1 3XX\t2025-06-18 15:00:00\t2025-06-20 23:00:00\n30291\tHull Freedom Festival 1/2025\thull-freedom-festival-1-2025-0\tFestival\t1 Queen Victoria Square, Hull, HU1 1XX\t2025-01-01 15:00:00\t2025-01-01 23:00:00\n30387\tHull Freedom Festival 1/2025\thull-freedom-festival-1-2025-96\tPerformance\t17 Queen Victoria Square, Hull, HU1 7XX\t2025-01-13 21:00:00\t2025-01-14 00:00:00\n30355\tHull Freedom Festival 5/2025\thull-freedom-festival-5-2025-64\tArt\t5 Queen Victoria Square, Hull, HU1 2XX\t2025-05-09 18:00:00\t2025-05-11 02:00:00\n30323\tHull Freedom Festival 9/2025\thull-freedom-festival-9-2025-32\tCultural\t13 Queen Victoria Square, Hull, HU1 6XX\t2025-09-05 16:00:00\t2025-09-08 00:00:00\n30326\tHull Jazz Festival 12/2025\thull-jazz-festival-12-2025-35\tEducational\t16 Queen Victoria Square, Hull, HU1 9XX\t2025-12-08 20:00:00\t2025-12-10 23:00:00\n30294\tHull Jazz Festival 4/2025\thull-jazz-festival-4-2025-3\tMarket\t4 Queen Victoria Square, Hull, HU1 4XX\t2025-04-04 17:00:00\t2025-04-05 01:00:00\n30390\tHull Jazz Festival 4/2025\thull-jazz-festival-4-2025-99\tMusic\t20 Queen Victoria Square, Hull, HU1 1XX\t2025-04-16 23:00:00\t2025-04-17 02:00:00\n30358\tHull Jazz Festival 8/2025\thull-jazz-festival-8-2025-67\tSports\t8 Queen Victoria Square, Hull, HU1 5XX\t2025-08-12 21:00:00\t2025-08-14 00:00:00\n30327\tHull Literature Festival 1/2025\thull-literature-festival-1-2025-36\tFestival\t17 Queen Victoria Square, Hull, HU1 1XX\t2025-01-09 21:00:00\t2025-01-10 00:00:00\n30295\tHull Literature Festival 5/2025\thull-literature-festival-5-2025-4\tWorkshop\t5 Queen Victoria Square, Hull, HU1 5XX\t2025-05-05 18:00:00\t2025-05-07 02:00:00\n30391\tHull Literature Festival 5/2025\thull-literature-festival-5-2025-100\tArt\t1 Queen Victoria Square, Hull, HU1 2XX\t2025-05-17 14:00:00\t2025-05-18 22:00:00\n30359\tHull Literature Festival 9/2025\thull-literature-festival-9-2025-68\tCultural\t9 Queen Victoria Square, Hull, HU1 6XX\t2025-09-13 22:00:00\t2025-09-16 01:00:00\n30324\tHull Pride 10/2025\thull-pride-10-2025-33\tCommunity\t14 Queen Victoria Square, Hull, HU1 7XX\t2025-10-06 17:00:00\t2025-10-07 01:00:00\n30292\tHull Pride 2/2025\thull-pride-2-2025-1\tConcert\t2 Queen Victoria Square, Hull, HU1 2XX\t2025-02-02 16:00:00\t2025-02-04 00:00:00\n30388\tHull Pride 2/2025\thull-pride-2-2025-97\tComedy\t18 Queen Victoria Square, Hull, HU1 8XX\t2025-02-14 22:00:00\t2025-02-16 01:00:00\n30356\tHull Pride 6/2025\thull-pride-6-2025-65\tFood & Drink\t6 Queen Victoria Square, Hull, HU1 3XX\t2025-06-10 19:00:00\t2025-06-12 22:00:00\n30325\tHumber Street Sesh 11/2025\thumber-street-sesh-11-2025-34\tCharity\t15 Queen Victoria Square, Hull, HU1 8XX\t2025-11-07 19:00:00\t2025-11-09 03:00:00\n30293\tHumber Street Sesh 3/2025\thumber-street-sesh-3-2025-2\tExhibition\t3 Queen Victoria Square, Hull, HU1 3XX\t2025-03-03 17:00:00\t2025-03-06 01:00:00\n30389\tHumber Street Sesh 3/2025\thumber-street-sesh-3-2025-98\tTheatre\t19 Queen Victoria Square, Hull, HU1 9XX\t2025-03-15 22:00:00\t2025-03-18 01:00:00\n30357\tHumber Street Sesh 7/2025\thumber-street-sesh-7-2025-66\tFamily\t7 Queen Victoria Square, Hull, HU1 4XX\t2025-07-11 20:00:00\t2025-07-11 23:00:00\n30300\tMusic Concert 10/2025\tmusic-concert-10-2025-9\tMusic\t10 Queen Victoria Square, Hull, HU1 1XX\t2025-10-10 23:00:00\t2025-10-11 02:00:00\n30396\tMusic Concert 10/2025\tmusic-concert-10-2025-105\tCommunity\t6 Queen Victoria Square, Hull, HU1 7XX\t2025-10-22 19:00:00\t2025-10-22 22:00:00\n30364\tMusic Concert 2/2025\tmusic-concert-2-2025-73\tConcert\t14 Queen Victoria Square, Hull, HU1 2XX\t2025-02-18 18:00:00\t2025-02-20 02:00:00\n30332\tMusic Concert 6/2025\tmusic-concert-6-2025-41\tTour\t2 Queen Victoria Square, Hull, HU1 6XX\t2025-06-14 15:00:00\t2025-06-16 23:00:00\n30315\tOpera Night 1/2025\topera-night-1-2025-24\tPerformance\t5 Queen Victoria Square, Hull, HU1 7XX\t2025-01-25 19:00:00\t2025-01-26 03:00:00\n30379\tOpera Night 5/2025\topera-night-5-2025-88\tCharity\t9 Queen Victoria Square, Hull, HU1 8XX\t2025-05-05 22:00:00\t2025-05-07 01:00:00\n30347\tOpera Night 9/2025\topera-night-9-2025-56\tExhibition\t17 Queen Victoria Square, Hull, HU1 3XX\t2025-09-01 20:00:00\t2025-09-03 23:00:00\n30408\tPoetry Reading 10/2025\tpoetry-reading-10-2025-117\tMusic\t18 Queen Victoria Square, Hull, HU1 1XX\t2025-10-06 21:00:00\t2025-10-07 00:00:00\n30312\tPoetry Reading 10/2025\tpoetry-reading-10-2025-21\tMarket\t2 Queen Victoria Square, Hull, HU1 4XX\t2025-10-22 15:00:00\t2025-10-22 23:00:00\n30376\tPoetry Reading 2/2025\tpoetry-reading-2-2025-85\tSports\t6 Queen Victoria Square, Hull, HU1 5XX\t2025-02-02 20:00:00\t2025-02-03 23:00:00\n30344\tPoetry Reading 6/2025\tpoetry-reading-6-2025-53\tEducational\t14 Queen Victoria Square, Hull, HU1 9XX\t2025-06-26 17:00:00\t2025-06-29 01:00:00\n30350\tPop Concert 12/2025\tpop-concert-12-2025-59\tTour\t20 Queen Victoria Square, Hull, HU1 6XX\t2025-12-05 00:00:00\t2025-12-07 03:00:00\n30318\tPop Concert 4/2025\tpop-concert-4-2025-27\tMusic\t8 Queen Victoria Square, Hull, HU1 1XX\t2025-04-28 21:00:00\t2025-04-29 00:00:00\n30382\tPop Concert 8/2025\tpop-concert-8-2025-91\tConcert\t12 Queen Victoria Square, Hull, HU1 2XX\t2025-08-08 15:00:00\t2025-08-09 23:00:00\n30385\tReggae Festival 11/2025\treggae-festival-11-2025-94\tWorkshop\t15 Queen Victoria Square, Hull, HU1 5XX\t2025-11-11 19:00:00\t2025-11-13 03:00:00\n30353\tReggae Festival 3/2025\treggae-festival-3-2025-62\tTheatre\t3 Queen Victoria Square, Hull, HU1 9XX\t2025-03-07 17:00:00\t2025-03-10 00:00:00\n30321\tReggae Festival 7/2025\treggae-festival-7-2025-30\tFamily\t11 Queen Victoria Square, Hull, HU1 4XX\t2025-07-03 14:00:00\t2025-07-03 22:00:00\n30349\tRock Concert 11/2025\trock-concert-11-2025-58\tWorkshop\t19 Queen Victoria Square, Hull, HU1 5XX\t2025-11-03 23:00:00\t2025-11-05 02:00:00\n30317\tRock Concert 3/2025\trock-concert-3-2025-26\tTheatre\t7 Queen Victoria Square, Hull, HU1 9XX\t2025-03-27 20:00:00\t2025-03-29 23:00:00\n30381\tRock Concert 7/2025\trock-concert-7-2025-90\tFestival\t11 Queen Victoria Square, Hull, HU1 1XX\t2025-07-07 14:00:00\t2025-07-07 22:00:00\n30397\tTheatre Performance 11/2025\ttheatre-performance-11-2025-106\tCharity\t7 Queen Victoria Square, Hull, HU1 8XX\t2025-11-23 21:00:00\t2025-11-25 00:00:00\n30301\tTheatre Performance 11/2025\ttheatre-performance-11-2025-10\tArt\t11 Queen Victoria Square, Hull, HU1 2XX\t2025-11-11 15:00:00\t2025-11-12 23:00:00\n30365\tTheatre Performance 3/2025\ttheatre-performance-3-2025-74\tExhibition\t15 Queen Victoria Square, Hull, HU1 3XX\t2025-03-19 18:00:00\t2025-03-22 02:00:00\n30333\tTheatre Performance 7/2025\ttheatre-performance-7-2025-42\tPerformance\t3 Queen Victoria Square, Hull, HU1 7XX\t2025-07-15 16:00:00\t2025-07-16 00:00:00\n30337\tVintage Market 11/2025\tvintage-market-11-2025-46\tArt\t7 Queen Victoria Square, Hull, HU1 2XX\t2025-11-19 21:00:00\t2025-11-21 00:00:00\n30401\tVintage Market 3/2025\tvintage-market-3-2025-110\tExhibition\t11 Queen Victoria Square, Hull, HU1 3XX\t2025-03-27 14:00:00\t2025-03-29 22:00:00\n30305\tVintage Market 3/2025\tvintage-market-3-2025-14\tCultural\t15 Queen Victoria Square, Hull, HU1 6XX\t2025-03-15 18:00:00\t2025-03-18 02:00:00\n30369\tVintage Market 7/2025\tvintage-market-7-2025-78\tPerformance\t19 Queen Victoria Square, Hull, HU1 7XX\t2025-07-23 22:00:00\t2025-07-24 01:00:00\n30373\tWorkshop Series 11/2025\tworkshop-series-11-2025-82\tArt\t3 Queen Victoria Square, Hull, HU1 2XX\t2025-11-27 17:00:00\t2025-11-29 01:00:00\n30341\tWorkshop Series 3/2025\tworkshop-series-3-2025-50\tCultural\t11 Queen Victoria Square, Hull, HU1 6XX\t2025-03-23 14:00:00\t2025-03-25 22:00:00\n30405\tWorkshop Series 7/2025\tworkshop-series-7-2025-114\tPerformance\t15 Queen Victoria Square, Hull, HU1 7XX\t2025-07-03 18:00:00\t2025-07-04 02:00:00\n30309\tWorkshop Series 7/2025\tworkshop-series-7-2025-18\tFestival\t19 Queen Victoria Square, Hull, HU1 1XX\t2025-07-19 22:00:00\t2025-07-20 01:00:00\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

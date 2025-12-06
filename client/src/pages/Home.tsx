@@ -11,9 +11,18 @@ import { CurrencyConverter } from "@/components/CurrencyConverter";
 import { Link } from "wouter";
 import { Calendar, MapPin, Utensils, Hotel, Ship, Search, ArrowRight, Star, Clock } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [, setLocation] = useLocation();
+  
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setLocation(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
   
   const { data: featuredAttractions, isLoading: attractionsLoading } = trpc.attractions.featured.useQuery({ limit: 6 });
   const { data: upcomingEvents, isLoading: eventsLoading } = trpc.events.upcoming.useQuery({ limit: 4 });
@@ -53,7 +62,7 @@ export default function Home() {
             
             {/* Modern Search Bar */}
             <div className="max-w-3xl mx-auto mt-12">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-strong p-3 flex flex-col sm:flex-row gap-3">
+              <form onSubmit={handleSearch} className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-strong p-3 flex flex-col sm:flex-row gap-3">
                 <div className="flex-1 flex items-center gap-3 px-4">
                   <Search className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                   <Input 
@@ -65,13 +74,13 @@ export default function Home() {
                   />
                 </div>
                 <Button 
-                  asChild 
+                  type="submit"
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium rounded-xl px-8 shadow-sm hover:shadow-md transition-all"
                 >
-                  <Link href={`/search?q=${encodeURIComponent(searchQuery)}`}><a>Search</a></Link>
+                  Search
                 </Button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

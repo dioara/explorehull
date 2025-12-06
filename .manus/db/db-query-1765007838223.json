@@ -1,0 +1,850 @@
+{
+  "query": "SELECT id, name, slug, cuisine, address FROM restaurants ORDER BY name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user aVmfAzGaFwUYThZ.03868022cba3 --database SGg5rWqvWgGGYNh8QMBiqU --execute SELECT id, name, slug, cuisine, address FROM restaurants ORDER BY name;",
+  "rows": [
+    {
+      "id": "30394",
+      "name": "Bar Chinese Cafe 63",
+      "slug": "bar-chinese-cafe-103",
+      "cuisine": "Chinese",
+      "address": "104 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30319",
+      "name": "Bar Chinese Kitchen",
+      "slug": "bar-chinese-kitchen-28",
+      "cuisine": "Chinese",
+      "address": "29 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30409",
+      "name": "Bar Fusion Bar 78",
+      "slug": "bar-fusion-bar-118",
+      "cuisine": "Fusion",
+      "address": "119 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30334",
+      "name": "Bar Fusion Bistro 3",
+      "slug": "bar-fusion-bistro-43",
+      "cuisine": "Fusion",
+      "address": "44 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30349",
+      "name": "Bar Japanese Grill 18",
+      "slug": "bar-japanese-grill-58",
+      "cuisine": "Japanese",
+      "address": "59 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30364",
+      "name": "Bar Pizza House 33",
+      "slug": "bar-pizza-house-73",
+      "cuisine": "Pizza",
+      "address": "74 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30304",
+      "name": "Bar Vietnamese Place",
+      "slug": "bar-vietnamese-place-13",
+      "cuisine": "Vietnamese",
+      "address": "14 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30379",
+      "name": "Bar Vietnamese Restaurant 48",
+      "slug": "bar-vietnamese-restaurant-88",
+      "cuisine": "Vietnamese",
+      "address": "89 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30397",
+      "name": "Bella French Diner 66",
+      "slug": "bella-french-diner-106",
+      "cuisine": "French",
+      "address": "107 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30322",
+      "name": "Bella French House",
+      "slug": "bella-french-house-31",
+      "cuisine": "French",
+      "address": "32 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30352",
+      "name": "Bella Greek Cafe 21",
+      "slug": "bella-greek-cafe-61",
+      "cuisine": "Greek",
+      "address": "62 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30367",
+      "name": "Bella Italian Bar 36",
+      "slug": "bella-italian-bar-76",
+      "cuisine": "Italian",
+      "address": "77 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30292",
+      "name": "Bella Italian Bistro",
+      "slug": "bella-italian-bistro-1",
+      "cuisine": "Italian",
+      "address": "2 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30382",
+      "name": "Bella Moroccan Eatery 51",
+      "slug": "bella-moroccan-eatery-91",
+      "cuisine": "Moroccan",
+      "address": "92 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30307",
+      "name": "Bella Moroccan Grill",
+      "slug": "bella-moroccan-grill-16",
+      "cuisine": "Moroccan",
+      "address": "17 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30337",
+      "name": "Bella Seafood Restaurant 6",
+      "slug": "bella-seafood-restaurant-46",
+      "cuisine": "Seafood",
+      "address": "47 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30358",
+      "name": "Bistro Caribbean Tavern 27",
+      "slug": "bistro-caribbean-tavern-67",
+      "cuisine": "Caribbean",
+      "address": "68 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30343",
+      "name": "Bistro Indian Brasserie 12",
+      "slug": "bistro-indian-brasserie-52",
+      "cuisine": "Indian",
+      "address": "53 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30298",
+      "name": "Bistro Mediterranean Eatery",
+      "slug": "bistro-mediterranean-eatery-7",
+      "cuisine": "Mediterranean",
+      "address": "8 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30373",
+      "name": "Bistro Mediterranean Inn 42",
+      "slug": "bistro-mediterranean-inn-82",
+      "cuisine": "Mediterranean",
+      "address": "83 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30313",
+      "name": "Bistro Steakhouse Diner",
+      "slug": "bistro-steakhouse-diner-22",
+      "cuisine": "Steakhouse",
+      "address": "23 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30388",
+      "name": "Bistro Steakhouse Place 57",
+      "slug": "bistro-steakhouse-place-97",
+      "cuisine": "Steakhouse",
+      "address": "98 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30403",
+      "name": "Bistro Turkish Kitchen 72",
+      "slug": "bistro-turkish-kitchen-112",
+      "cuisine": "Turkish",
+      "address": "113 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30328",
+      "name": "Bistro Turkish Lounge",
+      "slug": "bistro-turkish-lounge-37",
+      "cuisine": "Turkish",
+      "address": "38 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30344",
+      "name": "Cafe Chinese Tavern 13",
+      "slug": "cafe-chinese-tavern-53",
+      "cuisine": "Chinese",
+      "address": "54 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30359",
+      "name": "Cafe Fusion Inn 28",
+      "slug": "cafe-fusion-inn-68",
+      "cuisine": "Fusion",
+      "address": "69 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30299",
+      "name": "Cafe Japanese Diner",
+      "slug": "cafe-japanese-diner-8",
+      "cuisine": "Japanese",
+      "address": "9 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30374",
+      "name": "Cafe Japanese Place 43",
+      "slug": "cafe-japanese-place-83",
+      "cuisine": "Japanese",
+      "address": "84 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30389",
+      "name": "Cafe Pizza Kitchen 58",
+      "slug": "cafe-pizza-kitchen-98",
+      "cuisine": "Pizza",
+      "address": "99 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30314",
+      "name": "Cafe Pizza Lounge",
+      "slug": "cafe-pizza-lounge-23",
+      "cuisine": "Pizza",
+      "address": "24 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30404",
+      "name": "Cafe Vietnamese Bistro 73",
+      "slug": "cafe-vietnamese-bistro-113",
+      "cuisine": "Vietnamese",
+      "address": "114 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30329",
+      "name": "Cafe Vietnamese Brasserie",
+      "slug": "cafe-vietnamese-brasserie-38",
+      "cuisine": "Vietnamese",
+      "address": "39 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30341",
+      "name": "Casa British Diner 10",
+      "slug": "casa-british-diner-50",
+      "cuisine": "British",
+      "address": "51 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30356",
+      "name": "Casa Lebanese Lounge 25",
+      "slug": "casa-lebanese-lounge-65",
+      "cuisine": "Lebanese",
+      "address": "66 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30371",
+      "name": "Casa Mexican Brasserie 40",
+      "slug": "casa-mexican-brasserie-80",
+      "cuisine": "Mexican",
+      "address": "81 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30296",
+      "name": "Casa Mexican Cafe",
+      "slug": "casa-mexican-cafe-5",
+      "cuisine": "Mexican",
+      "address": "6 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30326",
+      "name": "Casa Spanish Eatery",
+      "slug": "casa-spanish-eatery-35",
+      "cuisine": "Spanish",
+      "address": "36 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30401",
+      "name": "Casa Spanish Inn 70",
+      "slug": "casa-spanish-inn-110",
+      "cuisine": "Spanish",
+      "address": "111 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30311",
+      "name": "Casa Vegan Bar",
+      "slug": "casa-vegan-bar-20",
+      "cuisine": "Vegan",
+      "address": "21 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30386",
+      "name": "Casa Vegan Tavern 55",
+      "slug": "casa-vegan-tavern-95",
+      "cuisine": "Vegan",
+      "address": "96 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30339",
+      "name": "El Bar 8",
+      "slug": "el-bar-48",
+      "cuisine": "Pizza",
+      "address": "49 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30399",
+      "name": "El Brasserie 68",
+      "slug": "el-brasserie-108",
+      "cuisine": "Japanese",
+      "address": "109 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30324",
+      "name": "El Cafe",
+      "slug": "el-cafe-33",
+      "cuisine": "Japanese",
+      "address": "34 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30369",
+      "name": "El Diner 38",
+      "slug": "el-diner-78",
+      "cuisine": "Chinese",
+      "address": "79 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30354",
+      "name": "El Eatery 23",
+      "slug": "el-eatery-63",
+      "cuisine": "Vietnamese",
+      "address": "64 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30294",
+      "name": "El House",
+      "slug": "el-house-3",
+      "cuisine": "Chinese",
+      "address": "4 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30384",
+      "name": "El Lounge 53",
+      "slug": "el-lounge-93",
+      "cuisine": "Fusion",
+      "address": "94 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30309",
+      "name": "El Restaurant",
+      "slug": "el-restaurant-18",
+      "cuisine": "Fusion",
+      "address": "19 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30347",
+      "name": "Grill French Kitchen 16",
+      "slug": "grill-french-kitchen-56",
+      "cuisine": "French",
+      "address": "57 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30377",
+      "name": "Grill Greek Grill 46",
+      "slug": "grill-greek-grill-86",
+      "cuisine": "Greek",
+      "address": "87 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30302",
+      "name": "Grill Greek Tavern",
+      "slug": "grill-greek-tavern-11",
+      "cuisine": "Greek",
+      "address": "12 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30392",
+      "name": "Grill Italian House 61",
+      "slug": "grill-italian-house-101",
+      "cuisine": "Italian",
+      "address": "102 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30317",
+      "name": "Grill Italian Inn",
+      "slug": "grill-italian-inn-26",
+      "cuisine": "Italian",
+      "address": "27 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30332",
+      "name": "Grill Moroccan Place 1",
+      "slug": "grill-moroccan-place-41",
+      "cuisine": "Moroccan",
+      "address": "42 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30407",
+      "name": "Grill Moroccan Restaurant 76",
+      "slug": "grill-moroccan-restaurant-116",
+      "cuisine": "Moroccan",
+      "address": "117 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30362",
+      "name": "Grill Seafood Bistro 31",
+      "slug": "grill-seafood-bistro-71",
+      "cuisine": "Seafood",
+      "address": "72 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30348",
+      "name": "House Bistro 17",
+      "slug": "house-bistro-57",
+      "cuisine": "Mediterranean",
+      "address": "58 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30408",
+      "name": "House Cafe 77",
+      "slug": "house-cafe-117",
+      "cuisine": "Caribbean",
+      "address": "118 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30363",
+      "name": "House Grill 32",
+      "slug": "house-grill-72",
+      "cuisine": "Steakhouse",
+      "address": "73 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30378",
+      "name": "House House 47",
+      "slug": "house-house-87",
+      "cuisine": "Turkish",
+      "address": "88 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30303",
+      "name": "House Inn",
+      "slug": "house-inn-12",
+      "cuisine": "Turkish",
+      "address": "13 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30333",
+      "name": "House Kitchen 2",
+      "slug": "house-kitchen-42",
+      "cuisine": "Caribbean",
+      "address": "43 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30318",
+      "name": "House Place",
+      "slug": "house-place-27",
+      "cuisine": "Indian",
+      "address": "28 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30393",
+      "name": "House Restaurant 62",
+      "slug": "house-restaurant-102",
+      "cuisine": "Indian",
+      "address": "103 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30391",
+      "name": "Kitchen British Grill 60",
+      "slug": "kitchen-british-grill-100",
+      "cuisine": "British",
+      "address": "101 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30316",
+      "name": "Kitchen British Tavern",
+      "slug": "kitchen-british-tavern-25",
+      "cuisine": "British",
+      "address": "26 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30406",
+      "name": "Kitchen Lebanese House 75",
+      "slug": "kitchen-lebanese-house-115",
+      "cuisine": "Lebanese",
+      "address": "116 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30331",
+      "name": "Kitchen Lebanese Inn",
+      "slug": "kitchen-lebanese-inn-40",
+      "cuisine": "Lebanese",
+      "address": "41 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30346",
+      "name": "Kitchen Mexican Place 15",
+      "slug": "kitchen-mexican-place-55",
+      "cuisine": "Mexican",
+      "address": "56 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30376",
+      "name": "Kitchen Spanish Bistro 45",
+      "slug": "kitchen-spanish-bistro-85",
+      "cuisine": "Spanish",
+      "address": "86 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30301",
+      "name": "Kitchen Spanish Brasserie",
+      "slug": "kitchen-spanish-brasserie-10",
+      "cuisine": "Spanish",
+      "address": "11 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30361",
+      "name": "Kitchen Vegan Kitchen 30",
+      "slug": "kitchen-vegan-kitchen-70",
+      "cuisine": "Vegan",
+      "address": "71 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30383",
+      "name": "La Caribbean Diner 52",
+      "slug": "la-caribbean-diner-92",
+      "cuisine": "Caribbean",
+      "address": "93 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30308",
+      "name": "La Caribbean House",
+      "slug": "la-caribbean-house-17",
+      "cuisine": "Caribbean",
+      "address": "18 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30368",
+      "name": "La Indian Eatery 37",
+      "slug": "la-indian-eatery-77",
+      "cuisine": "Indian",
+      "address": "78 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30293",
+      "name": "La Indian Grill",
+      "slug": "la-indian-grill-2",
+      "cuisine": "Indian",
+      "address": "3 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30398",
+      "name": "La Mediterranean Lounge 67",
+      "slug": "la-mediterranean-lounge-107",
+      "cuisine": "Mediterranean",
+      "address": "108 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30323",
+      "name": "La Mediterranean Restaurant",
+      "slug": "la-mediterranean-restaurant-32",
+      "cuisine": "Mediterranean",
+      "address": "33 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30338",
+      "name": "La Steakhouse Cafe 7",
+      "slug": "la-steakhouse-cafe-47",
+      "cuisine": "Steakhouse",
+      "address": "48 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30353",
+      "name": "La Turkish Bar 22",
+      "slug": "la-turkish-bar-62",
+      "cuisine": "Turkish",
+      "address": "63 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30325",
+      "name": "Le American Bar",
+      "slug": "le-american-bar-34",
+      "cuisine": "American",
+      "address": "35 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30400",
+      "name": "Le American Tavern 69",
+      "slug": "le-american-tavern-109",
+      "cuisine": "American",
+      "address": "110 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30340",
+      "name": "Le Burgers Eatery 9",
+      "slug": "le-burgers-eatery-49",
+      "cuisine": "Burgers",
+      "address": "50 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30355",
+      "name": "Le Korean Diner 24",
+      "slug": "le-korean-diner-64",
+      "cuisine": "Korean",
+      "address": "65 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30370",
+      "name": "Le Thai Lounge 39",
+      "slug": "le-thai-lounge-79",
+      "cuisine": "Thai",
+      "address": "80 Humber Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30295",
+      "name": "Le Thai Restaurant",
+      "slug": "le-thai-restaurant-4",
+      "cuisine": "Thai",
+      "address": "5 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30385",
+      "name": "Le Vegetarian Brasserie 54",
+      "slug": "le-vegetarian-brasserie-94",
+      "cuisine": "Vegetarian",
+      "address": "95 Humber Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30310",
+      "name": "Le Vegetarian Cafe",
+      "slug": "le-vegetarian-cafe-19",
+      "cuisine": "Vegetarian",
+      "address": "20 Humber Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30350",
+      "name": "Pub American House 19",
+      "slug": "pub-american-house-59",
+      "cuisine": "American",
+      "address": "60 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30365",
+      "name": "Pub Burgers Restaurant 34",
+      "slug": "pub-burgers-restaurant-74",
+      "cuisine": "Burgers",
+      "address": "75 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30380",
+      "name": "Pub Korean Cafe 49",
+      "slug": "pub-korean-cafe-89",
+      "cuisine": "Korean",
+      "address": "90 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30305",
+      "name": "Pub Korean Kitchen",
+      "slug": "pub-korean-kitchen-14",
+      "cuisine": "Korean",
+      "address": "15 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30395",
+      "name": "Pub Thai Bar 64",
+      "slug": "pub-thai-bar-104",
+      "cuisine": "Thai",
+      "address": "105 Humber Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30320",
+      "name": "Pub Thai Bistro",
+      "slug": "pub-thai-bistro-29",
+      "cuisine": "Thai",
+      "address": "30 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30410",
+      "name": "Pub Vegetarian Eatery 79",
+      "slug": "pub-vegetarian-eatery-119",
+      "cuisine": "Vegetarian",
+      "address": "120 Humber Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30335",
+      "name": "Pub Vegetarian Grill 4",
+      "slug": "pub-vegetarian-grill-44",
+      "cuisine": "Vegetarian",
+      "address": "45 Humber Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30390",
+      "name": "Restaurant Bistro 59",
+      "slug": "restaurant-bistro-99",
+      "cuisine": "Burgers",
+      "address": "100 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30315",
+      "name": "Restaurant Brasserie",
+      "slug": "restaurant-brasserie-24",
+      "cuisine": "Burgers",
+      "address": "25 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30405",
+      "name": "Restaurant Grill 74",
+      "slug": "restaurant-grill-114",
+      "cuisine": "Korean",
+      "address": "115 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30345",
+      "name": "Restaurant Inn 14",
+      "slug": "restaurant-inn-54",
+      "cuisine": "Thai",
+      "address": "55 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30375",
+      "name": "Restaurant Kitchen 44",
+      "slug": "restaurant-kitchen-84",
+      "cuisine": "American",
+      "address": "85 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30300",
+      "name": "Restaurant Lounge",
+      "slug": "restaurant-lounge-9",
+      "cuisine": "American",
+      "address": "10 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30360",
+      "name": "Restaurant Place 29",
+      "slug": "restaurant-place-69",
+      "cuisine": "Vegetarian",
+      "address": "70 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30330",
+      "name": "Restaurant Tavern",
+      "slug": "restaurant-tavern-39",
+      "cuisine": "Korean",
+      "address": "40 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30381",
+      "name": "The Bar 50",
+      "slug": "the-bar-90",
+      "cuisine": "Lebanese",
+      "address": "91 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30306",
+      "name": "The Bistro",
+      "slug": "the-bistro-15",
+      "cuisine": "Lebanese",
+      "address": "16 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30366",
+      "name": "The Cafe 35",
+      "slug": "the-cafe-75",
+      "cuisine": "British",
+      "address": "76 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30396",
+      "name": "The Eatery 65",
+      "slug": "the-eatery-105",
+      "cuisine": "Mexican",
+      "address": "106 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30321",
+      "name": "The Grill",
+      "slug": "the-grill-30",
+      "cuisine": "Mexican",
+      "address": "31 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30336",
+      "name": "The House 5",
+      "slug": "the-house-45",
+      "cuisine": "Vegan",
+      "address": "46 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30291",
+      "name": "The Kitchen",
+      "slug": "the-kitchen-0",
+      "cuisine": "British",
+      "address": "1 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30351",
+      "name": "The Restaurant 20",
+      "slug": "the-restaurant-60",
+      "cuisine": "Spanish",
+      "address": "61 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30297",
+      "name": "Trattoria Bar",
+      "slug": "trattoria-bar-6",
+      "cuisine": "French",
+      "address": "7 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30357",
+      "name": "Trattoria Brasserie 26",
+      "slug": "trattoria-brasserie-66",
+      "cuisine": "Moroccan",
+      "address": "67 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30327",
+      "name": "Trattoria Diner",
+      "slug": "trattoria-diner-36",
+      "cuisine": "Greek",
+      "address": "37 Humber Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30312",
+      "name": "Trattoria Eatery",
+      "slug": "trattoria-eatery-21",
+      "cuisine": "Seafood",
+      "address": "22 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30387",
+      "name": "Trattoria Inn 56",
+      "slug": "trattoria-inn-96",
+      "cuisine": "Seafood",
+      "address": "97 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30342",
+      "name": "Trattoria Lounge 11",
+      "slug": "trattoria-lounge-51",
+      "cuisine": "Italian",
+      "address": "52 Humber Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30402",
+      "name": "Trattoria Place 71",
+      "slug": "trattoria-place-111",
+      "cuisine": "Greek",
+      "address": "112 Humber Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30372",
+      "name": "Trattoria Tavern 41",
+      "slug": "trattoria-tavern-81",
+      "cuisine": "French",
+      "address": "82 Humber Street, Hull, HU1 1XX"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\tcuisine\taddress\n30394\tBar Chinese Cafe 63\tbar-chinese-cafe-103\tChinese\t104 Humber Street, Hull, HU1 5XX\n30319\tBar Chinese Kitchen\tbar-chinese-kitchen-28\tChinese\t29 Humber Street, Hull, HU1 2XX\n30409\tBar Fusion Bar 78\tbar-fusion-bar-118\tFusion\t119 Humber Street, Hull, HU1 2XX\n30334\tBar Fusion Bistro 3\tbar-fusion-bistro-43\tFusion\t44 Humber Street, Hull, HU1 8XX\n30349\tBar Japanese Grill 18\tbar-japanese-grill-58\tJapanese\t59 Humber Street, Hull, HU1 5XX\n30364\tBar Pizza House 33\tbar-pizza-house-73\tPizza\t74 Humber Street, Hull, HU1 2XX\n30304\tBar Vietnamese Place\tbar-vietnamese-place-13\tVietnamese\t14 Humber Street, Hull, HU1 5XX\n30379\tBar Vietnamese Restaurant 48\tbar-vietnamese-restaurant-88\tVietnamese\t89 Humber Street, Hull, HU1 8XX\n30397\tBella French Diner 66\tbella-french-diner-106\tFrench\t107 Humber Street, Hull, HU1 8XX\n30322\tBella French House\tbella-french-house-31\tFrench\t32 Humber Street, Hull, HU1 5XX\n30352\tBella Greek Cafe 21\tbella-greek-cafe-61\tGreek\t62 Humber Street, Hull, HU1 8XX\n30367\tBella Italian Bar 36\tbella-italian-bar-76\tItalian\t77 Humber Street, Hull, HU1 5XX\n30292\tBella Italian Bistro\tbella-italian-bistro-1\tItalian\t2 Humber Street, Hull, HU1 2XX\n30382\tBella Moroccan Eatery 51\tbella-moroccan-eatery-91\tMoroccan\t92 Humber Street, Hull, HU1 2XX\n30307\tBella Moroccan Grill\tbella-moroccan-grill-16\tMoroccan\t17 Humber Street, Hull, HU1 8XX\n30337\tBella Seafood Restaurant 6\tbella-seafood-restaurant-46\tSeafood\t47 Humber Street, Hull, HU1 2XX\n30358\tBistro Caribbean Tavern 27\tbistro-caribbean-tavern-67\tCaribbean\t68 Humber Street, Hull, HU1 5XX\n30343\tBistro Indian Brasserie 12\tbistro-indian-brasserie-52\tIndian\t53 Humber Street, Hull, HU1 8XX\n30298\tBistro Mediterranean Eatery\tbistro-mediterranean-eatery-7\tMediterranean\t8 Humber Street, Hull, HU1 8XX\n30373\tBistro Mediterranean Inn 42\tbistro-mediterranean-inn-82\tMediterranean\t83 Humber Street, Hull, HU1 2XX\n30313\tBistro Steakhouse Diner\tbistro-steakhouse-diner-22\tSteakhouse\t23 Humber Street, Hull, HU1 5XX\n30388\tBistro Steakhouse Place 57\tbistro-steakhouse-place-97\tSteakhouse\t98 Humber Street, Hull, HU1 8XX\n30403\tBistro Turkish Kitchen 72\tbistro-turkish-kitchen-112\tTurkish\t113 Humber Street, Hull, HU1 5XX\n30328\tBistro Turkish Lounge\tbistro-turkish-lounge-37\tTurkish\t38 Humber Street, Hull, HU1 2XX\n30344\tCafe Chinese Tavern 13\tcafe-chinese-tavern-53\tChinese\t54 Humber Street, Hull, HU1 9XX\n30359\tCafe Fusion Inn 28\tcafe-fusion-inn-68\tFusion\t69 Humber Street, Hull, HU1 6XX\n30299\tCafe Japanese Diner\tcafe-japanese-diner-8\tJapanese\t9 Humber Street, Hull, HU1 9XX\n30374\tCafe Japanese Place 43\tcafe-japanese-place-83\tJapanese\t84 Humber Street, Hull, HU1 3XX\n30389\tCafe Pizza Kitchen 58\tcafe-pizza-kitchen-98\tPizza\t99 Humber Street, Hull, HU1 9XX\n30314\tCafe Pizza Lounge\tcafe-pizza-lounge-23\tPizza\t24 Humber Street, Hull, HU1 6XX\n30404\tCafe Vietnamese Bistro 73\tcafe-vietnamese-bistro-113\tVietnamese\t114 Humber Street, Hull, HU1 6XX\n30329\tCafe Vietnamese Brasserie\tcafe-vietnamese-brasserie-38\tVietnamese\t39 Humber Street, Hull, HU1 3XX\n30341\tCasa British Diner 10\tcasa-british-diner-50\tBritish\t51 Humber Street, Hull, HU1 6XX\n30356\tCasa Lebanese Lounge 25\tcasa-lebanese-lounge-65\tLebanese\t66 Humber Street, Hull, HU1 3XX\n30371\tCasa Mexican Brasserie 40\tcasa-mexican-brasserie-80\tMexican\t81 Humber Street, Hull, HU1 9XX\n30296\tCasa Mexican Cafe\tcasa-mexican-cafe-5\tMexican\t6 Humber Street, Hull, HU1 6XX\n30326\tCasa Spanish Eatery\tcasa-spanish-eatery-35\tSpanish\t36 Humber Street, Hull, HU1 9XX\n30401\tCasa Spanish Inn 70\tcasa-spanish-inn-110\tSpanish\t111 Humber Street, Hull, HU1 3XX\n30311\tCasa Vegan Bar\tcasa-vegan-bar-20\tVegan\t21 Humber Street, Hull, HU1 3XX\n30386\tCasa Vegan Tavern 55\tcasa-vegan-tavern-95\tVegan\t96 Humber Street, Hull, HU1 6XX\n30339\tEl Bar 8\tel-bar-48\tPizza\t49 Humber Street, Hull, HU1 4XX\n30399\tEl Brasserie 68\tel-brasserie-108\tJapanese\t109 Humber Street, Hull, HU1 1XX\n30324\tEl Cafe\tel-cafe-33\tJapanese\t34 Humber Street, Hull, HU1 7XX\n30369\tEl Diner 38\tel-diner-78\tChinese\t79 Humber Street, Hull, HU1 7XX\n30354\tEl Eatery 23\tel-eatery-63\tVietnamese\t64 Humber Street, Hull, HU1 1XX\n30294\tEl House\tel-house-3\tChinese\t4 Humber Street, Hull, HU1 4XX\n30384\tEl Lounge 53\tel-lounge-93\tFusion\t94 Humber Street, Hull, HU1 4XX\n30309\tEl Restaurant\tel-restaurant-18\tFusion\t19 Humber Street, Hull, HU1 1XX\n30347\tGrill French Kitchen 16\tgrill-french-kitchen-56\tFrench\t57 Humber Street, Hull, HU1 3XX\n30377\tGrill Greek Grill 46\tgrill-greek-grill-86\tGreek\t87 Humber Street, Hull, HU1 6XX\n30302\tGrill Greek Tavern\tgrill-greek-tavern-11\tGreek\t12 Humber Street, Hull, HU1 3XX\n30392\tGrill Italian House 61\tgrill-italian-house-101\tItalian\t102 Humber Street, Hull, HU1 3XX\n30317\tGrill Italian Inn\tgrill-italian-inn-26\tItalian\t27 Humber Street, Hull, HU1 9XX\n30332\tGrill Moroccan Place 1\tgrill-moroccan-place-41\tMoroccan\t42 Humber Street, Hull, HU1 6XX\n30407\tGrill Moroccan Restaurant 76\tgrill-moroccan-restaurant-116\tMoroccan\t117 Humber Street, Hull, HU1 9XX\n30362\tGrill Seafood Bistro 31\tgrill-seafood-bistro-71\tSeafood\t72 Humber Street, Hull, HU1 9XX\n30348\tHouse Bistro 17\thouse-bistro-57\tMediterranean\t58 Humber Street, Hull, HU1 4XX\n30408\tHouse Cafe 77\thouse-cafe-117\tCaribbean\t118 Humber Street, Hull, HU1 1XX\n30363\tHouse Grill 32\thouse-grill-72\tSteakhouse\t73 Humber Street, Hull, HU1 1XX\n30378\tHouse House 47\thouse-house-87\tTurkish\t88 Humber Street, Hull, HU1 7XX\n30303\tHouse Inn\thouse-inn-12\tTurkish\t13 Humber Street, Hull, HU1 4XX\n30333\tHouse Kitchen 2\thouse-kitchen-42\tCaribbean\t43 Humber Street, Hull, HU1 7XX\n30318\tHouse Place\thouse-place-27\tIndian\t28 Humber Street, Hull, HU1 1XX\n30393\tHouse Restaurant 62\thouse-restaurant-102\tIndian\t103 Humber Street, Hull, HU1 4XX\n30391\tKitchen British Grill 60\tkitchen-british-grill-100\tBritish\t101 Humber Street, Hull, HU1 2XX\n30316\tKitchen British Tavern\tkitchen-british-tavern-25\tBritish\t26 Humber Street, Hull, HU1 8XX\n30406\tKitchen Lebanese House 75\tkitchen-lebanese-house-115\tLebanese\t116 Humber Street, Hull, HU1 8XX\n30331\tKitchen Lebanese Inn\tkitchen-lebanese-inn-40\tLebanese\t41 Humber Street, Hull, HU1 5XX\n30346\tKitchen Mexican Place 15\tkitchen-mexican-place-55\tMexican\t56 Humber Street, Hull, HU1 2XX\n30376\tKitchen Spanish Bistro 45\tkitchen-spanish-bistro-85\tSpanish\t86 Humber Street, Hull, HU1 5XX\n30301\tKitchen Spanish Brasserie\tkitchen-spanish-brasserie-10\tSpanish\t11 Humber Street, Hull, HU1 2XX\n30361\tKitchen Vegan Kitchen 30\tkitchen-vegan-kitchen-70\tVegan\t71 Humber Street, Hull, HU1 8XX\n30383\tLa Caribbean Diner 52\tla-caribbean-diner-92\tCaribbean\t93 Humber Street, Hull, HU1 3XX\n30308\tLa Caribbean House\tla-caribbean-house-17\tCaribbean\t18 Humber Street, Hull, HU1 9XX\n30368\tLa Indian Eatery 37\tla-indian-eatery-77\tIndian\t78 Humber Street, Hull, HU1 6XX\n30293\tLa Indian Grill\tla-indian-grill-2\tIndian\t3 Humber Street, Hull, HU1 3XX\n30398\tLa Mediterranean Lounge 67\tla-mediterranean-lounge-107\tMediterranean\t108 Humber Street, Hull, HU1 9XX\n30323\tLa Mediterranean Restaurant\tla-mediterranean-restaurant-32\tMediterranean\t33 Humber Street, Hull, HU1 6XX\n30338\tLa Steakhouse Cafe 7\tla-steakhouse-cafe-47\tSteakhouse\t48 Humber Street, Hull, HU1 3XX\n30353\tLa Turkish Bar 22\tla-turkish-bar-62\tTurkish\t63 Humber Street, Hull, HU1 9XX\n30325\tLe American Bar\tle-american-bar-34\tAmerican\t35 Humber Street, Hull, HU1 8XX\n30400\tLe American Tavern 69\tle-american-tavern-109\tAmerican\t110 Humber Street, Hull, HU1 2XX\n30340\tLe Burgers Eatery 9\tle-burgers-eatery-49\tBurgers\t50 Humber Street, Hull, HU1 5XX\n30355\tLe Korean Diner 24\tle-korean-diner-64\tKorean\t65 Humber Street, Hull, HU1 2XX\n30370\tLe Thai Lounge 39\tle-thai-lounge-79\tThai\t80 Humber Street, Hull, HU1 8XX\n30295\tLe Thai Restaurant\tle-thai-restaurant-4\tThai\t5 Humber Street, Hull, HU1 5XX\n30385\tLe Vegetarian Brasserie 54\tle-vegetarian-brasserie-94\tVegetarian\t95 Humber Street, Hull, HU1 5XX\n30310\tLe Vegetarian Cafe\tle-vegetarian-cafe-19\tVegetarian\t20 Humber Street, Hull, HU1 2XX\n30350\tPub American House 19\tpub-american-house-59\tAmerican\t60 Humber Street, Hull, HU1 6XX\n30365\tPub Burgers Restaurant 34\tpub-burgers-restaurant-74\tBurgers\t75 Humber Street, Hull, HU1 3XX\n30380\tPub Korean Cafe 49\tpub-korean-cafe-89\tKorean\t90 Humber Street, Hull, HU1 9XX\n30305\tPub Korean Kitchen\tpub-korean-kitchen-14\tKorean\t15 Humber Street, Hull, HU1 6XX\n30395\tPub Thai Bar 64\tpub-thai-bar-104\tThai\t105 Humber Street, Hull, HU1 6XX\n30320\tPub Thai Bistro\tpub-thai-bistro-29\tThai\t30 Humber Street, Hull, HU1 3XX\n30410\tPub Vegetarian Eatery 79\tpub-vegetarian-eatery-119\tVegetarian\t120 Humber Street, Hull, HU1 3XX\n30335\tPub Vegetarian Grill 4\tpub-vegetarian-grill-44\tVegetarian\t45 Humber Street, Hull, HU1 9XX\n30390\tRestaurant Bistro 59\trestaurant-bistro-99\tBurgers\t100 Humber Street, Hull, HU1 1XX\n30315\tRestaurant Brasserie\trestaurant-brasserie-24\tBurgers\t25 Humber Street, Hull, HU1 7XX\n30405\tRestaurant Grill 74\trestaurant-grill-114\tKorean\t115 Humber Street, Hull, HU1 7XX\n30345\tRestaurant Inn 14\trestaurant-inn-54\tThai\t55 Humber Street, Hull, HU1 1XX\n30375\tRestaurant Kitchen 44\trestaurant-kitchen-84\tAmerican\t85 Humber Street, Hull, HU1 4XX\n30300\tRestaurant Lounge\trestaurant-lounge-9\tAmerican\t10 Humber Street, Hull, HU1 1XX\n30360\tRestaurant Place 29\trestaurant-place-69\tVegetarian\t70 Humber Street, Hull, HU1 7XX\n30330\tRestaurant Tavern\trestaurant-tavern-39\tKorean\t40 Humber Street, Hull, HU1 4XX\n30381\tThe Bar 50\tthe-bar-90\tLebanese\t91 Humber Street, Hull, HU1 1XX\n30306\tThe Bistro\tthe-bistro-15\tLebanese\t16 Humber Street, Hull, HU1 7XX\n30366\tThe Cafe 35\tthe-cafe-75\tBritish\t76 Humber Street, Hull, HU1 4XX\n30396\tThe Eatery 65\tthe-eatery-105\tMexican\t106 Humber Street, Hull, HU1 7XX\n30321\tThe Grill\tthe-grill-30\tMexican\t31 Humber Street, Hull, HU1 4XX\n30336\tThe House 5\tthe-house-45\tVegan\t46 Humber Street, Hull, HU1 1XX\n30291\tThe Kitchen\tthe-kitchen-0\tBritish\t1 Humber Street, Hull, HU1 1XX\n30351\tThe Restaurant 20\tthe-restaurant-60\tSpanish\t61 Humber Street, Hull, HU1 7XX\n30297\tTrattoria Bar\ttrattoria-bar-6\tFrench\t7 Humber Street, Hull, HU1 7XX\n30357\tTrattoria Brasserie 26\ttrattoria-brasserie-66\tMoroccan\t67 Humber Street, Hull, HU1 4XX\n30327\tTrattoria Diner\ttrattoria-diner-36\tGreek\t37 Humber Street, Hull, HU1 1XX\n30312\tTrattoria Eatery\ttrattoria-eatery-21\tSeafood\t22 Humber Street, Hull, HU1 4XX\n30387\tTrattoria Inn 56\ttrattoria-inn-96\tSeafood\t97 Humber Street, Hull, HU1 7XX\n30342\tTrattoria Lounge 11\ttrattoria-lounge-51\tItalian\t52 Humber Street, Hull, HU1 7XX\n30402\tTrattoria Place 71\ttrattoria-place-111\tGreek\t112 Humber Street, Hull, HU1 4XX\n30372\tTrattoria Tavern 41\ttrattoria-tavern-81\tFrench\t82 Humber Street, Hull, HU1 1XX\n",
+  "stderr": "",
+  "execution_time_ms": 131
+}

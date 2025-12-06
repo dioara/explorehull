@@ -1,0 +1,745 @@
+{
+  "query": "SELECT id, name, slug, category, address FROM attractions ORDER BY name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user aVmfAzGaFwUYThZ.03868022cba3 --database SGg5rWqvWgGGYNh8QMBiqU --execute SELECT id, name, slug, category, address FROM attractions ORDER BY name;",
+  "rows": [
+    {
+      "id": "30270",
+      "name": "Arctic Corsair",
+      "slug": "arctic-corsair",
+      "category": "Museums",
+      "address": "13 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30314",
+      "name": "Arctic Corsair 2",
+      "slug": "arctic-corsair-2",
+      "category": "Museums",
+      "address": "57 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30358",
+      "name": "Arctic Corsair 3",
+      "slug": "arctic-corsair-3",
+      "category": "Museums",
+      "address": "101 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30275",
+      "name": "Beverley Gate",
+      "slug": "beverley-gate",
+      "category": "History & Heritage",
+      "address": "18 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30319",
+      "name": "Beverley Gate 2",
+      "slug": "beverley-gate-2",
+      "category": "History & Heritage",
+      "address": "62 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30363",
+      "name": "Beverley Gate 3",
+      "slug": "beverley-gate-3",
+      "category": "History & Heritage",
+      "address": "106 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30283",
+      "name": "Bonus Arena",
+      "slug": "bonus-arena",
+      "category": "Entertainment",
+      "address": "26 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30327",
+      "name": "Bonus Arena 2",
+      "slug": "bonus-arena-2",
+      "category": "Entertainment",
+      "address": "70 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30305",
+      "name": "Costello Stadium",
+      "slug": "costello-stadium",
+      "category": "Sports & Leisure",
+      "address": "48 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30349",
+      "name": "Costello Stadium 2",
+      "slug": "costello-stadium-2",
+      "category": "Sports & Leisure",
+      "address": "92 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30280",
+      "name": "Dinostar",
+      "slug": "dinostar",
+      "category": "Family Friendly",
+      "address": "23 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30324",
+      "name": "Dinostar 2",
+      "slug": "dinostar-2",
+      "category": "Family Friendly",
+      "address": "67 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30289",
+      "name": "East Park",
+      "slug": "east-park",
+      "category": "Outdoors",
+      "address": "32 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30333",
+      "name": "East Park 2",
+      "slug": "east-park-2",
+      "category": "Outdoors",
+      "address": "76 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30278",
+      "name": "Escape Hull",
+      "slug": "escape-hull",
+      "category": "Entertainment",
+      "address": "21 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30322",
+      "name": "Escape Hull 2",
+      "slug": "escape-hull-2",
+      "category": "Entertainment",
+      "address": "65 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30366",
+      "name": "Escape Hull 3",
+      "slug": "escape-hull-3",
+      "category": "Entertainment",
+      "address": "109 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30263",
+      "name": "Ferens Art Gallery",
+      "slug": "ferens-art-gallery",
+      "category": "Arts & Culture",
+      "address": "Queen Victoria Square, Hull, HU1 3RA"
+    },
+    {
+      "id": "30299",
+      "name": "Fruit Market",
+      "slug": "fruit-market",
+      "category": "Arts & Culture",
+      "address": "42 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30343",
+      "name": "Fruit Market 2",
+      "slug": "fruit-market-2",
+      "category": "Arts & Culture",
+      "address": "86 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30269",
+      "name": "Hands On History Museum",
+      "slug": "hands-on-history-museum",
+      "category": "Family Friendly",
+      "address": "12 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30313",
+      "name": "Hands On History Museum 2",
+      "slug": "hands-on-history-museum-2",
+      "category": "Family Friendly",
+      "address": "56 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30357",
+      "name": "Hands On History Museum 3",
+      "slug": "hands-on-history-museum-3",
+      "category": "Family Friendly",
+      "address": "100 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30273",
+      "name": "Holy Trinity Church",
+      "slug": "holy-trinity-church",
+      "category": "History & Heritage",
+      "address": "16 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30317",
+      "name": "Holy Trinity Church 2",
+      "slug": "holy-trinity-church-2",
+      "category": "History & Heritage",
+      "address": "60 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30361",
+      "name": "Holy Trinity Church 3",
+      "slug": "holy-trinity-church-3",
+      "category": "History & Heritage",
+      "address": "104 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30267",
+      "name": "Hull & East Riding Museum",
+      "slug": "hull-east-riding-museum",
+      "category": "Museums",
+      "address": "10 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30311",
+      "name": "Hull & East Riding Museum 2",
+      "slug": "hull-east-riding-museum-2",
+      "category": "Museums",
+      "address": "54 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30355",
+      "name": "Hull & East Riding Museum 3",
+      "slug": "hull-east-riding-museum-3",
+      "category": "Museums",
+      "address": "98 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30286",
+      "name": "Hull City Hall",
+      "slug": "hull-city-hall",
+      "category": "Arts & Culture",
+      "address": "29 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30330",
+      "name": "Hull City Hall 2",
+      "slug": "hull-city-hall-2",
+      "category": "Arts & Culture",
+      "address": "73 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30310",
+      "name": "Hull Fair Ground",
+      "slug": "hull-fair-ground",
+      "category": "Events",
+      "address": "53 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30354",
+      "name": "Hull Fair Ground 2",
+      "slug": "hull-fair-ground-2",
+      "category": "Events",
+      "address": "97 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30304",
+      "name": "Hull FC Stadium",
+      "slug": "hull-fc-stadium",
+      "category": "Sports & Leisure",
+      "address": "47 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30348",
+      "name": "Hull FC Stadium 2",
+      "slug": "hull-fc-stadium-2",
+      "category": "Sports & Leisure",
+      "address": "91 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30272",
+      "name": "Hull Guildhall",
+      "slug": "hull-guildhall",
+      "category": "History & Heritage",
+      "address": "15 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30316",
+      "name": "Hull Guildhall 2",
+      "slug": "hull-guildhall-2",
+      "category": "History & Heritage",
+      "address": "59 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30360",
+      "name": "Hull Guildhall 3",
+      "slug": "hull-guildhall-3",
+      "category": "History & Heritage",
+      "address": "103 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30282",
+      "name": "Hull Ice Arena",
+      "slug": "hull-ice-arena",
+      "category": "Sports & Leisure",
+      "address": "25 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30326",
+      "name": "Hull Ice Arena 2",
+      "slug": "hull-ice-arena-2",
+      "category": "Sports & Leisure",
+      "address": "69 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30294",
+      "name": "Hull Marina",
+      "slug": "hull-marina",
+      "category": "Outdoors",
+      "address": "37 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30338",
+      "name": "Hull Marina 2",
+      "slug": "hull-marina-2",
+      "category": "Outdoors",
+      "address": "81 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30265",
+      "name": "Hull Maritime Museum",
+      "slug": "hull-maritime-museum",
+      "category": "Museums",
+      "address": "Queen Victoria Square, Hull, HU1 3DX"
+    },
+    {
+      "id": "30274",
+      "name": "Hull Minster",
+      "slug": "hull-minster",
+      "category": "History & Heritage",
+      "address": "17 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30318",
+      "name": "Hull Minster 2",
+      "slug": "hull-minster-2",
+      "category": "History & Heritage",
+      "address": "61 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30362",
+      "name": "Hull Minster 3",
+      "slug": "hull-minster-3",
+      "category": "History & Heritage",
+      "address": "105 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30285",
+      "name": "Hull New Theatre",
+      "slug": "hull-new-theatre",
+      "category": "Arts & Culture",
+      "address": "28 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30329",
+      "name": "Hull New Theatre 2",
+      "slug": "hull-new-theatre-2",
+      "category": "Arts & Culture",
+      "address": "72 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30306",
+      "name": "Hull Old Town",
+      "slug": "hull-old-town",
+      "category": "History & Heritage",
+      "address": "49 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30350",
+      "name": "Hull Old Town 2",
+      "slug": "hull-old-town-2",
+      "category": "History & Heritage",
+      "address": "93 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30284",
+      "name": "Hull Truck Theatre",
+      "slug": "hull-truck-theatre",
+      "category": "Arts & Culture",
+      "address": "27 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30328",
+      "name": "Hull Truck Theatre 2",
+      "slug": "hull-truck-theatre-2",
+      "category": "Arts & Culture",
+      "address": "71 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30288",
+      "name": "Hull Venue",
+      "slug": "hull-venue",
+      "category": "Entertainment",
+      "address": "31 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30332",
+      "name": "Hull Venue 2",
+      "slug": "hull-venue-2",
+      "category": "Entertainment",
+      "address": "75 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30300",
+      "name": "Humber Bridge",
+      "slug": "humber-bridge",
+      "category": "Landmarks",
+      "address": "43 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30344",
+      "name": "Humber Bridge 2",
+      "slug": "humber-bridge-2",
+      "category": "Landmarks",
+      "address": "87 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30293",
+      "name": "Humber Bridge Country Park",
+      "slug": "humber-bridge-country-park",
+      "category": "Outdoors",
+      "address": "36 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30337",
+      "name": "Humber Bridge Country Park 2",
+      "slug": "humber-bridge-country-park-2",
+      "category": "Outdoors",
+      "address": "80 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30308",
+      "name": "Humber Street",
+      "slug": "humber-street",
+      "category": "Arts & Culture",
+      "address": "51 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30352",
+      "name": "Humber Street 2",
+      "slug": "humber-street-2",
+      "category": "Arts & Culture",
+      "address": "95 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30268",
+      "name": "Humber Street Gallery",
+      "slug": "humber-street-gallery",
+      "category": "Arts & Culture",
+      "address": "11 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30312",
+      "name": "Humber Street Gallery 2",
+      "slug": "humber-street-gallery-2",
+      "category": "Arts & Culture",
+      "address": "55 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30356",
+      "name": "Humber Street Gallery 3",
+      "slug": "humber-street-gallery-3",
+      "category": "Arts & Culture",
+      "address": "99 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30303",
+      "name": "KCOM Stadium",
+      "slug": "kcom-stadium",
+      "category": "Sports & Leisure",
+      "address": "46 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30347",
+      "name": "KCOM Stadium 2",
+      "slug": "kcom-stadium-2",
+      "category": "Sports & Leisure",
+      "address": "90 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30277",
+      "name": "Lost City Adventure Golf",
+      "slug": "lost-city-adventure-golf",
+      "category": "Family Friendly",
+      "address": "20 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30321",
+      "name": "Lost City Adventure Golf 2",
+      "slug": "lost-city-adventure-golf-2",
+      "category": "Family Friendly",
+      "address": "64 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30365",
+      "name": "Lost City Adventure Golf 3",
+      "slug": "lost-city-adventure-golf-3",
+      "category": "Family Friendly",
+      "address": "108 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30307",
+      "name": "Museum Quarter",
+      "slug": "museum-quarter",
+      "category": "Museums",
+      "address": "50 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30351",
+      "name": "Museum Quarter 2",
+      "slug": "museum-quarter-2",
+      "category": "Museums",
+      "address": "94 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30281",
+      "name": "Napoleons Casino",
+      "slug": "napoleons-casino",
+      "category": "Entertainment",
+      "address": "24 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30325",
+      "name": "Napoleons Casino 2",
+      "slug": "napoleons-casino-2",
+      "category": "Entertainment",
+      "address": "68 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30295",
+      "name": "Paragon Arcade",
+      "slug": "paragon-arcade",
+      "category": "Shopping",
+      "address": "38 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30339",
+      "name": "Paragon Arcade 2",
+      "slug": "paragon-arcade-2",
+      "category": "Shopping",
+      "address": "82 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30290",
+      "name": "Pearson Park",
+      "slug": "pearson-park",
+      "category": "Outdoors",
+      "address": "33 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30334",
+      "name": "Pearson Park 2",
+      "slug": "pearson-park-2",
+      "category": "Outdoors",
+      "address": "77 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30292",
+      "name": "Pickering Park",
+      "slug": "pickering-park",
+      "category": "Outdoors",
+      "address": "35 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30336",
+      "name": "Pickering Park 2",
+      "slug": "pickering-park-2",
+      "category": "Outdoors",
+      "address": "79 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30297",
+      "name": "Princes Quay",
+      "slug": "princes-quay",
+      "category": "Shopping",
+      "address": "40 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30341",
+      "name": "Princes Quay 2",
+      "slug": "princes-quay-2",
+      "category": "Shopping",
+      "address": "84 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30291",
+      "name": "Queens Gardens",
+      "slug": "queens-gardens",
+      "category": "Outdoors",
+      "address": "34 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30335",
+      "name": "Queens Gardens 2",
+      "slug": "queens-gardens-2",
+      "category": "Outdoors",
+      "address": "78 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30301",
+      "name": "Scale Lane Bridge",
+      "slug": "scale-lane-bridge",
+      "category": "Landmarks",
+      "address": "44 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30345",
+      "name": "Scale Lane Bridge 2",
+      "slug": "scale-lane-bridge-2",
+      "category": "Landmarks",
+      "address": "88 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30271",
+      "name": "Spurn Lightship",
+      "slug": "spurn-lightship",
+      "category": "History & Heritage",
+      "address": "14 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30315",
+      "name": "Spurn Lightship 2",
+      "slug": "spurn-lightship-2",
+      "category": "History & Heritage",
+      "address": "58 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30359",
+      "name": "Spurn Lightship 3",
+      "slug": "spurn-lightship-3",
+      "category": "History & Heritage",
+      "address": "102 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30298",
+      "name": "St Stephen's Shopping Centre",
+      "slug": "st-stephen-s-shopping-centre",
+      "category": "Shopping",
+      "address": "41 High Street, Hull, HU1 5XX"
+    },
+    {
+      "id": "30342",
+      "name": "St Stephen's Shopping Centre 2",
+      "slug": "st-stephen-s-shopping-centre-2",
+      "category": "Shopping",
+      "address": "85 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30264",
+      "name": "Streetlife Museum",
+      "slug": "streetlife-museum",
+      "category": "Museums",
+      "address": "High Street, Hull, HU1 1PS"
+    },
+    {
+      "id": "30279",
+      "name": "TeamSport Karting",
+      "slug": "teamsport-karting",
+      "category": "Entertainment",
+      "address": "22 High Street, Hull, HU1 4XX"
+    },
+    {
+      "id": "30323",
+      "name": "TeamSport Karting 2",
+      "slug": "teamsport-karting-2",
+      "category": "Entertainment",
+      "address": "66 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30262",
+      "name": "The Deep",
+      "slug": "the-deep",
+      "category": "Museums",
+      "address": "Tower Street, Hull, HU1 4DP"
+    },
+    {
+      "id": "30287",
+      "name": "The Polar Bear",
+      "slug": "the-polar-bear",
+      "category": "Arts & Culture",
+      "address": "30 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30331",
+      "name": "The Polar Bear 2",
+      "slug": "the-polar-bear-2",
+      "category": "Arts & Culture",
+      "address": "74 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30276",
+      "name": "The Ropery",
+      "slug": "the-ropery",
+      "category": "History & Heritage",
+      "address": "19 High Street, Hull, HU1 1XX"
+    },
+    {
+      "id": "30320",
+      "name": "The Ropery 2",
+      "slug": "the-ropery-2",
+      "category": "History & Heritage",
+      "address": "63 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30364",
+      "name": "The Ropery 3",
+      "slug": "the-ropery-3",
+      "category": "History & Heritage",
+      "address": "107 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30302",
+      "name": "Tidal Surge Barrier",
+      "slug": "tidal-surge-barrier",
+      "category": "Landmarks",
+      "address": "45 High Street, Hull, HU1 9XX"
+    },
+    {
+      "id": "30346",
+      "name": "Tidal Surge Barrier 2",
+      "slug": "tidal-surge-barrier-2",
+      "category": "Landmarks",
+      "address": "89 High Street, Hull, HU1 8XX"
+    },
+    {
+      "id": "30296",
+      "name": "Trinity Market",
+      "slug": "trinity-market",
+      "category": "Shopping",
+      "address": "39 High Street, Hull, HU1 3XX"
+    },
+    {
+      "id": "30340",
+      "name": "Trinity Market 2",
+      "slug": "trinity-market-2",
+      "category": "Shopping",
+      "address": "83 High Street, Hull, HU1 2XX"
+    },
+    {
+      "id": "30309",
+      "name": "Victoria Pier",
+      "slug": "victoria-pier",
+      "category": "Landmarks",
+      "address": "52 High Street, Hull, HU1 7XX"
+    },
+    {
+      "id": "30353",
+      "name": "Victoria Pier 2",
+      "slug": "victoria-pier-2",
+      "category": "Landmarks",
+      "address": "96 High Street, Hull, HU1 6XX"
+    },
+    {
+      "id": "30266",
+      "name": "Wilberforce House Museum",
+      "slug": "wilberforce-house-museum",
+      "category": "History & Heritage",
+      "address": "25 High Street, Hull, HU1 1NQ"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\tcategory\taddress\n30270\tArctic Corsair\tarctic-corsair\tMuseums\t13 High Street, Hull, HU1 4XX\n30314\tArctic Corsair 2\tarctic-corsair-2\tMuseums\t57 High Street, Hull, HU1 3XX\n30358\tArctic Corsair 3\tarctic-corsair-3\tMuseums\t101 High Street, Hull, HU1 2XX\n30275\tBeverley Gate\tbeverley-gate\tHistory & Heritage\t18 High Street, Hull, HU1 9XX\n30319\tBeverley Gate 2\tbeverley-gate-2\tHistory & Heritage\t62 High Street, Hull, HU1 8XX\n30363\tBeverley Gate 3\tbeverley-gate-3\tHistory & Heritage\t106 High Street, Hull, HU1 7XX\n30283\tBonus Arena\tbonus-arena\tEntertainment\t26 High Street, Hull, HU1 8XX\n30327\tBonus Arena 2\tbonus-arena-2\tEntertainment\t70 High Street, Hull, HU1 7XX\n30305\tCostello Stadium\tcostello-stadium\tSports & Leisure\t48 High Street, Hull, HU1 3XX\n30349\tCostello Stadium 2\tcostello-stadium-2\tSports & Leisure\t92 High Street, Hull, HU1 2XX\n30280\tDinostar\tdinostar\tFamily Friendly\t23 High Street, Hull, HU1 5XX\n30324\tDinostar 2\tdinostar-2\tFamily Friendly\t67 High Street, Hull, HU1 4XX\n30289\tEast Park\teast-park\tOutdoors\t32 High Street, Hull, HU1 5XX\n30333\tEast Park 2\teast-park-2\tOutdoors\t76 High Street, Hull, HU1 4XX\n30278\tEscape Hull\tescape-hull\tEntertainment\t21 High Street, Hull, HU1 3XX\n30322\tEscape Hull 2\tescape-hull-2\tEntertainment\t65 High Street, Hull, HU1 2XX\n30366\tEscape Hull 3\tescape-hull-3\tEntertainment\t109 High Street, Hull, HU1 1XX\n30263\tFerens Art Gallery\tferens-art-gallery\tArts & Culture\tQueen Victoria Square, Hull, HU1 3RA\n30299\tFruit Market\tfruit-market\tArts & Culture\t42 High Street, Hull, HU1 6XX\n30343\tFruit Market 2\tfruit-market-2\tArts & Culture\t86 High Street, Hull, HU1 5XX\n30269\tHands On History Museum\thands-on-history-museum\tFamily Friendly\t12 High Street, Hull, HU1 3XX\n30313\tHands On History Museum 2\thands-on-history-museum-2\tFamily Friendly\t56 High Street, Hull, HU1 2XX\n30357\tHands On History Museum 3\thands-on-history-museum-3\tFamily Friendly\t100 High Street, Hull, HU1 1XX\n30273\tHoly Trinity Church\tholy-trinity-church\tHistory & Heritage\t16 High Street, Hull, HU1 7XX\n30317\tHoly Trinity Church 2\tholy-trinity-church-2\tHistory & Heritage\t60 High Street, Hull, HU1 6XX\n30361\tHoly Trinity Church 3\tholy-trinity-church-3\tHistory & Heritage\t104 High Street, Hull, HU1 5XX\n30267\tHull & East Riding Museum\thull-east-riding-museum\tMuseums\t10 High Street, Hull, HU1 1XX\n30311\tHull & East Riding Museum 2\thull-east-riding-museum-2\tMuseums\t54 High Street, Hull, HU1 9XX\n30355\tHull & East Riding Museum 3\thull-east-riding-museum-3\tMuseums\t98 High Street, Hull, HU1 8XX\n30286\tHull City Hall\thull-city-hall\tArts & Culture\t29 High Street, Hull, HU1 2XX\n30330\tHull City Hall 2\thull-city-hall-2\tArts & Culture\t73 High Street, Hull, HU1 1XX\n30310\tHull Fair Ground\thull-fair-ground\tEvents\t53 High Street, Hull, HU1 8XX\n30354\tHull Fair Ground 2\thull-fair-ground-2\tEvents\t97 High Street, Hull, HU1 7XX\n30304\tHull FC Stadium\thull-fc-stadium\tSports & Leisure\t47 High Street, Hull, HU1 2XX\n30348\tHull FC Stadium 2\thull-fc-stadium-2\tSports & Leisure\t91 High Street, Hull, HU1 1XX\n30272\tHull Guildhall\thull-guildhall\tHistory & Heritage\t15 High Street, Hull, HU1 6XX\n30316\tHull Guildhall 2\thull-guildhall-2\tHistory & Heritage\t59 High Street, Hull, HU1 5XX\n30360\tHull Guildhall 3\thull-guildhall-3\tHistory & Heritage\t103 High Street, Hull, HU1 4XX\n30282\tHull Ice Arena\thull-ice-arena\tSports & Leisure\t25 High Street, Hull, HU1 7XX\n30326\tHull Ice Arena 2\thull-ice-arena-2\tSports & Leisure\t69 High Street, Hull, HU1 6XX\n30294\tHull Marina\thull-marina\tOutdoors\t37 High Street, Hull, HU1 1XX\n30338\tHull Marina 2\thull-marina-2\tOutdoors\t81 High Street, Hull, HU1 9XX\n30265\tHull Maritime Museum\thull-maritime-museum\tMuseums\tQueen Victoria Square, Hull, HU1 3DX\n30274\tHull Minster\thull-minster\tHistory & Heritage\t17 High Street, Hull, HU1 8XX\n30318\tHull Minster 2\thull-minster-2\tHistory & Heritage\t61 High Street, Hull, HU1 7XX\n30362\tHull Minster 3\thull-minster-3\tHistory & Heritage\t105 High Street, Hull, HU1 6XX\n30285\tHull New Theatre\thull-new-theatre\tArts & Culture\t28 High Street, Hull, HU1 1XX\n30329\tHull New Theatre 2\thull-new-theatre-2\tArts & Culture\t72 High Street, Hull, HU1 9XX\n30306\tHull Old Town\thull-old-town\tHistory & Heritage\t49 High Street, Hull, HU1 4XX\n30350\tHull Old Town 2\thull-old-town-2\tHistory & Heritage\t93 High Street, Hull, HU1 3XX\n30284\tHull Truck Theatre\thull-truck-theatre\tArts & Culture\t27 High Street, Hull, HU1 9XX\n30328\tHull Truck Theatre 2\thull-truck-theatre-2\tArts & Culture\t71 High Street, Hull, HU1 8XX\n30288\tHull Venue\thull-venue\tEntertainment\t31 High Street, Hull, HU1 4XX\n30332\tHull Venue 2\thull-venue-2\tEntertainment\t75 High Street, Hull, HU1 3XX\n30300\tHumber Bridge\thumber-bridge\tLandmarks\t43 High Street, Hull, HU1 7XX\n30344\tHumber Bridge 2\thumber-bridge-2\tLandmarks\t87 High Street, Hull, HU1 6XX\n30293\tHumber Bridge Country Park\thumber-bridge-country-park\tOutdoors\t36 High Street, Hull, HU1 9XX\n30337\tHumber Bridge Country Park 2\thumber-bridge-country-park-2\tOutdoors\t80 High Street, Hull, HU1 8XX\n30308\tHumber Street\thumber-street\tArts & Culture\t51 High Street, Hull, HU1 6XX\n30352\tHumber Street 2\thumber-street-2\tArts & Culture\t95 High Street, Hull, HU1 5XX\n30268\tHumber Street Gallery\thumber-street-gallery\tArts & Culture\t11 High Street, Hull, HU1 2XX\n30312\tHumber Street Gallery 2\thumber-street-gallery-2\tArts & Culture\t55 High Street, Hull, HU1 1XX\n30356\tHumber Street Gallery 3\thumber-street-gallery-3\tArts & Culture\t99 High Street, Hull, HU1 9XX\n30303\tKCOM Stadium\tkcom-stadium\tSports & Leisure\t46 High Street, Hull, HU1 1XX\n30347\tKCOM Stadium 2\tkcom-stadium-2\tSports & Leisure\t90 High Street, Hull, HU1 9XX\n30277\tLost City Adventure Golf\tlost-city-adventure-golf\tFamily Friendly\t20 High Street, Hull, HU1 2XX\n30321\tLost City Adventure Golf 2\tlost-city-adventure-golf-2\tFamily Friendly\t64 High Street, Hull, HU1 1XX\n30365\tLost City Adventure Golf 3\tlost-city-adventure-golf-3\tFamily Friendly\t108 High Street, Hull, HU1 9XX\n30307\tMuseum Quarter\tmuseum-quarter\tMuseums\t50 High Street, Hull, HU1 5XX\n30351\tMuseum Quarter 2\tmuseum-quarter-2\tMuseums\t94 High Street, Hull, HU1 4XX\n30281\tNapoleons Casino\tnapoleons-casino\tEntertainment\t24 High Street, Hull, HU1 6XX\n30325\tNapoleons Casino 2\tnapoleons-casino-2\tEntertainment\t68 High Street, Hull, HU1 5XX\n30295\tParagon Arcade\tparagon-arcade\tShopping\t38 High Street, Hull, HU1 2XX\n30339\tParagon Arcade 2\tparagon-arcade-2\tShopping\t82 High Street, Hull, HU1 1XX\n30290\tPearson Park\tpearson-park\tOutdoors\t33 High Street, Hull, HU1 6XX\n30334\tPearson Park 2\tpearson-park-2\tOutdoors\t77 High Street, Hull, HU1 5XX\n30292\tPickering Park\tpickering-park\tOutdoors\t35 High Street, Hull, HU1 8XX\n30336\tPickering Park 2\tpickering-park-2\tOutdoors\t79 High Street, Hull, HU1 7XX\n30297\tPrinces Quay\tprinces-quay\tShopping\t40 High Street, Hull, HU1 4XX\n30341\tPrinces Quay 2\tprinces-quay-2\tShopping\t84 High Street, Hull, HU1 3XX\n30291\tQueens Gardens\tqueens-gardens\tOutdoors\t34 High Street, Hull, HU1 7XX\n30335\tQueens Gardens 2\tqueens-gardens-2\tOutdoors\t78 High Street, Hull, HU1 6XX\n30301\tScale Lane Bridge\tscale-lane-bridge\tLandmarks\t44 High Street, Hull, HU1 8XX\n30345\tScale Lane Bridge 2\tscale-lane-bridge-2\tLandmarks\t88 High Street, Hull, HU1 7XX\n30271\tSpurn Lightship\tspurn-lightship\tHistory & Heritage\t14 High Street, Hull, HU1 5XX\n30315\tSpurn Lightship 2\tspurn-lightship-2\tHistory & Heritage\t58 High Street, Hull, HU1 4XX\n30359\tSpurn Lightship 3\tspurn-lightship-3\tHistory & Heritage\t102 High Street, Hull, HU1 3XX\n30298\tSt Stephen's Shopping Centre\tst-stephen-s-shopping-centre\tShopping\t41 High Street, Hull, HU1 5XX\n30342\tSt Stephen's Shopping Centre 2\tst-stephen-s-shopping-centre-2\tShopping\t85 High Street, Hull, HU1 4XX\n30264\tStreetlife Museum\tstreetlife-museum\tMuseums\tHigh Street, Hull, HU1 1PS\n30279\tTeamSport Karting\tteamsport-karting\tEntertainment\t22 High Street, Hull, HU1 4XX\n30323\tTeamSport Karting 2\tteamsport-karting-2\tEntertainment\t66 High Street, Hull, HU1 3XX\n30262\tThe Deep\tthe-deep\tMuseums\tTower Street, Hull, HU1 4DP\n30287\tThe Polar Bear\tthe-polar-bear\tArts & Culture\t30 High Street, Hull, HU1 3XX\n30331\tThe Polar Bear 2\tthe-polar-bear-2\tArts & Culture\t74 High Street, Hull, HU1 2XX\n30276\tThe Ropery\tthe-ropery\tHistory & Heritage\t19 High Street, Hull, HU1 1XX\n30320\tThe Ropery 2\tthe-ropery-2\tHistory & Heritage\t63 High Street, Hull, HU1 9XX\n30364\tThe Ropery 3\tthe-ropery-3\tHistory & Heritage\t107 High Street, Hull, HU1 8XX\n30302\tTidal Surge Barrier\ttidal-surge-barrier\tLandmarks\t45 High Street, Hull, HU1 9XX\n30346\tTidal Surge Barrier 2\ttidal-surge-barrier-2\tLandmarks\t89 High Street, Hull, HU1 8XX\n30296\tTrinity Market\ttrinity-market\tShopping\t39 High Street, Hull, HU1 3XX\n30340\tTrinity Market 2\ttrinity-market-2\tShopping\t83 High Street, Hull, HU1 2XX\n30309\tVictoria Pier\tvictoria-pier\tLandmarks\t52 High Street, Hull, HU1 7XX\n30353\tVictoria Pier 2\tvictoria-pier-2\tLandmarks\t96 High Street, Hull, HU1 6XX\n30266\tWilberforce House Museum\twilberforce-house-museum\tHistory & Heritage\t25 High Street, Hull, HU1 1NQ\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}
