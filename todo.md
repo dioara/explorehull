@@ -671,6 +671,13 @@
 
 ## Railway Deployment Fixes
 
-- [ ] Fix seed script to use real external image URLs instead of placeholder paths
-- [ ] Ensure all attractions use authentic Hull images
-- [ ] Verify all listings are real Hull businesses and attractions
+- [x] Fix seed script to use real external image URLs instead of placeholder paths
+- [x] Ensure all attractions use authentic Hull images
+- [x] Verify all listings are real Hull businesses and attractions
+
+## Image Display Issues
+
+- [x] Verify seed script with Unsplash URLs is correctly uploaded to GitHub
+- [x] Check database schema - verify if images field stores JSON array or single imageUrl
+- [x] Fix seed script to match actual database schema (use imageUrl not images)
+- [ ] Reseed database with correct format
