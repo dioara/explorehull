@@ -2,7 +2,7 @@ import { useRoute } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import { SEO, generateRestaurantStructuredData } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -59,6 +59,16 @@ export default function RestaurantDetail() {
         description={restaurant.description}
         ogImage={restaurant.imageUrl || undefined}
         ogType="article"
+        structuredData={generateRestaurantStructuredData({
+          name: restaurant.name,
+          description: restaurant.description,
+          cuisine: restaurant.cuisine,
+          address: restaurant.address || undefined,
+          imageUrl: restaurant.imageUrl || undefined,
+          website: restaurant.website || undefined,
+          phone: restaurant.phone || undefined,
+          priceRange: priceRangeDisplay,
+        })}
       />
       <Navigation />
       

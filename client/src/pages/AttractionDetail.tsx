@@ -2,7 +2,7 @@ import { useRoute } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import { SEO, generateAttractionStructuredData } from "@/components/SEO";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { SaveToItinerary } from "@/components/SaveToItinerary";
 import { MapView } from "@/components/Map";
@@ -76,6 +76,16 @@ export default function AttractionDetail() {
         description={attraction.description}
         ogImage={images[0]}
         ogType="article"
+        structuredData={generateAttractionStructuredData({
+          name: attraction.name,
+          description: attraction.description,
+          address: attraction.address || undefined,
+          imageUrl: images[0],
+          website: attraction.website || undefined,
+          phone: attraction.phone || undefined,
+          openingHours: attraction.openingHours || undefined,
+          pricing: attraction.pricing || undefined,
+        })}
       />
       <Navigation />
       

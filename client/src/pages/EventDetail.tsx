@@ -2,7 +2,7 @@ import { useRoute } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import { SEO, generateEventStructuredData } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -60,6 +60,16 @@ export default function EventDetail() {
         description={event.description}
         ogImage={event.imageUrl || undefined}
         ogType="article"
+        structuredData={generateEventStructuredData({
+          title: event.title,
+          description: event.description,
+          startDate: new Date(event.startDate),
+          endDate: event.endDate ? new Date(event.endDate) : null,
+          location: event.location || undefined,
+          imageUrl: event.imageUrl || undefined,
+          ticketUrl: event.ticketUrl || undefined,
+          price: event.price || undefined,
+        })}
       />
       <Navigation />
       
