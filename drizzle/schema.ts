@@ -185,6 +185,60 @@ export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 export type InsertContactSubmission = typeof contactSubmissions.$inferInsert;
 
 /**
+ * Partner listing submissions table
+ */
+export const partnerListings = mysqlTable("partner_listings", {
+  id: int("id").autoincrement().primaryKey(),
+  businessName: varchar("business_name", { length: 255 }).notNull(),
+  contactName: varchar("contact_name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 50 }).notNull(),
+  listingType: varchar("listing_type", { length: 100 }).notNull(),
+  businessDescription: text("business_description").notNull(),
+  website: varchar("website", { length: 500 }).notNull(),
+  address: text("address").notNull(),
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+});
+
+export type PartnerListing = typeof partnerListings.$inferSelect;
+export type InsertPartnerListing = typeof partnerListings.$inferInsert;
+
+/**
+ * Advertising inquiries table
+ */
+export const advertisingInquiries = mysqlTable("advertising_inquiries", {
+  id: int("id").autoincrement().primaryKey(),
+  companyName: varchar("company_name", { length: 255 }).notNull(),
+  contactName: varchar("contact_name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 50 }).notNull(),
+  adType: varchar("ad_type", { length: 100 }).notNull(),
+  budget: varchar("budget", { length: 100 }).notNull(),
+  message: text("message").notNull(),
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+});
+
+export type AdvertisingInquiry = typeof advertisingInquiries.$inferSelect;
+export type InsertAdvertisingInquiry = typeof advertisingInquiries.$inferInsert;
+
+/**
+ * Partnership inquiries table
+ */
+export const partnershipInquiries = mysqlTable("partnership_inquiries", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationName: varchar("organization_name", { length: 255 }).notNull(),
+  contactName: varchar("contact_name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 50 }).notNull(),
+  partnershipType: varchar("partnership_type", { length: 100 }).notNull(),
+  proposal: text("proposal").notNull(),
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+});
+
+export type PartnershipInquiry = typeof partnershipInquiries.$inferSelect;
+export type InsertPartnershipInquiry = typeof partnershipInquiries.$inferInsert;
+
+/**
  * Reviews table - user reviews for attractions, restaurants, and accommodations
  */
 export const reviews = mysqlTable("reviews", {

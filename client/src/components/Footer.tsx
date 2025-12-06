@@ -27,9 +27,10 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4">Discover</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><Link href="/maritime"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Maritime Heritage</a></Link></li>
-              <li><Link href="/blog"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Blog</a></Link></li>
-              <li><Link href="/travel-info"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Travel Info</a></Link></li>
+              <Link href="/maritime"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Maritime Heritage</a></Link>
+              <Link href="/blog"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Blog</a></Link>
+              <Link href="/travel-info"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Travel Info</a></Link>
+              <Link href="/partner"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Partner With Us</a></Link>
             </ul>
           </div>
           

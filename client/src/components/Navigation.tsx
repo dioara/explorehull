@@ -24,6 +24,7 @@ export function Navigation() {
             <Link href="/eat-drink"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Eat & Drink</a></Link>
             <Link href="/stay"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Stay</a></Link>
             <Link href="/blog"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Blog</a></Link>
+            <Link href="/partner"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Partner</a></Link>
           </div>
           
           <div className="flex items-center gap-4">
@@ -69,6 +70,11 @@ export function Navigation() {
               <Link href="/blog">
                 <a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
                   Blog
+                </a>
+              </Link>
+              <Link href="/partner">
+                <a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                  Partner
                 </a>
               </Link>
               <Button asChild className="bg-[oklch(0.70_0.15_200)] hover:bg-[oklch(0.65_0.15_200)] text-white w-full">

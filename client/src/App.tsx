@@ -16,6 +16,7 @@ import TravelInfo from "./pages/TravelInfo";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Partner from "./pages/Partner";
 import AttractionDetail from "./pages/AttractionDetail";
 import EventDetail from "./pages/EventDetail";
 import RestaurantDetail from "./pages/RestaurantDetail";
@@ -35,6 +36,7 @@ function Router() {
       <Route path={"/contact"} component={Contact} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/terms"} component={Terms} />
+      <Route path={"/partner"} component={Partner} />
       <Route path={"/attraction/:slug"} component={AttractionDetail} />
       <Route path={"/event/:slug"} component={EventDetail} />
       <Route path={"/restaurant/:slug"} component={RestaurantDetail} />

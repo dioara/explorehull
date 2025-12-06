@@ -213,6 +213,134 @@ This message was sent via the ExploreHull.com contact form.`;
       }),
   }),
 
+  partner: router({
+    submitListing: publicProcedure
+      .input(z.object({
+        businessName: z.string(),
+        contactName: z.string(),
+        email: z.string().email(),
+        phone: z.string(),
+        listingType: z.string(),
+        businessDescription: z.string(),
+        website: z.string(),
+        address: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        // Save to database
+        await db.savePartnerListing(input);
+        
+        // Send notification to owner
+        const emailContent = `New Business Listing Submission from ExploreHull.com
+
+**Business Name:** ${input.businessName}
+**Listing Type:** ${input.listingType}
+**Contact Name:** ${input.contactName}
+**Email:** ${input.email}
+**Phone:** ${input.phone}
+**Website:** ${input.website}
+**Address:** ${input.address}
+
+**Description:**
+${input.businessDescription}
+
+---
+This listing request was submitted via the ExploreHull.com Partner page.`;
+        
+        try {
+          await notifyOwner({
+            title: `New Listing Request: ${input.businessName}`,
+            content: emailContent,
+          });
+        } catch (error) {
+          console.error('Failed to send listing notification:', error);
+        }
+        
+        return { success: true };
+      }),
+
+    submitAdvertising: publicProcedure
+      .input(z.object({
+        companyName: z.string(),
+        contactName: z.string(),
+        email: z.string().email(),
+        phone: z.string(),
+        adType: z.string(),
+        budget: z.string(),
+        message: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        // Save to database
+        await db.saveAdvertisingInquiry(input);
+        
+        // Send notification to owner
+        const emailContent = `New Advertising Inquiry from ExploreHull.com
+
+**Company Name:** ${input.companyName}
+**Contact Name:** ${input.contactName}
+**Email:** ${input.email}
+**Phone:** ${input.phone}
+**Ad Type:** ${input.adType}
+**Budget:** ${input.budget}
+
+**Campaign Details:**
+${input.message}
+
+---
+This advertising inquiry was submitted via the ExploreHull.com Partner page.`;
+        
+        try {
+          await notifyOwner({
+            title: `Advertising Inquiry: ${input.companyName}`,
+            content: emailContent,
+          });
+        } catch (error) {
+          console.error('Failed to send advertising notification:', error);
+        }
+        
+        return { success: true };
+      }),
+
+    submitPartnership: publicProcedure
+      .input(z.object({
+        organizationName: z.string(),
+        contactName: z.string(),
+        email: z.string().email(),
+        phone: z.string(),
+        partnershipType: z.string(),
+        proposal: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        // Save to database
+        await db.savePartnershipInquiry(input);
+        
+        // Send notification to owner
+        const emailContent = `New Partnership Inquiry from ExploreHull.com
+
+**Organization:** ${input.organizationName}
+**Contact Name:** ${input.contactName}
+**Email:** ${input.email}
+**Phone:** ${input.phone}
+**Partnership Type:** ${input.partnershipType}
+
+**Proposal:**
+${input.proposal}
+
+---
+This partnership inquiry was submitted via the ExploreHull.com Partner page.`;
+        
+        try {
+          await notifyOwner({
+            title: `Partnership Inquiry: ${input.organizationName}`,
+            content: emailContent,
+          });
+        } catch (error) {
+          console.error('Failed to send partnership notification:', error);
+        }
+        
+        return { success: true };
+      }),
+  }),
+
   news: router({
     getLatest: publicProcedure
       .input(z.object({ limit: z.number().optional() }).optional())

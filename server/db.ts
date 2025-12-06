@@ -19,6 +19,12 @@ import {
   InsertNewsletterSubscription,
   contactSubmissions,
   InsertContactSubmission,
+  partnerListings,
+  InsertPartnerListing,
+  advertisingInquiries,
+  InsertAdvertisingInquiry,
+  partnershipInquiries,
+  InsertPartnershipInquiry,
   reviews,
   InsertReview,
   itineraryItems,
@@ -330,6 +336,47 @@ export async function saveContactSubmission(data: Omit<InsertContactSubmission, 
     return { success: true };
   } catch (error) {
     console.error("Failed to save contact submission:", error);
+    throw error;
+  }
+}
+
+// ===== Partner Submissions =====
+
+export async function savePartnerListing(data: Omit<InsertPartnerListing, 'id' | 'submittedAt'>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  try {
+    await db.insert(partnerListings).values(data);
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to save partner listing:", error);
+    throw error;
+  }
+}
+
+export async function saveAdvertisingInquiry(data: Omit<InsertAdvertisingInquiry, 'id' | 'submittedAt'>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  try {
+    await db.insert(advertisingInquiries).values(data);
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to save advertising inquiry:", error);
+    throw error;
+  }
+}
+
+export async function savePartnershipInquiry(data: Omit<InsertPartnershipInquiry, 'id' | 'submittedAt'>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  try {
+    await db.insert(partnershipInquiries).values(data);
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to save partnership inquiry:", error);
     throw error;
   }
 }
