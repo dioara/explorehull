@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE attractions SET featured = 1 WHERE name IN ('The Deep', 'Hull Maritime Museum', 'Ferens Art Gallery') LIMIT 3;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user aVmfAzGaFwUYThZ.03868022cba3 --database SGg5rWqvWgGGYNh8QMBiqU --execute UPDATE attractions SET featured = 1 WHERE name IN ('The Deep', 'Hull Maritime Museum', 'Ferens Art Gallery') LIMIT 3;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 736
+}

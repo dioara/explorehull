@@ -543,3 +543,38 @@
 - [x] Implement Google Analytics event tracking for booking clicks
 - [x] Test booking button functionality
 - [x] All 27 tests passing
+
+## Admin Dashboard & Notifications (User Request)
+
+### Admin Authentication System
+- [x] Create admin_users table with email/password fields
+- [x] Implement password hashing with bcrypt
+- [x] Create admin login page (separate from Manus OAuth)
+- [x] Create admin authentication backend (JWT-based)
+- [x] Add admin session management (JWT cookies)
+- [x] Create admin logout functionality
+- [x] Create admin dashboard with protected routes
+- [x] Add admin middleware to protect dashboard routes
+
+### Admin Dashboard
+- [x] Create admin dashboard layout
+- [x] Add featured listings management page (toggle featured status)
+- [x] Add partner submissions view (listing requests)
+- [x] Add advertising inquiries view
+- [x] Add partnership inquiries view
+- [x] Add contact submissions view
+- [x] Add statistics/analytics overview
+- [x] Add routes for admin login and dashboard
+
+### Sample Featured Listings
+- [x] Mark 2-3 real Hull attractions as featured (The Deep, Hull Maritime Museum, Ferens Art Gallery)
+- [x] Mark 2-3 real Hull restaurants as featured (Ambiente Tapas, 1884 Dock Street Kitchen, Thieving Harry's)
+- [x] Mark 2-3 real Hull accommodations as featured (Doubletree, Village Hotel, Holiday Inn)
+- [ ] Verify featured badges appear correctly
+
+### Email Notifications
+- [x] Set up email notification system for partner form submissions
+- [x] Send email to contact@lampstand.consulting on listing submission (already implemented)
+- [x] Send email to contact@lampstand.consulting on advertising inquiry (already implemented)
+- [x] Send email to contact@lampstand.consulting on partnership inquiry (already implemented)
+- [x] Email notifications working via notifyOwner function

@@ -342,6 +342,30 @@ export async function saveContactSubmission(data: Omit<InsertContactSubmission, 
 
 // ===== Partner Submissions =====
 
+export async function getAllPartnerListings() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(partnerListings).orderBy(desc(partnerListings.submittedAt));
+}
+
+export async function getAllAdvertisingInquiries() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(advertisingInquiries).orderBy(desc(advertisingInquiries.submittedAt));
+}
+
+export async function getAllPartnershipInquiries() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(partnershipInquiries).orderBy(desc(partnershipInquiries.submittedAt));
+}
+
+export async function getAllContactSubmissions() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(contactSubmissions).orderBy(desc(contactSubmissions.submittedAt));
+}
+
 export async function savePartnerListing(data: Omit<InsertPartnerListing, 'id' | 'submittedAt'>) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");

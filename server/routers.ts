@@ -1,13 +1,17 @@
-import { COOKIE_NAME } from "@shared/const";
+import { eq } from "drizzle-orm";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
+import { attractions, restaurants, accommodations } from "../drizzle/schema";
 import { generateSitemap } from './sitemap';
 import { getHullNews } from './news';
 import { getCurrentWeather, getWeatherForecast } from './weather';
 import { notifyOwner } from './_core/notification';
+import { authenticateAdmin, getAdminById } from './admin-auth';
+import jwt from 'jsonwebtoken';
+import { ENV } from './_core/env';
 
 export const appRouter = router({
   system: systemRouter,
@@ -16,8 +20,119 @@ export const appRouter = router({
     me: publicProcedure.query(opts => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);
-      ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
+      ctx.res.clearCookie('app_session_id', { ...cookieOptions, maxAge: -1 });
       return { success: true } as const;
+    }),
+  }),
+
+  admin: router({
+    login: publicProcedure
+      .input(z.object({
+        email: z.string().email(),
+        password: z.string(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const admin = await authenticateAdmin(input.email, input.password);
+        
+        if (!admin) {
+          throw new Error('Invalid email or password');
+        }
+
+        // Create JWT token for admin session
+        const token = jwt.sign(
+          { adminId: admin.id, email: admin.email },
+          ENV.jwtSecret,
+          { expiresIn: '7d' }
+        );
+
+        // Set admin session cookie
+        ctx.res.cookie('admin_session', token, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'lax',
+          maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+        });
+
+        return { success: true, admin };
+      }),
+
+    me: publicProcedure.query(async ({ ctx }) => {
+      const token = ctx.req.cookies?.admin_session;
+      
+      if (!token) return null;
+
+      try {
+        const decoded = jwt.verify(token, ENV.jwtSecret) as { adminId: number };
+        const admin = await getAdminById(decoded.adminId);
+        return admin;
+      } catch (error) {
+        return null;
+      }
+    }),
+
+    logout: publicProcedure.mutation(({ ctx }) => {
+      ctx.res.clearCookie('admin_session');
+      return { success: true };
+    }),
+
+    // Featured listings management
+    toggleFeatured: publicProcedure
+      .input(z.object({
+        type: z.enum(['attraction', 'restaurant', 'accommodation']),
+        id: z.number(),
+        featured: z.boolean(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        // Verify admin authentication
+        const token = ctx.req.cookies?.admin_session;
+        if (!token) throw new Error('Unauthorized');
+        
+        try {
+          jwt.verify(token, ENV.jwtSecret);
+        } catch (error) {
+          throw new Error('Unauthorized');
+        }
+
+        const database = await db.getDb();
+        if (!database) throw new Error('Database not available');
+
+        const { type, id, featured } = input;
+        
+        if (type === 'attraction') {
+          await database.update(attractions)
+            .set({ featured })
+            .where(eq(attractions.id, id));
+        } else if (type === 'restaurant') {
+          await database.update(restaurants)
+            .set({ featured })
+            .where(eq(restaurants.id, id));
+        } else {
+          await database.update(accommodations)
+            .set({ featured })
+            .where(eq(accommodations.id, id));
+        }
+
+        return { success: true };
+      }),
+
+    // Get all submissions
+    getSubmissions: publicProcedure.query(async ({ ctx }) => {
+      // Verify admin authentication
+      const token = ctx.req.cookies?.admin_session;
+      if (!token) throw new Error('Unauthorized');
+      
+      try {
+        jwt.verify(token, ENV.jwtSecret);
+      } catch (error) {
+        throw new Error('Unauthorized');
+      }
+
+      return {
+        listings: await db.getAllPartnerListings(),
+        advertising: await db.getAllAdvertisingInquiries(),
+        partnerships: await db.getAllPartnershipInquiries(),
+        contacts: await db.getAllContactSubmissions(),
+      };
     }),
   }),
 
