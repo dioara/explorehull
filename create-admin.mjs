@@ -14,9 +14,9 @@ async function createAdmin() {
   const connection = await mysql.createConnection(DATABASE_URL);
   const db = drizzle(connection);
 
-  const email = 'admin@explorehull.com';
-  const password = 'Admin123!'; // Change this password after first login
-  const name = 'Admin User';
+  const email = 'tolu@kits.health';
+  const password = '14TCk2J&I$Xb';
+  const name = 'Tolu Admin';
 
   const passwordHash = await bcrypt.hash(password, 10);
 

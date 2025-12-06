@@ -578,3 +578,16 @@
 - [x] Send email to contact@lampstand.consulting on advertising inquiry (already implemented)
 - [x] Send email to contact@lampstand.consulting on partnership inquiry (already implemented)
 - [x] Email notifications working via notifyOwner function
+
+## Footer & Admin Updates (User Request)
+
+### Mobile Footer Fix
+- [x] Fix mobile footer menu layout (wrapped links in li tags)
+- [x] Ensure proper spacing and alignment
+
+### Admin Credentials Update
+- [x] Update admin email to tolu@kits.health
+- [x] Update admin password to 14TCk2J&I$Xb
+- [x] Delete old admin account (admin@explorehull.com)
+- [x] Update create-admin.mjs script with new credentials
+- [x] Create new admin account with updated credentials
