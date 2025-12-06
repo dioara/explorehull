@@ -3,6 +3,8 @@ import { trpc } from "@/lib/trpc";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { SaveToItinerary } from "@/components/SaveToItinerary";
 import { MapView } from "@/components/Map";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -240,6 +242,12 @@ export default function AttractionDetail() {
               <Card>
                 <CardContent className="p-6 space-y-4">
                   <h3 className="text-xl font-bold">Plan Your Visit</h3>
+                  <SaveToItinerary
+                    itemType="attraction"
+                    itemId={attraction.id}
+                    itemName={attraction.name}
+                    size="lg"
+                  />
                   <Button 
                     className="w-full" 
                     size="lg"
@@ -264,6 +272,15 @@ export default function AttractionDetail() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+          
+          {/* Reviews Section */}
+          <div className="mt-12">
+            <ReviewsSection
+              itemType="attraction"
+              itemId={attraction.id}
+              itemName={attraction.name}
+            />
           </div>
         </div>
       </main>

@@ -29,6 +29,20 @@
       "when": 1764981204100,
       "tag": "0003_mighty_random",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1765003023658,
+      "tag": "0004_watery_timeslip",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1765003275151,
+      "tag": "0005_hesitant_vindicator",
+      "breakpoints": true
     }
   ]
 }

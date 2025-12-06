@@ -18,7 +18,11 @@ import {
   newsletterSubscriptions,
   InsertNewsletterSubscription,
   contactSubmissions,
-  InsertContactSubmission
+  InsertContactSubmission,
+  reviews,
+  InsertReview,
+  itineraryItems,
+  InsertItineraryItem
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -378,4 +382,131 @@ export async function searchContent(query: string) {
     accommodations: accommodationResults,
     blogPosts: blogResults,
   };
+}
+
+
+// ===== Reviews =====
+
+export async function createReview(review: InsertReview) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  const [result] = await db.insert(reviews).values(review);
+  return result;
+}
+
+export async function getReviewsByItem(itemType: string, itemId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  
+  return db.select().from(reviews)
+    .where(and(
+      eq(reviews.itemType, itemType),
+      eq(reviews.itemId, itemId)
+    ))
+    .orderBy(desc(reviews.createdAt));
+}
+
+export async function getAverageRating(itemType: string, itemId: number) {
+  const db = await getDb();
+  if (!db) return { average: 0, count: 0 };
+  
+  const reviewList = await db.select().from(reviews)
+    .where(and(
+      eq(reviews.itemType, itemType),
+      eq(reviews.itemId, itemId)
+    ));
+  
+  if (reviewList.length === 0) return { average: 0, count: 0 };
+  
+  const sum = reviewList.reduce((acc, review) => acc + review.rating, 0);
+  const average = sum / reviewList.length;
+  
+  return { average: Math.round(average * 10) / 10, count: reviewList.length };
+}
+
+
+// ===== Itinerary =====
+
+export async function addToItinerary(item: InsertItineraryItem) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  // Check if item already exists
+  const existing = await db.select().from(itineraryItems)
+    .where(and(
+      eq(itineraryItems.userId, item.userId),
+      eq(itineraryItems.itemType, item.itemType),
+      eq(itineraryItems.itemId, item.itemId)
+    ))
+    .limit(1);
+  
+  if (existing.length > 0) {
+    return existing[0];
+  }
+  
+  const [result] = await db.insert(itineraryItems).values(item);
+  return result;
+}
+
+export async function removeFromItinerary(userId: number, itemType: string, itemId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  
+  await db.delete(itineraryItems)
+    .where(and(
+      eq(itineraryItems.userId, userId),
+      eq(itineraryItems.itemType, itemType),
+      eq(itineraryItems.itemId, itemId)
+    ));
+  
+  return { success: true };
+}
+
+export async function getUserItinerary(userId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  
+  const items = await db.select().from(itineraryItems)
+    .where(eq(itineraryItems.userId, userId))
+    .orderBy(desc(itineraryItems.createdAt));
+  
+  // Fetch full details for each item
+  const detailedItems = await Promise.all(
+    items.map(async (item) => {
+      let details = null;
+      if (item.itemType === 'attraction') {
+        const [attraction] = await db.select().from(attractions).where(eq(attractions.id, item.itemId)).limit(1);
+        details = attraction;
+      } else if (item.itemType === 'restaurant') {
+        const [restaurant] = await db.select().from(restaurants).where(eq(restaurants.id, item.itemId)).limit(1);
+        details = restaurant;
+      } else if (item.itemType === 'accommodation') {
+        const [accommodation] = await db.select().from(accommodations).where(eq(accommodations.id, item.itemId)).limit(1);
+        details = accommodation;
+      }
+      
+      return {
+        ...item,
+        details,
+      };
+    })
+  );
+  
+  return detailedItems;
+}
+
+export async function isInItinerary(userId: number, itemType: string, itemId: number) {
+  const db = await getDb();
+  if (!db) return false;
+  
+  const result = await db.select().from(itineraryItems)
+    .where(and(
+      eq(itineraryItems.userId, userId),
+      eq(itineraryItems.itemType, itemType),
+      eq(itineraryItems.itemId, itemId)
+    ))
+    .limit(1);
+  
+  return result.length > 0;
 }

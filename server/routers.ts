@@ -1,7 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
 import { generateSitemap } from './sitemap';
@@ -218,6 +218,79 @@ ${input.message}
     forecast: publicProcedure.query(async () => {
       return await getWeatherForecast();
     }),
+  }),
+
+  reviews: router({
+    create: protectedProcedure
+      .input(z.object({
+        itemType: z.enum(['attraction', 'restaurant', 'accommodation']),
+        itemId: z.number(),
+        rating: z.number().min(1).max(5),
+        comment: z.string().optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        return await db.createReview({
+          userId: ctx.user.id,
+          userName: ctx.user.name || 'Anonymous',
+          itemType: input.itemType,
+          itemId: input.itemId,
+          rating: input.rating,
+          comment: input.comment || null,
+        });
+      }),
+    getByItem: publicProcedure
+      .input(z.object({
+        itemType: z.string(),
+        itemId: z.number(),
+      }))
+      .query(async ({ input }) => {
+        return await db.getReviewsByItem(input.itemType, input.itemId);
+      }),
+    getAverageRating: publicProcedure
+      .input(z.object({
+        itemType: z.string(),
+        itemId: z.number(),
+      }))
+      .query(async ({ input }) => {
+        return await db.getAverageRating(input.itemType, input.itemId);
+      }),
+  }),
+
+  itinerary: router({
+    add: protectedProcedure
+      .input(z.object({
+        itemType: z.enum(['attraction', 'restaurant', 'accommodation']),
+        itemId: z.number(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        return await db.addToItinerary({
+          userId: ctx.user.id,
+          itemType: input.itemType,
+          itemId: input.itemId,
+          notes: input.notes || null,
+        });
+      }),
+    remove: protectedProcedure
+      .input(z.object({
+        itemType: z.string(),
+        itemId: z.number(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        return await db.removeFromItinerary(ctx.user.id, input.itemType, input.itemId);
+      }),
+    getMyItinerary: protectedProcedure
+      .query(async ({ ctx }) => {
+        return await db.getUserItinerary(ctx.user.id);
+      }),
+    isInItinerary: protectedProcedure
+      .input(z.object({
+        itemType: z.string(),
+        itemId: z.number(),
+      }))
+      .query(async ({ input, ctx }) => {
+        return await db.isInItinerary(ctx.user.id, input.itemType, input.itemId);
+      }),
   }),
 
   sitemap: publicProcedure.query(async () => {

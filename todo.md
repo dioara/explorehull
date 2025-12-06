@@ -286,3 +286,41 @@
 - [x] Update restaurant listings with logo URLs
 - [x] Update Stay page UI to display hotel logos
 - [x] Update Eat & Drink page UI to display restaurant logos
+
+
+## Phase 7: Major Feature Expansion & UI Redesign
+
+### Expand Logo Coverage (50+ logos)
+- [ ] Search for and download 25+ additional hotel logos
+- [ ] Search for and download 25+ additional restaurant logos
+- [ ] Update database with all new logo URLs
+- [ ] Verify all logos display correctly
+
+### User Reviews & Ratings System
+- [x] Create reviews database table (user, rating, comment, date)
+- [x] Add review submission form to detail pages
+- [x] Add review display section to detail pages
+- [x] Implement star rating component
+- [x] Add average rating calculation
+- [ ] Add review moderation (optional)
+- [x] Write vitest tests for review system
+- [x] All 27 tests passing## Save to Itinerary Feature
+- [x] Create itinerary database table
+- [x] Add "Save to Itinerary" button to listings
+- [ ] Create My Itinerary page
+- [x] Add remove from itinerary functionality
+- [ ] Show saved items with map view
+- [x] Add notes/comments to saved items
+- [ ] Export itinerary as PDF (optional)system
+
+### UI Redesign - Minimalistic & Sleek
+- [ ] Research leading tourism websites (Airbnb, Booking.com, TripAdvisor)
+- [ ] Define new color palette and typography
+- [ ] Redesign homepage with modern layout
+- [ ] Redesign navigation and header
+- [ ] Redesign listing cards with better spacing
+- [ ] Redesign detail pages with cleaner layout
+- [ ] Add smooth animations and transitions
+- [ ] Improve mobile responsiveness
+- [ ] Add loading skeletons for better UX
+- [ ] Optimize images and performance

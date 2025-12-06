@@ -183,3 +183,36 @@ export const contactSubmissions = mysqlTable("contact_submissions", {
 
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 export type InsertContactSubmission = typeof contactSubmissions.$inferInsert;
+
+/**
+ * Reviews table - user reviews for attractions, restaurants, and accommodations
+ */
+export const reviews = mysqlTable("reviews", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("user_id").notNull(),
+  itemType: varchar("item_type", { length: 50 }).notNull(), // 'attraction', 'restaurant', 'accommodation'
+  itemId: int("item_id").notNull(),
+  rating: int("rating").notNull(), // 1-5 stars
+  comment: text("comment"),
+  userName: varchar("user_name", { length: 255 }),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Review = typeof reviews.$inferSelect;
+export type InsertReview = typeof reviews.$inferInsert;
+
+/**
+ * Itinerary table - user saved items for trip planning
+ */
+export const itineraryItems = mysqlTable("itinerary_items", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("user_id").notNull(),
+  itemType: varchar("item_type", { length: 50 }).notNull(), // 'attraction', 'restaurant', 'accommodation'
+  itemId: int("item_id").notNull(),
+  notes: text("notes"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type ItineraryItem = typeof itineraryItems.$inferSelect;
+export type InsertItineraryItem = typeof itineraryItems.$inferInsert;
