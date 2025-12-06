@@ -437,3 +437,16 @@
 - [x] Verify all event details are accurate for Hull (120 events verified)
 - [x] Verify all restaurant details are accurate for Hull (120 restaurants verified)
 - [x] Verify all accommodation details are accurate for Hull
+
+## Interactive Map Feature
+
+### Map Integration
+- [x] Create reusable map component with Google Maps
+- [x] Add interactive map to Explore page showing all attractions
+- [x] Add interactive map to Eat & Drink page showing all restaurants
+- [x] Add interactive map to Stay page showing all accommodations
+- [x] Implement custom markers for different categories
+- [x] Add info windows with attraction/restaurant details
+- [x] Add map controls (zoom, pan, fullscreen)
+- [x] Ensure mobile responsiveness
+- [x] Test map functionality across all pages

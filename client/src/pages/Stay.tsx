@@ -5,13 +5,16 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { MapPin, ExternalLink, Star, Hotel, Home, Building } from "lucide-react";
-import { useState } from "react";
+import { MapPin, ExternalLink, Star, Hotel, Home, Building, Grid3x3, Map as MapIcon } from "lucide-react";
+import { useState, useRef } from "react";
+import { MapView } from "@/components/Map";
 
 const types = ["All", "Hotel", "B&B", "Apartment", "Guesthouse"];
 
 export default function Stay() {
   const [selectedType, setSelectedType] = useState("All");
+  const [viewMode, setViewMode] = useState<"grid" | "map">("grid");
+  const mapRef = useRef<google.maps.Map | null>(null);
   
   const { data: accommodations, isLoading } = trpc.accommodations.list.useQuery();
   
@@ -54,8 +57,9 @@ export default function Stay() {
       {/* Type Filter - Modern Pills */}
       <section className="bg-card border-b sticky top-[73px] z-40 shadow-sm">
         <div className="container py-6">
-          <div className="flex gap-2 overflow-x-auto pb-2">
-            {types.map((type) => (
+          <div className="flex items-center justify-between gap-4 flex-wrap">
+            <div className="flex gap-2 overflow-x-auto pb-2 flex-1">
+              {types.map((type) => (
               <Button
                 key={type}
                 variant={selectedType === type ? "default" : "outline"}
@@ -69,7 +73,28 @@ export default function Stay() {
               >
                 {type}
               </Button>
-            ))}
+              ))}
+            </div>
+            
+            {/* View Mode Toggle */}
+            <div className="flex gap-1 bg-secondary rounded-lg p-1">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setViewMode("grid")}
+                className={`rounded-md ${viewMode === "grid" ? "bg-background shadow-sm" : ""}`}
+              >
+                <Grid3x3 className="w-4 h-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setViewMode("map")}
+                className={`rounded-md ${viewMode === "map" ? "bg-background shadow-sm" : ""}`}
+              >
+                <MapIcon className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -86,7 +111,83 @@ export default function Stay() {
             </p>
           </div>
 
-          {isLoading ? (
+          {viewMode === "map" ? (
+            <div className="space-y-6">
+              <MapView
+                className="w-full h-[600px] rounded-2xl overflow-hidden shadow-medium"
+                initialCenter={{ lat: 53.7457, lng: -0.3367 }}
+                initialZoom={13}
+                onMapReady={(map) => {
+                  mapRef.current = map;
+                  
+                  // Add markers for all filtered accommodations
+                  filteredAccommodations?.forEach((accommodation) => {
+                    if (accommodation.latitude && accommodation.longitude) {
+                      const marker = new google.maps.marker.AdvancedMarkerElement({
+                        map,
+                        position: { lat: Number(accommodation.latitude), lng: Number(accommodation.longitude) },
+                        title: accommodation.name,
+                      });
+
+                      // Create info window
+                      const infoWindow = new google.maps.InfoWindow({
+                        content: `
+                          <div style="padding: 12px; max-width: 280px;">
+                            <h3 style="font-weight: bold; font-size: 16px; margin-bottom: 8px;">${accommodation.name}</h3>
+                            <p style="color: #666; font-size: 14px; margin-bottom: 8px;">${accommodation.description.substring(0, 100)}...</p>
+                            <div style="display: flex; align-items: center; gap: 6px; color: #888; font-size: 13px; margin-bottom: 4px;">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                              </svg>
+                              <span>${accommodation.address || 'Hull, UK'}</span>
+                            </div>
+                            <div style="color: #0891b2; font-size: 13px; font-weight: 500; margin-bottom: 8px;">${accommodation.type}</div>
+                            <a href="/accommodation/${accommodation.slug}" style="display: inline-block; background: #0891b2; color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 500;">View Details</a>
+                          </div>
+                        `,
+                      });
+
+                      marker.addListener('click', () => {
+                        infoWindow.open(map, marker);
+                      });
+                    }
+                  });
+                }}
+              />
+              
+              {/* Accommodation List Below Map */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filteredAccommodations?.map((accommodation) => (
+                  <Link key={accommodation.id} href={`/accommodation/${accommodation.slug}`}>
+                    <a className="block">
+                      <Card className="overflow-hidden rounded-xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-sm h-full">
+                        <div className="flex gap-4 p-4">
+                          <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-muted">
+                            <img 
+                              src={accommodation.imageUrl || '/images/hull_marina_waterfront.png'} 
+                              alt={accommodation.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="font-bold text-base mb-1 line-clamp-1">{accommodation.name}</h3>
+                            <p className="text-sm text-accent font-medium mb-1">{accommodation.type}</p>
+                            {accommodation.address && (
+                              <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                                <MapPin className="w-3 h-3 flex-shrink-0" />
+                                <span className="line-clamp-1">{accommodation.address}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </Card>
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : isLoading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[...Array(6)].map((_, i) => (
                 <Card key={i} className="overflow-hidden rounded-2xl">
@@ -182,7 +283,6 @@ export default function Stay() {
           )}
         </div>
       </section>
-
       <Footer />
     </div>
   );
