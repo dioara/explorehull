@@ -34,17 +34,17 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="font-bold mb-4">Connect</h3>
+            <h3 className="font-bold mb-4">Legal</h3>
             <ul className="space-y-2 text-gray-300">
               <li><Link href="/contact"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Contact Us</a></Link></li>
-              <li><a href="#" className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Terms of Service</a></li>
+              <li><Link href="/privacy"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Privacy Policy</a></Link></li>
+              <li><Link href="/terms"><a className="hover:text-[oklch(0.70_0.15_200)] transition-colors">Terms of Service</a></Link></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Explore Hull. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ExploreHull.com. Operated by <a href="https://lampstand.consulting" target="_blank" rel="noopener noreferrer" className="hover:text-[oklch(0.70_0.15_200)] transition-colors underline">Lampstand Consulting</a>. All rights reserved.</p>
         </div>
       </div>
     </footer>

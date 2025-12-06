@@ -7,6 +7,7 @@ import * as db from "./db";
 import { generateSitemap } from './sitemap';
 import { getHullNews } from './news';
 import { getCurrentWeather, getWeatherForecast } from './weather';
+import { notifyOwner } from './_core/notification';
 
 export const appRouter = router({
   system: systemRouter,
@@ -177,26 +178,36 @@ export const appRouter = router({
         message: z.string(),
       }))
       .mutation(async ({ input }) => {
-        // Send email notification to contact@lampstand.consulting
-        const emailContent = `
-New Contact Form Submission from ExploreHull.com
-
-Name: ${input.name}
-Email: ${input.email}
-Subject: ${input.subject}
-
-Message:
-${input.message}
-        `;
-        
-        // Use the notification system to send to owner
-        // In production, this would integrate with an email service
+        // Save to database
         await db.saveContactSubmission({
           name: input.name,
           email: input.email,
           subject: input.subject,
           message: input.message,
         });
+        
+        // Send notification to owner (contact@lampstand.consulting)
+        const emailContent = `New Contact Form Submission from ExploreHull.com
+
+**Name:** ${input.name}
+**Email:** ${input.email}
+**Subject:** ${input.subject}
+
+**Message:**
+${input.message}
+
+---
+This message was sent via the ExploreHull.com contact form.`;
+        
+        try {
+          await notifyOwner({
+            title: `ExploreHull Contact: ${input.subject}`,
+            content: emailContent,
+          });
+        } catch (error) {
+          console.error('Failed to send contact notification:', error);
+          // Continue even if notification fails - submission is saved
+        }
         
         return { success: true };
       }),

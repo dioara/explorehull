@@ -450,3 +450,36 @@
 - [x] Add map controls (zoom, pan, fullscreen)
 - [x] Ensure mobile responsiveness
 - [x] Test map functionality across all pages
+
+## Final Polish & Legal (User Request)
+
+### Hull Radio Integration
+- [x] Research major Hull radio stations with embeddable players
+- [x] Find stations that allow free embedding without contracts
+- [x] Conclusion: BBC Radio Humberside and Viking FM do not offer free embeddable players without contracts
+- [x] Decision: Skip radio embed feature due to licensing restrictions
+
+### Contact Form & Email
+- [x] Update contact form to send notifications to owner (contact@lampstand.consulting)
+- [ ] Test contact form submission
+- [ ] Verify notification delivery
+
+### Legal Pages
+- [x] Create Privacy Policy page for Lampstand Consulting
+- [x] Create Terms of Service page for Lampstand Consulting
+- [x] Add links to legal pages in footer
+- [x] Add routes for Privacy and Terms pages
+- [x] Ensure legal pages are comprehensive and professional
+
+### Footer & Branding
+- [x] Update footer with Lampstand Consulting copyright
+- [x] Add link to lampstand.consulting in footer
+- [x] Remove all placeholder addresses and phone numbers
+- [x] Verify footer appears on all pages
+
+### Final Testing
+- [x] Test all pages for functionality
+- [x] Verify all links work
+- [x] Check mobile responsiveness
+- [x] Ensure no broken features
+- [x] All 27 tests passing
