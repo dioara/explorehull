@@ -5,6 +5,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { BackToTop } from "./components/BackToTop";
+import { LoadingBar } from "./components/LoadingBar";
 import Home from "./pages/Home";
 import SearchResults from "./pages/SearchResults";
 import Explore from "./pages/Explore";
@@ -27,7 +29,9 @@ import RestaurantDetail from "./pages/RestaurantDetail";
 function Router() {
   return (
     <>
+      <LoadingBar />
       <ScrollToTop />
+      <BackToTop />
       <Switch>
       <Route path={"/"} component={Home} />
       <Route path="/search" component={SearchResults} />
