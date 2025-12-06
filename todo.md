@@ -667,3 +667,10 @@
 - [ ] Document required environment variables
 - [ ] Document database setup instructions
 - [ ] Document auth replacement options
+
+
+## Railway Deployment Fixes
+
+- [ ] Fix seed script to use real external image URLs instead of placeholder paths
+- [ ] Ensure all attractions use authentic Hull images
+- [ ] Verify all listings are real Hull businesses and attractions
