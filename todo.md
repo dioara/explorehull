@@ -745,3 +745,18 @@
 - [x] Update seed-events-50.ts with local image paths
 - [x] Test image loading on local dev server (verified working)
 - [x] Push all changes to GitHub
+
+
+## Railway Deployment - Image Loading Issue
+
+- [x] Check Railway deployment logs for image serving errors
+- [x] Verify images exist in Railway build output (in GitHub)
+- [x] Check if Vite static asset handling is configured correctly
+- [x] Test image URLs on Railway production site - found caching issue
+- [x] Reseeded production database with local paths
+- [x] Triggered Railway redeploy to clear server cache
+- [x] Wait for Railway redeploy to complete (3-5 minutes)
+- [x] Identified Railway uses separate production database
+- [x] Reseeded Railway production database with local image paths
+- [x] Verified all images load correctly on production
+- [x] Tested attractions, restaurants, events, and hotels images
