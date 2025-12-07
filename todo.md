@@ -771,3 +771,15 @@
 - [x] Test weather data fetching and display on dev server - working perfectly!
 - [x] Push to GitHub and deploy to Railway (waiting for Railway deployment)
 - [ ] Save checkpoint
+
+
+## Real Events Scraping
+
+- [ ] Scrape events from Hull Theatres (hulltheatres.co.uk)
+- [ ] Identify other Hull event sources (Bonus Arena, venues, festivals)
+- [ ] Create event scraping script to extract event data
+- [ ] Map scraped data to events database schema
+- [ ] Clear existing seed events and populate with real events
+- [ ] Test events display on website
+- [ ] Push to GitHub and deploy to Railway
+- [ ] Save checkpoint

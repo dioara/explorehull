@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Hull New Theatre Venue Tour - 2026",
+    "startDate": "2026-01-15",
+    "endDate": "2026-01-15",
+    "venue": "Hull New Theatre",
+    "category": "Tours",
+    "description": "Explore the historic Hull New Theatre with a guided tour. Discover the beautiful Edwardian architecture, backstage areas, and rich theatrical history.",
+    "price": "£8.00",
+    "imageUrl": "/images/events/hull-new-theatre-tour.jpg"
+  },
+  {
+    "title": "Hull City Hall Venue Tour - 2026",
+    "startDate": "2026-01-20",
+    "endDate": "2026-01-20",
+    "venue": "Hull City Hall",
+    "category": "Tours",
+    "description": "Take a behind-the-scenes tour of the magnificent Hull City Hall. See the stunning concert hall, learn about its history, and explore areas normally closed to the public.",
+    "price": "£8.00",
+    "imageUrl": "/images/events/hull-city-hall-tour.jpg"
+  },
+  {
+    "title": "Spotlight Lounge - January 2026",
+    "startDate": "2026-01-25",
+    "endDate": "2026-01-25",
+    "venue": "Hull City Hall",
+    "category": "Music",
+    "description": "Intimate live music sessions in the Spotlight Lounge. Enjoy performances from local and touring artists in a relaxed setting.",
+    "price": "£15.00",
+    "imageUrl": "/images/events/spotlight-lounge-music.jpg"
+  },
+  {
+    "title": "Winter Memories",
+    "startDate": "2026-02-01",
+    "endDate": "2026-02-01",
+    "venue": "Hull City Hall",
+    "category": "Variety Show",
+    "description": "A nostalgic journey through winter past with classic songs, festive music, and heartwarming stories. Perfect for the whole family.",
+    "price": "£25.00",
+    "imageUrl": "/images/events/christmas-memories-show.jpg"
+  },
+  {
+    "title": "A Winter Celebration",
+    "startDate": "2026-02-05",
+    "endDate": "2026-02-05",
+    "venue": "Hull City Hall",
+    "category": "Classical Music",
+    "description": "Celebrate the season with a spectacular concert featuring classical favorites performed by a full orchestra and choir.",
+    "price": "£30.00",
+    "imageUrl": "/images/events/christmas-celebration-concert.jpg"
+  },
+  {
+    "title": "Lunchtime Organ Showcase - February 2026",
+    "startDate": "2026-02-10",
+    "endDate": "2026-02-10",
+    "venue": "Hull City Hall",
+    "category": "Classical Music",
+    "description": "Experience the magnificent Hull City Hall organ in this lunchtime concert series. Free admission.",
+    "price": "Free",
+    "imageUrl": "/images/events/lunchtime-organ-concert.jpg"
+  },
+  {
+    "title": "Beauty and the Beast",
+    "startDate": "2026-02-14",
+    "endDate": "2026-03-15",
+    "venue": "Hull New Theatre",
+    "category": "Pantomime",
+    "description": "The classic tale of Beauty and the Beast comes to life in this spectacular pantomime production. Starring Paul Chuckle, Jack Land Noble, and Liv Newcomb.",
+    "price": "£25.00",
+    "imageUrl": "/images/events/beauty-beast-pantomime.jpg"
+  },
+  {
+    "title": "Hull Music Service: Festival of Songs",
+    "startDate": "2026-02-18",
+    "endDate": "2026-02-18",
+    "venue": "Hull City Hall",
+    "category": "Classical Music",
+    "description": "Join local school choirs and musicians for a joyful celebration of songs and music.",
+    "price": "£10.00",
+    "imageUrl": "/images/events/festival-carols-concert.jpg"
+  },
+  {
+    "title": "A Fairytale Evening",
+    "startDate": "2026-02-22",
+    "endDate": "2026-02-22",
+    "venue": "Hull City Hall",
+    "category": "Family",
+    "description": "A magical show featuring beloved fairytale characters, music, and fun for all the family.",
+    "price": "£18.00",
+    "imageUrl": "/images/events/fairytale-christmas-family.jpg"
+  },
+  {
+    "title": "LOL Comedy Club - February 2026",
+    "startDate": "2026-02-25",
+    "endDate": "2026-02-25",
+    "venue": "Hull City Hall: Mortimer Suite",
+    "category": "Comedy",
+    "description": "An evening of laughter with top stand-up comedians. Featuring headline acts and rising stars from the UK comedy circuit.",
+    "price": "£20.00",
+    "imageUrl": "/images/events/lol-comedy-club-show.jpg"
+  },
+  {
+    "title": "Motown's Greatest Hits - How Sweet It Is",
+    "startDate": "2026-03-01",
+    "endDate": "2026-03-01",
+    "venue": "Hull City Hall",
+    "category": "Music",
+    "description": "Celebrate the legendary sounds of Motown with this spectacular tribute show featuring all the classic hits from Diana Ross, Marvin Gaye, The Supremes, and more.",
+    "price": "£28.00",
+    "imageUrl": "/images/events/motown-tribute-show.jpg"
+  },
+  {
+    "title": "A Pirate's Adventure",
+    "startDate": "2026-03-05",
+    "endDate": "2026-03-05",
+    "venue": "Hull City Hall",
+    "category": "Family",
+    "description": "Set sail on an adventure with pirates, treasure, and magic. A swashbuckling family show.",
+    "price": "£16.00",
+    "imageUrl": "/images/events/pirates-christmas-adventure.jpg"
+  }
+]
