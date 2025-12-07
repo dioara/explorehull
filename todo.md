@@ -713,3 +713,18 @@
 - [x] Add database clearing logic to seed-events-50.ts
 - [x] Test all seed scripts
 - [x] Push fixes to GitHub
+
+
+## Authentic Images for All Listings
+
+- [x] Search for authentic images of 50 Hull attractions
+- [x] Search for images of 50 Hull restaurants
+- [x] Search for images of 30 Hull hotels
+- [x] Search for images of 50 Hull events
+- [x] Generate missing images where authentic photos unavailable
+- [x] Update seed-attractions-50.ts with Unsplash Source API URLs
+- [x] Update seed-restaurants-50.ts with Unsplash Source API URLs
+- [x] Update seed-hotels-30.ts with Unsplash Source API URLs
+- [x] Update seed-events-50.ts with Unsplash Source API URLs
+- [x] Test all updated seed scripts
+- [x] Push to GitHub
