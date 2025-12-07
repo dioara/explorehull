@@ -728,3 +728,20 @@
 - [x] Update seed-events-50.ts with Unsplash Source API URLs
 - [x] Test all updated seed scripts
 - [x] Push to GitHub
+
+
+## Fix Images - Upload to GitHub
+
+- [ ] Unsplash Source API is deprecated/broken - need alternative solution
+- [ ] Generate AI images for 50 attractions
+- [ ] Generate AI images for 50 restaurants
+- [ ] Generate AI images for 30 hotels
+- [ ] Generate AI images for 50 events
+- [ ] Create organized folder structure in public/images/
+- [ ] Upload images to GitHub repository
+- [ ] Update seed-attractions-50.ts with local image paths
+- [ ] Update seed-restaurants-50.ts with local image paths
+- [ ] Update seed-hotels-30.ts with local image paths
+- [ ] Update seed-events-50.ts with local image paths
+- [ ] Test image loading on Railway deployment
+- [ ] Push all changes to GitHub
