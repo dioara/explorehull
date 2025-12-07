@@ -8,6 +8,7 @@ import { SEO } from "@/components/SEO";
 import { HullNews } from "@/components/HullNews";
 import { WhatsOnToday } from "@/components/WhatsOnToday";
 import { CurrencyConverter } from "@/components/CurrencyConverter";
+import { HullRadioPlayer } from "@/components/HullRadioPlayer";
 import { Link } from "wouter";
 import { Calendar, MapPin, Utensils, Hotel, Ship, Search, ArrowRight, Star, Clock } from "lucide-react";
 import { useState } from "react";
@@ -369,8 +370,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Currency Converter */}
-      <CurrencyConverter />
+      {/* Interactive Tools Section */}
+      <section className="container py-16">
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Currency Converter */}
+          <CurrencyConverter />
+          
+          {/* Hull Radio Player */}
+          <HullRadioPlayer />
+        </div>
+      </section>
 
       <Footer />
     </div>

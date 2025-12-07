@@ -747,16 +747,27 @@
 - [x] Push all changes to GitHub
 
 
-## Railway Deployment - Image Loading Issue
+## Hull Radio Station Player
 
-- [x] Check Railway deployment logs for image serving errors
-- [x] Verify images exist in Railway build output (in GitHub)
-- [x] Check if Vite static asset handling is configured correctly
-- [x] Test image URLs on Railway production site - found caching issue
-- [x] Reseeded production database with local paths
-- [x] Triggered Railway redeploy to clear server cache
-- [x] Wait for Railway redeploy to complete (3-5 minutes)
-- [x] Identified Railway uses separate production database
-- [x] Reseeded Railway production database with local image paths
-- [x] Verified all images load correctly on production
-- [x] Tested attractions, restaurants, events, and hotels images
+- [x] Research Hull-based radio stations (found Hull's 107FM)
+- [x] Find embeddable radio players or streaming URLs (http://88.99.195.180:8031/stream)
+- [x] Create HullRadioPlayer component with play/pause, volume slider, mute
+- [x] Add radio player to home page (side-by-side with currency converter)
+- [x] Style player with gradient design and live indicator
+- [x] Test audio streaming functionality on dev server - working perfectly!
+- [x] Push changes to GitHub
+- [ ] Verify radio player on Railway production
+- [ ] Save checkpoint
+
+
+## Weather & Date Widget
+
+- [x] Create WeatherWidget component with live weather API
+- [x] Fetch Hull weather data (temperature, condition, icon)
+- [x] Display current date in readable format
+- [x] Style widget to match 107FM design (compact, top bar)
+- [x] Add weather widget to Navigation component
+- [x] Ensure widget appears on all pages (via Navigation)
+- [x] Test weather data fetching and display on dev server - working perfectly!
+- [x] Push to GitHub and deploy to Railway (waiting for Railway deployment)
+- [ ] Save checkpoint

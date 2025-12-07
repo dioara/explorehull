@@ -8,6 +8,7 @@ import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { generateSitemap } from "../sitemap";
 import { serveStatic, setupVite } from "./vite";
+import { setupRadioProxy } from "../radioProxy";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -36,6 +37,9 @@ async function startServer() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);
+  
+  // Radio stream proxy
+  setupRadioProxy(app);
   
   // Sitemap route
   app.get("/sitemap.xml", async (req, res) => {

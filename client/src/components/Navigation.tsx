@@ -2,12 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Ship, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { WeatherBar } from "@/components/WeatherBar";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <>
+      <WeatherBar />
+      <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container py-4">
         <div className="flex items-center justify-between">
           <Link href="/">
@@ -85,5 +88,6 @@ export function Navigation() {
         )}
       </div>
     </nav>
+    </>
   );
 }
