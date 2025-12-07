@@ -693,3 +693,13 @@
 - [ ] Create production seed script with ONLY verified real data
 - [ ] Remove all fake/generated listings
 - [ ] Test and deploy production seed to Railway database
+
+
+## Modular Seed Files (50+ each category)
+
+- [x] Create seed-attractions-50.ts with 50 real Hull attractions
+- [x] Create seed-restaurants-50.ts with 50 real Hull restaurants
+- [x] Create seed-hotels-30.ts with 30 real Hull hotels
+- [x] Create seed-events-50.ts with 50 real Hull events
+- [ ] Test all seed files
+- [ ] Push to GitHub and provide run instructions
