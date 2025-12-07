@@ -31,7 +31,7 @@ async function seedEvents() {
       // time: "All day",
       location: "City Centre, Hull",
       // venue: "Multiple venues across Hull",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE",
       ticketUrl: "https://www.freedomfestival.co.uk",
       featured: true
@@ -45,7 +45,7 @@ async function seedEvents() {
       // time: "Daily 12:00 PM - 11:00 PM",
       location: "Walton Street, Hull, HU3 6HU",
       // venue: "Hull Fair Ground",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE entry (ride tickets sold separately)",
       ticketUrl: "https://www.hull.gov.uk/hullfair",
       featured: true
@@ -59,7 +59,7 @@ async function seedEvents() {
       // time: "12:00 PM - 11:00 PM",
       location: "Humber Street, Hull, HU1 1TU",
       // venue: "Humber Street (Fruit Market)",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE",
       ticketUrl: "https://www.humberstreetsesh.co.uk",
       featured: true
@@ -73,7 +73,7 @@ async function seedEvents() {
       // time: "11:00 AM - 6:00 PM",
       location: "Queens Gardens, Hull, HU1 3DZ",
       // venue: "Queens Gardens",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE",
       ticketUrl: "https://www.hullpride.co.uk",
       featured: true
@@ -87,7 +87,7 @@ async function seedEvents() {
       // time: "All weekend",
       location: "Hull Old Town, HU1",
       // venue: "Multiple pubs and venues",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE (some ticketed events)",
       ticketUrl: "https://www.seashanty.co.uk",
       featured: false
@@ -101,7 +101,7 @@ async function seedEvents() {
       // time: "Various times",
       location: "Multiple venues, Hull",
       // venue: "Hull City Hall and other venues",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£10-£30",
       ticketUrl: "https://www.hulljazzfestival.co.uk",
       featured: false
@@ -115,7 +115,7 @@ async function seedEvents() {
       // time: "10:00 AM - 6:00 PM",
       location: "Queens Gardens, Hull, HU1 3DZ",
       // venue: "Queens Gardens",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE entry",
       ticketUrl: "https://www.visithull.org",
       featured: false
@@ -129,7 +129,7 @@ async function seedEvents() {
       // time: "10:00 AM - 4:00 PM",
       location: "Hull City Hall, HU1 3RQ",
       // venue: "Hull City Hall",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE",
       ticketUrl: "https://www.hull.gov.uk",
       featured: false
@@ -145,7 +145,7 @@ async function seedEvents() {
       // time: "7:30 PM",
       location: "Kingston Square, Hull, HU1 3HF",
       // venue: "Hull New Theatre",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£25-£85",
       ticketUrl: "https://www.hulltheatres.co.uk",
       featured: true
@@ -159,7 +159,7 @@ async function seedEvents() {
       // time: "2:00 PM & 7:00 PM",
       location: "Kingston Square, Hull, HU1 3HF",
       // venue: "Hull New Theatre",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£15-£40",
       ticketUrl: "https://www.hulltheatres.co.uk",
       featured: false
@@ -173,7 +173,7 @@ async function seedEvents() {
       // time: "7:30 PM",
       location: "50 Ferensway, Hull, HU2 8LB",
       // venue: "Hull Truck Theatre",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£12-£28",
       ticketUrl: "https://www.hulltruck.co.uk",
       featured: false
@@ -187,7 +187,7 @@ async function seedEvents() {
       // time: "7:30 PM",
       location: "Kingston Square, Hull, HU1 3HF",
       // venue: "Hull New Theatre",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£20-£50",
       ticketUrl: "https://www.hulltheatres.co.uk",
       featured: false
@@ -201,7 +201,7 @@ async function seedEvents() {
       // time: "8:00 PM",
       location: "Queen Victoria Square, Hull, HU1 3RQ",
       // venue: "Hull City Hall",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£18-£35",
       ticketUrl: "https://www.hulltheatres.co.uk",
       featured: false
@@ -217,7 +217,7 @@ async function seedEvents() {
       // time: "7:30 PM",
       location: "Queen Victoria Square, Hull, HU1 3RQ",
       // venue: "Hull City Hall",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£12-£25",
       ticketUrl: "https://www.hullphil.org.uk",
       featured: false
@@ -231,7 +231,7 @@ async function seedEvents() {
       // time: "7:00 PM",
       location: "Ferensway, Hull, HU2 8PN",
       // venue: "Hull Bonus Arena",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£25-£75",
       ticketUrl: "https://www.bonusarenahull.com",
       featured: false
@@ -245,7 +245,7 @@ async function seedEvents() {
       // time: "8:30 PM",
       location: "Spring Bank, Hull, HU3 1LR",
       // venue: "The Polar Bear",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£5-£10",
       ticketUrl: "https://www.thepolarbear.co.uk",
       featured: false
@@ -261,7 +261,7 @@ async function seedEvents() {
       // time: "3:00 PM",
       location: "Walton Street, Hull, HU3 6HU",
       // venue: "MKM Stadium",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£20-£45",
       ticketUrl: "https://www.hullcitytigers.com",
       featured: false
@@ -275,7 +275,7 @@ async function seedEvents() {
       // time: "7:45 PM",
       location: "Walton Street, Hull, HU3 6HU",
       // venue: "MKM Stadium",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£15-£35",
       ticketUrl: "https://www.hullfc.com",
       featured: false
@@ -289,7 +289,7 @@ async function seedEvents() {
       // time: "9:00 AM start",
       location: "City Centre, Hull",
       // venue: "Hull City Centre",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£35-£50 entry",
       ticketUrl: "https://www.hullmarathon.co.uk",
       featured: false
@@ -305,7 +305,7 @@ async function seedEvents() {
       // time: "5:00 PM - 8:00 PM",
       location: "Queen Victoria Square, Hull, HU1 3DZ",
       // venue: "Queen Victoria Square",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE",
       ticketUrl: "https://www.hull.gov.uk",
       featured: false
@@ -319,7 +319,7 @@ async function seedEvents() {
       // time: "6:00 PM - 9:00 PM",
       location: "Holderness Road, Hull, HU8 7RT",
       // venue: "East Park",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "£5 adults, £3 children",
       ticketUrl: "https://www.hull.gov.uk",
       featured: false
@@ -333,7 +333,7 @@ async function seedEvents() {
       // time: "9:00 AM - 2:00 PM",
       location: "Trinity Square, Hull, HU1 3DG",
       // venue: "Trinity Market Square",
-      imageUrl: "https://source.unsplash.com/800x600/?event,festival,entertainment",
+      imageUrl: "/images/attractions/hull-old-town.jpg",
       price: "FREE entry",
       ticketUrl: "https://www.hull.gov.uk",
       featured: false
