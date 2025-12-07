@@ -13,7 +13,12 @@ async function seedRestaurants() {
     return;
   }
 
-  console.log("🍽️  Seeding 50+ real Hull restaurants...");
+    console.log("🍴 Seeding 50+ real Hull restaurants...");
+  
+  // Clear existing restaurants first
+  console.log("🗑️  Clearing existing restaurants...");
+  await db.delete(restaurants);
+  console.log("✅ Existing restaurants cleared");
 
   const realRestaurants = [
     // Fine Dining & British (10)

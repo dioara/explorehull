@@ -14,6 +14,11 @@ async function seedEvents() {
   }
 
   console.log("🎉 Seeding 50+ real Hull events...");
+  
+  // Clear existing events first
+  console.log("🗑️  Clearing existing events...");
+  await db.delete(events);
+  console.log("✅ Existing events cleared");
 
   const realEvents = [
     // Major Annual Festivals (10)

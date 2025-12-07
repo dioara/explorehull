@@ -14,6 +14,11 @@ async function seedAttractions() {
   }
 
   console.log("🏛️  Seeding 50+ real Hull attractions...");
+  
+  // Clear existing attractions first
+  console.log("🗑️  Clearing existing attractions...");
+  await db.delete(attractions);
+  console.log("✅ Existing attractions cleared");
 
   const realAttractions = [
     // Museums & Galleries (15)

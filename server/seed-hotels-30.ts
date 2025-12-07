@@ -14,6 +14,11 @@ async function seedHotels() {
   }
 
   console.log("🏨 Seeding 30+ real Hull hotels and accommodations...");
+  
+  // Clear existing accommodations first
+  console.log("🗑️  Clearing existing accommodations...");
+  await db.delete(accommodations);
+  console.log("✅ Existing accommodations cleared");
 
   const realHotels = [
     // Major Hotel Chains (12)
