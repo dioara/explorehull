@@ -701,5 +701,15 @@
 - [x] Create seed-restaurants-50.ts with 50 real Hull restaurants
 - [x] Create seed-hotels-30.ts with 30 real Hull hotels
 - [x] Create seed-events-50.ts with 50 real Hull events
-- [ ] Test all seed files
-- [ ] Push to GitHub and provide run instructions
+- [x] Test all seed files
+- [x] Push to GitHub and provide run instructions
+
+
+## Fix Seed Script Duplicate Errors
+
+- [x] Add database clearing logic to seed-attractions-50.ts
+- [x] Add database clearing logic to seed-restaurants-50.ts
+- [x] Add database clearing logic to seed-hotels-30.ts
+- [x] Add database clearing logic to seed-events-50.ts
+- [x] Test all seed scripts
+- [x] Push fixes to GitHub
