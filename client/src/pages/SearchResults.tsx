@@ -322,8 +322,7 @@ export default function SearchResults() {
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredResults.accommodations.map((accommodation: any) => (
-                          <Link key={accommodation.id} href={`/accommodation/${accommodation.slug}`}>
-                            <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                          <Card key={accommodation.id} className="hover:shadow-lg transition-shadow h-full">
                               <CardContent className="p-0">
                                 <div className="relative h-48 overflow-hidden rounded-t-lg">
                                   <OptimizedImage
@@ -353,7 +352,6 @@ export default function SearchResults() {
                               </div>
                             </CardContent>
                           </Card>
-                          </Link>
                         ))}
                       </div>
                     </div>
@@ -461,8 +459,7 @@ export default function SearchResults() {
                 <TabsContent value="accommodations">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredResults.accommodations.map((accommodation: any) => (
-                      <Link key={accommodation.id} href={`/accommodation/${accommodation.slug}`}>
-                        <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                      <Card key={accommodation.id} className="hover:shadow-lg transition-shadow h-full">
                           <CardContent className="p-0">
                             <div className="relative h-48 overflow-hidden rounded-t-lg">
                               <OptimizedImage
@@ -492,7 +489,6 @@ export default function SearchResults() {
                           </div>
                         </CardContent>
                       </Card>
-                      </Link>
                     ))}
                   </div>
                 </TabsContent>

@@ -120,7 +120,7 @@ export function SearchAutocomplete({
                   <button
                     key={item.query}
                     onClick={() => handleSuggestionClick(item.query)}
-                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors text-left"
+                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors text-left text-foreground"
                   >
                     <item.icon className="w-4 h-4 text-muted-foreground" />
                     <span className="flex-1 font-medium">{item.query}</span>
@@ -142,7 +142,7 @@ export function SearchAutocomplete({
                   <button
                     key={suggestion.id}
                     onClick={() => handleSuggestionClick(suggestion.name)}
-                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors text-left"
+                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors text-left text-foreground"
                   >
                     {suggestion.type === 'attraction' && <MapPin className="w-4 h-4 text-muted-foreground" />}
                     {suggestion.type === 'event' && <Calendar className="w-4 h-4 text-muted-foreground" />}

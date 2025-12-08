@@ -2,7 +2,7 @@ import sgMail from '@sendgrid/mail';
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
 const CONTACT_EMAIL = 'contact@lampstand.consulting';
-const FROM_EMAIL = 'noreply@explorehull.com';
+const FROM_EMAIL = 'noreply@lampstand.consulting';
 
 // Initialize SendGrid
 if (SENDGRID_API_KEY) {
