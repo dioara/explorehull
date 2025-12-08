@@ -7,6 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Calendar, MapPin, Ticket, Clock } from "lucide-react";
 import { useState } from "react";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 const categories = ["All", "Festival", "Exhibition", "Theatre", "Music", "Family", "Sports"];
 const timeFilters = ["Upcoming", "Past"] as const;
@@ -142,11 +143,12 @@ export default function Events() {
                   <a className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1">
                       <div className="flex flex-col md:flex-row">
-                        <div className="relative w-full md:w-96 h-64 md:h-80 overflow-hidden flex-shrink-0 bg-muted">
-                          <img 
+                        <div className="relative w-full md:w-96 h-64 md:h-80 overflow-hidden flex-shrink-0">
+                          <OptimizedImage 
                             src={event.imageUrl || '/images/hull_events_festival.png'} 
                             alt={event.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            className="group-hover:scale-110 transition-transform duration-500"
+                            aspectRatio="4/3"
                           />
                           <div className="absolute top-4 left-4 bg-[oklch(0.68_0.10_55)] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md">
                             {event.category}

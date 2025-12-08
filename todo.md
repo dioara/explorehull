@@ -876,3 +876,10 @@
 - [x] Test Google Analytics tracking
 - [x] Test related articles functionality
 - [ ] Deploy to production
+
+## Phase 11: Event Images & Optimization Fix
+
+### Event Image Issues
+- [x] Replace regular img tags with OptimizedImage component on Events page
+- [x] Add lazy loading and blur placeholders to event images
+- [ ] Verify image optimization is working on live site
