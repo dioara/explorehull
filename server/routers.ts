@@ -252,30 +252,6 @@ export const appRouter = router({
       }),
   }),
 
-  venues: router({
-    list: publicProcedure.query(async () => {
-      return await db.getAllVenues();
-    }),
-    
-    byCategory: publicProcedure
-      .input(z.object({ category: z.string() }))
-      .query(async ({ input }) => {
-        return await db.getVenuesByCategory(input.category);
-      }),
-    
-    featured: publicProcedure
-      .input(z.object({ limit: z.number().optional() }).optional())
-      .query(async ({ input }) => {
-        return await db.getFeaturedVenues(input?.limit);
-      }),
-    
-    bySlug: publicProcedure
-      .input(z.object({ slug: z.string() }))
-      .query(async ({ input }) => {
-        return await db.getVenueBySlug(input.slug);
-      }),
-  }),
-
   blog: router({
     list: publicProcedure.query(async () => {
       return await db.getAllBlogPosts();
@@ -376,27 +352,18 @@ export const appRouter = router({
           message: input.message,
         });
         
-        // Send notification to owner (contact@lampstand.consulting)
-        const emailContent = `New Contact Form Submission from ExploreHull.com
-
-**Name:** ${input.name}
-**Email:** ${input.email}
-**Subject:** ${input.subject}
-
-**Message:**
-${input.message}
-
----
-This message was sent via the ExploreHull.com contact form.`;
-        
+        // Send email to contact@lampstand.consulting
         try {
-          await notifyOwner({
-            title: `ExploreHull Contact: ${input.subject}`,
-            content: emailContent,
+          const { sendContactFormEmail } = await import('./email');
+          await sendContactFormEmail({
+            name: input.name,
+            email: input.email,
+            subject: input.subject,
+            message: input.message,
           });
         } catch (error) {
-          console.error('Failed to send contact notification:', error);
-          // Continue even if notification fails - submission is saved
+          console.error('Failed to send contact email:', error);
+          // Continue even if email fails - submission is saved
         }
         
         return { success: true };
@@ -503,28 +470,19 @@ This advertising inquiry was submitted via the ExploreHull.com Partner page.`;
         // Save to database
         await db.savePartnershipInquiry(input);
         
-        // Send notification to owner
-        const emailContent = `New Partnership Inquiry from ExploreHull.com
-
-**Organization:** ${input.organizationName}
-**Contact Name:** ${input.contactName}
-**Email:** ${input.email}
-**Phone:** ${input.phone}
-**Partnership Type:** ${input.partnershipType}
-
-**Proposal:**
-${input.proposal}
-
----
-This partnership inquiry was submitted via the ExploreHull.com Partner page.`;
-        
+        // Send email to contact@lampstand.consulting
         try {
-          await notifyOwner({
-            title: `Partnership Inquiry: ${input.organizationName}`,
-            content: emailContent,
+          const { sendPartnershipEmail } = await import('./email');
+          await sendPartnershipEmail({
+            organizationName: input.organizationName,
+            contactName: input.contactName,
+            email: input.email,
+            phone: input.phone,
+            partnershipType: input.partnershipType,
+            proposal: input.proposal,
           });
         } catch (error) {
-          console.error('Failed to send partnership notification:', error);
+          console.error('Failed to send partnership email:', error);
         }
         
         return { success: true };
