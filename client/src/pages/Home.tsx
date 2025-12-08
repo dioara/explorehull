@@ -1,4 +1,5 @@
 import { trpc } from "@/lib/trpc";
+import { OptimizedImage } from "@/components/OptimizedImage";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -126,11 +127,12 @@ export default function Home() {
               {featuredAttractions?.map((attraction) => (
                 <Link key={attraction.id} href={`/attraction/${attraction.slug}`} className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1">
-                      <div className="relative h-64 overflow-hidden bg-muted">
-                        <img 
-                          src={attraction.imageUrl || '/images/hull_old_town.png'} 
+                      <div className="relative h-64 overflow-hidden">
+                        <OptimizedImage
+                          src={attraction.imageUrl || '/images/hull_old_town.png'}
                           alt={attraction.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="group-hover:scale-110 transition-transform duration-500"
+                          aspectRatio="4/3"
                         />
                         {attraction.featured && (
                           <div className="absolute top-4 right-4 bg-gradient-to-r from-[oklch(0.68_0.10_55)] to-[oklch(0.70_0.12_30)] text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1.5 shadow-md">
@@ -198,11 +200,12 @@ export default function Home() {
               {upcomingEvents?.map((event) => (
                 <Link key={event.id} href={`/event/${event.slug}`} className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1 flex flex-col md:flex-row h-full">
-                      <div className="relative w-full md:w-56 h-56 md:h-auto overflow-hidden flex-shrink-0 bg-muted">
-                        <img 
-                          src={event.imageUrl || '/images/hull_events_festival.png'} 
+                      <div className="relative w-full md:w-56 h-56 md:h-auto overflow-hidden flex-shrink-0">
+                        <OptimizedImage
+                          src={event.imageUrl || '/images/hull_events_festival.png'}
                           alt={event.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="group-hover:scale-110 transition-transform duration-500"
+                          aspectRatio="1/1"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
@@ -271,11 +274,12 @@ export default function Home() {
               {featuredRestaurants?.map((restaurant) => (
                 <Link key={restaurant.id} href={`/restaurant/${restaurant.slug}`} className="block group">
                     <Card className="overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1">
-                      <div className="relative h-64 overflow-hidden bg-muted">
-                        <img 
-                          src={restaurant.imageUrl || '/images/hull_dining_restaurant.png'} 
+                      <div className="relative h-64 overflow-hidden">
+                        <OptimizedImage
+                          src={restaurant.imageUrl || '/images/hull_dining_restaurant.png'}
                           alt={restaurant.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="group-hover:scale-110 transition-transform duration-500"
+                          aspectRatio="4/3"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
