@@ -321,14 +321,15 @@ export default function SearchResults() {
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {filteredResults.accommodations.map((accommodation: any) => (
-                          <Card key={accommodation.id} className="hover:shadow-lg transition-shadow h-full">
-                            <CardContent className="p-0">
-                              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                                <img
-                                  src={accommodation.images ? JSON.parse(accommodation.images as string)[0] : '/images/hull_marina.png'}
-                                  alt={accommodation.name}
-                                  className="w-full h-full object-cover"
-                                />
+                          <Link key={accommodation.id} href={`/accommodation/${accommodation.slug}`}>
+                            <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                              <CardContent className="p-0">
+                                <div className="relative h-48 overflow-hidden rounded-t-lg">
+                                  <OptimizedImage
+                                    src={accommodation.images ? JSON.parse(accommodation.images as string)[0] : '/images/hull_marina.png'}
+                                    alt={accommodation.name}
+                                    className="w-full h-full object-cover"
+                                  />
                                 <Badge className="absolute top-3 right-3 bg-white/90 text-foreground">
                                   {accommodation.type}
                                 </Badge>
@@ -351,6 +352,7 @@ export default function SearchResults() {
                               </div>
                             </CardContent>
                           </Card>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -458,14 +460,15 @@ export default function SearchResults() {
                 <TabsContent value="accommodations">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredResults.accommodations.map((accommodation: any) => (
-                      <Card key={accommodation.id} className="hover:shadow-lg transition-shadow h-full">
-                        <CardContent className="p-0">
-                          <div className="relative h-48 overflow-hidden rounded-t-lg">
-                            <img
-                              src={accommodation.images ? JSON.parse(accommodation.images as string)[0] : '/images/hull_marina.png'}
-                              alt={accommodation.name}
-                              className="w-full h-full object-cover"
-                            />
+                      <Link key={accommodation.id} href={`/accommodation/${accommodation.slug}`}>
+                        <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                          <CardContent className="p-0">
+                            <div className="relative h-48 overflow-hidden rounded-t-lg">
+                              <OptimizedImage
+                                src={accommodation.images ? JSON.parse(accommodation.images as string)[0] : '/images/hull_marina.png'}
+                                alt={accommodation.name}
+                                className="w-full h-full object-cover"
+                              />
                             <Badge className="absolute top-3 right-3 bg-white/90 text-foreground">
                               {accommodation.type}
                             </Badge>
@@ -488,6 +491,7 @@ export default function SearchResults() {
                           </div>
                         </CardContent>
                       </Card>
+                      </Link>
                     ))}
                   </div>
                 </TabsContent>
