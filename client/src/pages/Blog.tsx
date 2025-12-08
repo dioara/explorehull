@@ -5,9 +5,25 @@ import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Calendar, ArrowRight, Clock } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Blog() {
   const { data: blogPosts, isLoading } = trpc.blog.list.useQuery();
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const categories = [
+    "History & Heritage",
+    "Things to Do",
+    "Food & Drink",
+    "Events & Culture",
+    "Local Life",
+    "Travel Tips"
+  ];
+
+  const filteredPosts = selectedCategory
+    ? blogPosts?.filter(post => post.category === selectedCategory)
+    : blogPosts;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -30,6 +46,32 @@ export default function Blog() {
         </div>
       </section>
 
+      {/* Category Filter */}
+      <section className="py-8 bg-white border-b">
+        <div className="container">
+          <h2 className="text-2xl font-bold mb-4">Explore by Topic</h2>
+          <div className="flex flex-wrap gap-3">
+            <Button
+              variant={selectedCategory === null ? "default" : "outline"}
+              onClick={() => setSelectedCategory(null)}
+              className="rounded-full"
+            >
+              All Articles
+            </Button>
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => setSelectedCategory(category)}
+                className="rounded-full"
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Blog Posts Grid */}
       <section className="py-12">
         <div className="container">
@@ -45,9 +87,9 @@ export default function Blog() {
                 </Card>
               ))}
             </div>
-          ) : blogPosts && blogPosts.length > 0 ? (
+          ) : filteredPosts && filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`}>
                   <a>
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow group h-full flex flex-col">

@@ -860,3 +860,11 @@
 - [ ] Import blog articles to database
 - [ ] Test blog functionality
 - [ ] Deploy blog system to production
+
+## Phase 18: Blog Fixes
+
+- [ ] Add "Explore by Topic" category filter at top of blog page
+- [ ] Fix broken blog post images
+- [ ] Fix 404 errors when clicking blog posts
+- [ ] Test all blog functionality
+- [ ] Deploy fixes to production
