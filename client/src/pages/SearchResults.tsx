@@ -12,6 +12,7 @@ import { Search, MapPin, Calendar, Utensils, Hotel, Loader2 } from "lucide-react
 import { useState, useEffect, useMemo } from "react";
 import { Link } from "wouter";
 import { SearchFilters, SearchFiltersState } from "@/components/SearchFilters";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function SearchResults() {
   const [location] = useLocation();
