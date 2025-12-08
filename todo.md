@@ -841,4 +841,4 @@
 - [x] Fix AdSense "No slot size for availableWidth=0" error
 - [x] Ensure ad containers have proper width
 - [x] Test ads on all pages
-- [ ] Deploy fix to production
+- [x] Deploy fix to production
