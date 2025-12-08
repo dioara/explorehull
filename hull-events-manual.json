@@ -7,6 +7,7 @@
     "category": "Tours",
     "description": "Explore the historic Hull New Theatre with a guided tour. Discover the beautiful Edwardian architecture, backstage areas, and rich theatrical history.",
     "price": "£8.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/hull-new-theatre-tour.jpg"
   },
   {
@@ -17,6 +18,7 @@
     "category": "Tours",
     "description": "Take a behind-the-scenes tour of the magnificent Hull City Hall. See the stunning concert hall, learn about its history, and explore areas normally closed to the public.",
     "price": "£8.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/hull-city-hall-tour.jpg"
   },
   {
@@ -27,6 +29,7 @@
     "category": "Music",
     "description": "Intimate live music sessions in the Spotlight Lounge. Enjoy performances from local and touring artists in a relaxed setting.",
     "price": "£15.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/spotlight-lounge-music.jpg"
   },
   {
@@ -37,6 +40,7 @@
     "category": "Variety Show",
     "description": "A nostalgic journey through winter past with classic songs, festive music, and heartwarming stories. Perfect for the whole family.",
     "price": "£25.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/christmas-memories-show.jpg"
   },
   {
@@ -47,6 +51,7 @@
     "category": "Classical Music",
     "description": "Celebrate the season with a spectacular concert featuring classical favorites performed by a full orchestra and choir.",
     "price": "£30.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/christmas-celebration-concert.jpg"
   },
   {
@@ -57,6 +62,7 @@
     "category": "Classical Music",
     "description": "Experience the magnificent Hull City Hall organ in this lunchtime concert series. Free admission.",
     "price": "Free",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/lunchtime-organ-concert.jpg"
   },
   {
@@ -67,6 +73,7 @@
     "category": "Pantomime",
     "description": "The classic tale of Beauty and the Beast comes to life in this spectacular pantomime production. Starring Paul Chuckle, Jack Land Noble, and Liv Newcomb.",
     "price": "£25.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/beauty-beast-pantomime.jpg"
   },
   {
@@ -77,6 +84,7 @@
     "category": "Classical Music",
     "description": "Join local school choirs and musicians for a joyful celebration of songs and music.",
     "price": "£10.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/festival-carols-concert.jpg"
   },
   {
@@ -87,6 +95,7 @@
     "category": "Family",
     "description": "A magical show featuring beloved fairytale characters, music, and fun for all the family.",
     "price": "£18.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/fairytale-christmas-family.jpg"
   },
   {
@@ -97,6 +106,7 @@
     "category": "Comedy",
     "description": "An evening of laughter with top stand-up comedians. Featuring headline acts and rising stars from the UK comedy circuit.",
     "price": "£20.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/lol-comedy-club-show.jpg"
   },
   {
@@ -107,6 +117,7 @@
     "category": "Music",
     "description": "Celebrate the legendary sounds of Motown with this spectacular tribute show featuring all the classic hits from Diana Ross, Marvin Gaye, The Supremes, and more.",
     "price": "£28.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/motown-tribute-show.jpg"
   },
   {
@@ -117,6 +128,7 @@
     "category": "Family",
     "description": "Set sail on an adventure with pirates, treasure, and magic. A swashbuckling family show.",
     "price": "£16.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
     "imageUrl": "/images/events/pirates-christmas-adventure.jpg"
   }
 ]

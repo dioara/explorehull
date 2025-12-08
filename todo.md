@@ -783,3 +783,17 @@
 - [ ] Test events display on website
 - [ ] Push to GitHub and deploy to Railway
 - [ ] Save checkpoint
+
+
+## Automated Event Scraper & Book Now
+
+- [x] Create event scraper service that pulls from Hull Theatres website
+- [x] Add scraper logic to handle pagination and extract event details
+- [x] Store venue booking URLs in database (ticketUrl field)
+- [x] Create scheduled job to run scraper weekly (every Monday at 2am)
+- [x] Add error handling and logging for scraper failures
+- [ ] Test scraper manually on Railway production
+- [x] Add "Book Now" buttons to event detail pages (already exists as 'Buy Tickets')
+- [x] Link Book Now buttons to venue ticketUrl
+- [ ] Reimport events with ticketUrl to Railway production
+- [ ] Verify Book Now buttons work on production
