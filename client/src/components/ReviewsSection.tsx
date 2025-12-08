@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { StarRating } from "@/components/StarRating";
-import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
+// Auth removed - reviews disabled temporarily
 import { useState } from "react";
 import { toast } from "sonner";
 import { User } from "lucide-react";
@@ -16,7 +15,7 @@ interface ReviewsSectionProps {
 }
 
 export function ReviewsSection({ itemType, itemId, itemName }: ReviewsSectionProps) {
-  const { user, isAuthenticated } = useAuth();
+  // Auth disabled
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -84,49 +83,11 @@ export function ReviewsSection({ itemType, itemId, itemName }: ReviewsSectionPro
         <CardContent className="p-6">
           <h3 className="text-xl font-bold mb-4">Write a Review</h3>
           
-          {isAuthenticated ? (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Your Rating</label>
-                <StarRating
-                  rating={rating}
-                  onRatingChange={setRating}
-                  size="lg"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Your Review (Optional)</label>
-                <Textarea
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                  placeholder={`Share your experience at ${itemName}...`}
-                  rows={4}
-                  className="resize-none"
-                />
-              </div>
-              
-              <Button
-                type="submit"
-                disabled={isSubmitting || rating === 0}
-                className="bg-[oklch(0.70_0.15_200)] hover:bg-[oklch(0.65_0.15_200)]"
-              >
-                {isSubmitting ? "Submitting..." : "Submit Review"}
-              </Button>
-            </form>
-          ) : (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground mb-4">
-                Please sign in to leave a review
-              </p>
-              <Button
-                onClick={() => window.location.href = getLoginUrl()}
-                className="bg-[oklch(0.70_0.15_200)] hover:bg-[oklch(0.65_0.15_200)]"
-              >
-                Sign In to Review
-              </Button>
-            </div>
-          )}
+          <div className="text-center py-8">
+            <p className="text-muted-foreground">
+              Review submission is temporarily unavailable
+            </p>
+          </div>
         </CardContent>
       </Card>
       
