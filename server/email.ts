@@ -22,12 +22,18 @@ export interface EmailOptions {
  */
 export async function sendEmail(options: EmailOptions): Promise<boolean> {
   if (!SENDGRID_API_KEY) {
-    console.warn('[Email] SendGrid not configured - email not sent');
+    console.error('[Email] CRITICAL: SendGrid API key not configured!');
+    console.error('[Email] Environment variable SENDGRID_API_KEY is missing');
     return false;
   }
 
+  console.log('[Email] Attempting to send email...');
+  console.log('[Email] From:', FROM_EMAIL);
+  console.log('[Email] To:', options.to);
+  console.log('[Email] Subject:', options.subject);
+
   try {
-    await sgMail.send({
+    const result = await sgMail.send({
       to: options.to,
       from: FROM_EMAIL,
       subject: options.subject,
@@ -35,10 +41,16 @@ export async function sendEmail(options: EmailOptions): Promise<boolean> {
       text: options.text || options.html.replace(/<[^>]*>/g, ''), // Strip HTML for text version
     });
 
-    console.log('[Email] Email sent successfully to:', options.to);
+    console.log('[Email] ✓ Email sent successfully!');
+    console.log('[Email] SendGrid response status:', result[0]?.statusCode);
     return true;
   } catch (error: any) {
-    console.error('[Email] Failed to send email:', error.response?.body || error.message);
+    console.error('[Email] ✗ Failed to send email');
+    console.error('[Email] Error details:', JSON.stringify(error.response?.body || error, null, 2));
+    console.error('[Email] Error message:', error.message);
+    if (error.response?.body?.errors) {
+      console.error('[Email] SendGrid errors:', error.response.body.errors);
+    }
     return false;
   }
 }
