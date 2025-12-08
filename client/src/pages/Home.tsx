@@ -9,7 +9,7 @@ import { SEO } from "@/components/SEO";
 import { HullNews } from "@/components/HullNews";
 import { WhatsOnToday } from "@/components/WhatsOnToday";
 import { CurrencyConverter } from "@/components/CurrencyConverter";
-import { HullRadioPlayer } from "@/components/HullRadioPlayer";
+
 import { AdBanner } from "@/components/AdSense";
 import { SearchAutocomplete } from "@/components/SearchAutocomplete";
 import { Link } from "wouter";
@@ -361,8 +361,7 @@ export default function Home() {
           {/* Currency Converter */}
           <CurrencyConverter />
           
-          {/* Hull Radio Player */}
-          <HullRadioPlayer />
+
         </div>
       </section>
 
