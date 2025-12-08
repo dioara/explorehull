@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE blog_posts SET excerpt = SUBSTRING(content, 1, 200) WHERE excerpt IS NULL OR excerpt = ''",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user aVmfAzGaFwUYThZ.03868022cba3 --database SGg5rWqvWgGGYNh8QMBiqU --execute UPDATE blog_posts SET excerpt = SUBSTRING(content, 1, 200) WHERE excerpt IS NULL OR excerpt = ''",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 95
+}

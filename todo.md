@@ -842,3 +842,21 @@
 - [x] Ensure ad containers have proper width
 - [x] Test ads on all pages
 - [x] Deploy fix to production
+
+## Phase 16: Event Images Fix
+
+- [ ] Investigate missing event images
+- [ ] Fix broken image paths in event data
+- [ ] Test event images on all pages
+- [ ] Deploy fixes to production
+
+## Phase 17: Blog Content & Design
+
+- [ ] Research Hull topics and create blog categories
+- [ ] Write 15-20 original, well-researched blog articles
+- [ ] Design professional blog listing page
+- [ ] Design engaging blog article page layout
+- [ ] Create blog database schema and migration
+- [ ] Import blog articles to database
+- [ ] Test blog functionality
+- [ ] Deploy blog system to production

@@ -81,6 +81,8 @@ export const events = mysqlTable("events", {
 export type Event = typeof events.$inferSelect;
 export type InsertEvent = typeof events.$inferInsert;
 
+
+
 /**
  * Restaurants table - dining establishments
  */
@@ -160,11 +162,13 @@ export const blogPosts = mysqlTable("blog_posts", {
   title: varchar("title", { length: 255 }).notNull(),
   slug: varchar("slug", { length: 255 }).notNull().unique(),
   content: text("content").notNull(),
-  excerpt: text("excerpt"),
-  author: varchar("author", { length: 100 }),
-  category: varchar("category", { length: 100 }),
+  excerpt: text("excerpt").notNull(),
+  author: varchar("author", { length: 255 }).default("ExploreHull Editorial Team").notNull(),
+  category: varchar("category", { length: 100 }).notNull(),
   featuredImage: text("featuredImage"),
+  readingTime: int("readingTime").default(5),
   featured: boolean("featured").default(false),
+  published: boolean("published").default(true),
   publishedAt: timestamp("publishedAt").defaultNow().notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),

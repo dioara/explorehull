@@ -14,6 +14,7 @@ import Events from "./pages/Events";
 import EatDrink from "./pages/EatDrink";
 import Stay from "./pages/Stay";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Maritime from "./pages/Maritime";
 import TravelInfo from "./pages/TravelInfo";
 import Contact from "./pages/Contact";
@@ -40,6 +41,7 @@ function Router() {
       <Route path={"/eat-drink"} component={EatDrink} />
       <Route path={"/stay"} component={Stay} />
       <Route path={"/blog"} component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path={"/maritime"} component={Maritime} />
       <Route path={"/travel-info"} component={TravelInfo} />
       <Route path={"/contact"} component={Contact} />
