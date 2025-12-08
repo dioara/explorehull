@@ -13,6 +13,8 @@ import {
   InsertAccommodation,
   tours,
   InsertTour,
+  venues,
+  InsertVenue,
   blogPosts,
   InsertBlogPost,
   newsletterSubscriptions,
@@ -28,9 +30,7 @@ import {
   reviews,
   InsertReview,
   itineraryItems,
-  InsertItineraryItem,
-  venues,
-  InsertVenue
+  InsertItineraryItem
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -295,12 +295,6 @@ export async function getVenuesByCategory(category: string) {
   const db = await getDb();
   if (!db) return [];
   return db.select().from(venues).where(eq(venues.category, category)).orderBy(desc(venues.featured), venues.name);
-}
-
-export async function getFeaturedVenues(limit: number = 4) {
-  const db = await getDb();
-  if (!db) return [];
-  return db.select().from(venues).where(eq(venues.featured, true)).limit(limit);
 }
 
 export async function getVenueBySlug(slug: string) {

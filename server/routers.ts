@@ -252,6 +252,23 @@ export const appRouter = router({
       }),
   }),
 
+  venues: router({
+    list: publicProcedure
+      .input(z.object({ category: z.string().optional() }).optional())
+      .query(async ({ input }) => {
+        if (input?.category) {
+          return await db.getVenuesByCategory(input.category);
+        }
+        return await db.getAllVenues();
+      }),
+    
+    bySlug: publicProcedure
+      .input(z.object({ slug: z.string() }))
+      .query(async ({ input }) => {
+        return await db.getVenueBySlug(input.slug);
+      }),
+  }),
+
   blog: router({
     list: publicProcedure.query(async () => {
       return await db.getAllBlogPosts();
