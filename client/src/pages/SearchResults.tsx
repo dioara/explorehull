@@ -14,7 +14,8 @@ import { Link } from "wouter";
 
 export default function SearchResults() {
   const [location] = useLocation();
-  const searchParams = new URLSearchParams(location.split('?')[1]);
+  // Get query params from window.location.search since wouter's location doesn't include them
+  const searchParams = new URLSearchParams(window.location.search);
   const initialQuery = searchParams.get('q') || "";
   
   const [searchQuery, setSearchQuery] = useState(initialQuery);
@@ -25,9 +26,12 @@ export default function SearchResults() {
     { enabled: searchQuery.length > 0 }
   );
 
+  // Update search query when URL changes
   useEffect(() => {
-    setSearchQuery(initialQuery);
-  }, [initialQuery]);
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q') || "";
+    setSearchQuery(query);
+  }, [location]);
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
@@ -127,7 +131,7 @@ export default function SearchResults() {
                               <CardContent className="p-0">
                                 <div className="relative h-48 overflow-hidden rounded-t-lg">
                                   <img
-                                    src={JSON.parse(attraction.images as string)[0]}
+                                    src={attraction.images ? JSON.parse(attraction.images as string)[0] : '/images/hull_culture_theatre.png'}
                                     alt={attraction.name}
                                     className="w-full h-full object-cover"
                                   />
@@ -205,7 +209,7 @@ export default function SearchResults() {
                               <CardContent className="p-0">
                                 <div className="relative h-48 overflow-hidden rounded-t-lg">
                                   <img
-                                    src={JSON.parse(restaurant.images as string)[0]}
+                                    src={restaurant.images ? JSON.parse(restaurant.images as string)[0] : '/images/hull_food_festival.png'}
                                     alt={restaurant.name}
                                     className="w-full h-full object-cover"
                                   />
@@ -242,7 +246,7 @@ export default function SearchResults() {
                             <CardContent className="p-0">
                               <div className="relative h-48 overflow-hidden rounded-t-lg">
                                 <img
-                                  src={JSON.parse(accommodation.images as string)[0]}
+                                  src={accommodation.images ? JSON.parse(accommodation.images as string)[0] : '/images/hull_marina.png'}
                                   alt={accommodation.name}
                                   className="w-full h-full object-cover"
                                 />
@@ -282,7 +286,7 @@ export default function SearchResults() {
                           <CardContent className="p-0">
                             <div className="relative h-48 overflow-hidden rounded-t-lg">
                               <img
-                                src={JSON.parse(attraction.images as string)[0]}
+                                src={attraction.images ? JSON.parse(attraction.images as string)[0] : '/images/hull_culture_theatre.png'}
                                 alt={attraction.name}
                                 className="w-full h-full object-cover"
                               />
@@ -348,7 +352,7 @@ export default function SearchResults() {
                           <CardContent className="p-0">
                             <div className="relative h-48 overflow-hidden rounded-t-lg">
                               <img
-                                src={JSON.parse(restaurant.images as string)[0]}
+                                src={restaurant.images ? JSON.parse(restaurant.images as string)[0] : '/images/hull_food_festival.png'}
                                 alt={restaurant.name}
                                 className="w-full h-full object-cover"
                               />
@@ -379,7 +383,7 @@ export default function SearchResults() {
                         <CardContent className="p-0">
                           <div className="relative h-48 overflow-hidden rounded-t-lg">
                             <img
-                              src={JSON.parse(accommodation.images as string)[0]}
+                              src={accommodation.images ? JSON.parse(accommodation.images as string)[0] : '/images/hull_marina.png'}
                               alt={accommodation.name}
                               className="w-full h-full object-cover"
                             />
