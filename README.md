@@ -250,3 +250,4 @@ For inquiries about ExploreHull.com, please contact: contact@lampstand.consultin
 
 Built with ❤️ for Hull, UK - City of Culture 2017
 # Railway redeploy trigger Sun Dec  7 15:41:19 EST 2025
+# Events imported: Mon Dec  8 02:44:59 EST 2025
