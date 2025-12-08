@@ -1,14 +1,12 @@
-import { Resend } from 'resend';
+import sgMail from '@sendgrid/mail';
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY || '';
 const CONTACT_EMAIL = 'contact@lampstand.consulting';
-const FROM_EMAIL = 'noreply@explorehull.com'; // This will need to be verified domain
+const FROM_EMAIL = 'noreply@explorehull.com';
 
-let resend: Resend | null = null;
-
-// Initialize Resend only if API key is available
-if (RESEND_API_KEY) {
-  resend = new Resend(RESEND_API_KEY);
+// Initialize SendGrid
+if (SENDGRID_API_KEY) {
+  sgMail.setApiKey(SENDGRID_API_KEY);
 }
 
 export interface EmailOptions {
@@ -19,33 +17,28 @@ export interface EmailOptions {
 }
 
 /**
- * Send an email using Resend
- * Falls back gracefully if Resend is not configured
+ * Send an email using SendGrid
+ * Falls back gracefully if SendGrid is not configured
  */
 export async function sendEmail(options: EmailOptions): Promise<boolean> {
-  if (!resend) {
-    console.warn('[Email] Resend not configured - email not sent');
+  if (!SENDGRID_API_KEY) {
+    console.warn('[Email] SendGrid not configured - email not sent');
     return false;
   }
 
   try {
-    const { data, error } = await resend.emails.send({
-      from: FROM_EMAIL,
+    await sgMail.send({
       to: options.to,
+      from: FROM_EMAIL,
       subject: options.subject,
       html: options.html,
-      text: options.text,
+      text: options.text || options.html.replace(/<[^>]*>/g, ''), // Strip HTML for text version
     });
 
-    if (error) {
-      console.error('[Email] Failed to send email:', error);
-      return false;
-    }
-
-    console.log('[Email] Email sent successfully:', data?.id);
+    console.log('[Email] Email sent successfully to:', options.to);
     return true;
-  } catch (error) {
-    console.error('[Email] Error sending email:', error);
+  } catch (error: any) {
+    console.error('[Email] Failed to send email:', error.response?.body || error.message);
     return false;
   }
 }
