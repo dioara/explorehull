@@ -14,8 +14,41 @@ import { AdBanner } from "@/components/AdSense";
 import { SearchAutocomplete } from "@/components/SearchAutocomplete";
 import { Link } from "wouter";
 import { Calendar, MapPin, Utensils, Hotel, Ship, ArrowRight, Star, Clock } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { trpc } from "@/lib/trpc";
 
 export default function Home() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const { toast } = useToast();
+  const newsletterMutation = trpc.newsletter.subscribe.useMutation();
+  
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newsletterEmail)) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    try {
+      await newsletterMutation.mutateAsync({ email: newsletterEmail });
+      toast({
+        title: "Success!",
+        description: "You've been subscribed to our newsletter. Check your email for a welcome message!",
+      });
+      setNewsletterEmail("");
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to subscribe. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
   
   const { data: featuredAttractions, isLoading: attractionsLoading } = trpc.attractions.featured.useQuery({ limit: 6 });
   const { data: upcomingEvents, isLoading: eventsLoading } = trpc.events.upcoming.useQuery({ limit: 4 });
@@ -329,19 +362,24 @@ export default function Home() {
               </p>
             </div>
             <div className="max-w-md mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex flex-col sm:flex-row gap-2">
+              <form onSubmit={handleNewsletterSubmit} className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex flex-col sm:flex-row gap-2">
                 <Input 
                   type="email" 
                   placeholder="Enter your email" 
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
                   className="bg-white/90 text-foreground border-0 rounded-xl flex-1"
+                  required
                 />
                 <Button 
+                  type="submit"
                   size="lg"
+                  disabled={newsletterMutation.isPending}
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium rounded-xl px-8 shadow-sm"
                 >
-                  Subscribe
+                  {newsletterMutation.isPending ? "Subscribing..." : "Subscribe"}
                 </Button>
-              </div>
+              </form>
               <p className="text-sm text-white/70 mt-4">
                 We respect your privacy. Unsubscribe at any time.
               </p>
