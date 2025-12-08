@@ -868,3 +868,11 @@
 - [ ] Fix 404 errors when clicking blog posts
 - [ ] Test all blog functionality
 - [ ] Deploy fixes to production
+
+## Phase 19: Google Analytics & Related Articles
+
+- [x] Replace GTM with Google Analytics (G-WHYNDX01K4)
+- [x] Implement related articles section on blog post pages
+- [x] Test Google Analytics tracking
+- [x] Test related articles functionality
+- [ ] Deploy to production

@@ -15,6 +15,12 @@ export default function BlogPost() {
   const slug = params?.slug || "";
 
   const { data: post, isLoading } = trpc.blog.bySlug.useQuery({ slug });
+  
+  // Fetch related articles from the same category
+  const { data: relatedPosts } = trpc.blog.list.useQuery(
+    { category: post?.category },
+    { enabled: !!post?.category }
+  );
 
   if (isLoading) {
     return (
@@ -146,9 +152,46 @@ export default function BlogPost() {
       <section className="bg-white py-12">
         <div className="container">
           <h2 className="text-3xl font-bold mb-8">More from {post.category}</h2>
-          <div className="text-center text-gray-500">
-            <p>Check out more articles in the <Link href="/blog" className="text-[oklch(0.70_0.15_200)] hover:underline">blog</Link>.</p>
-          </div>
+          
+          {relatedPosts && relatedPosts.length > 1 ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts
+                .filter(p => p.slug !== post.slug) // Exclude current post
+                .slice(0, 3) // Show max 3 related posts
+                .map((relatedPost) => (
+                  <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`}>
+                    <div className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer h-full">
+                      {relatedPost.featuredImage && (
+                        <img
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.title}
+                          className="w-full h-48 object-cover"
+                        />
+                      )}
+                      <div className="p-6">
+                        <Badge className="mb-3 bg-[oklch(0.70_0.15_200)]">
+                          {relatedPost.category}
+                        </Badge>
+                        <h3 className="text-xl font-bold mb-2 line-clamp-2">
+                          {relatedPost.title}
+                        </h3>
+                        <p className="text-gray-600 line-clamp-3 mb-4">
+                          {relatedPost.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 text-sm text-gray-500">
+                          <Clock className="h-4 w-4" />
+                          <span>{relatedPost.readingTime || 5} min read</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
+          ) : (
+            <div className="text-center text-gray-500">
+              <p>Check out more articles in the <Link href="/blog" className="text-[oklch(0.70_0.15_200)] hover:underline">blog</Link>.</p>
+            </div>
+          )}
         </div>
       </section>
 
