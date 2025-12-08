@@ -797,3 +797,17 @@
 - [x] Link Book Now buttons to venue ticketUrl
 - [ ] Reimport events with ticketUrl to Railway production
 - [ ] Verify Book Now buttons work on production
+
+
+## Google AdSense Integration
+
+- [x] Add AdSense script to index.html head section
+- [x] Create AdSense ad component for reusability
+- [x] Add ads to home page (after featured attractions and before interactive tools)
+- [x] Add ads to listing pages (Explore page - after every 9 attractions)
+- [x] Add ads to detail pages (after main content, before reviews)
+- [ ] Add ads to blog pages (after articles) - skipped (no blog yet)
+- [x] Ensure ads are responsive and mobile-friendly (using data-full-width-responsive)
+- [ ] Test ad display on dev server
+- [ ] Push to GitHub and deploy to Railway
+- [ ] Verify ads load correctly on production

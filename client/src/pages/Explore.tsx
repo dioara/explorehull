@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import { MapPin, Clock, DollarSign, ExternalLink, Star, Grid3x3, List, Map as MapIcon } from "lucide-react";
 import { useState, useRef } from "react";
 import { MapView } from "@/components/Map";
+import { AdSquare } from "@/components/AdSense";
 
 const categories = ["All", "Museums", "Arts & Culture", "Maritime", "History & Heritage", "Family Friendly", "Don't Miss Experiences"];
 
@@ -207,7 +208,17 @@ export default function Explore() {
             </div>
           ) : filteredAttractions && filteredAttractions.length > 0 ? (
             <div className={viewMode === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" : "space-y-6"}>
-              {filteredAttractions.map((attraction) => (
+              {filteredAttractions.map((attraction, index) => (
+                <>
+                  {/* Show ad after every 9 attractions */}
+                  {index > 0 && index % 9 === 0 && viewMode === "grid" && (
+                    <div className="col-span-full">
+                      <AdSquare />
+                    </div>
+                  )}
+                  {index > 0 && index % 9 === 0 && viewMode === "list" && (
+                    <AdSquare />
+                  )}
                 <Link key={attraction.id} href={`/attraction/${attraction.slug}`}>
                   <a className="block group">
                     <Card className={`overflow-hidden rounded-2xl border-border/50 hover:border-border transition-all duration-300 hover:shadow-medium hover:-translate-y-1 h-full ${
@@ -270,6 +281,7 @@ export default function Explore() {
                     </Card>
                   </a>
                 </Link>
+                </>
               ))}
             </div>
           ) : (

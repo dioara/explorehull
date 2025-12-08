@@ -6,6 +6,7 @@ import { SEO, generateAttractionStructuredData } from "@/components/SEO";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { SaveToItinerary } from "@/components/SaveToItinerary";
 import { MapView } from "@/components/Map";
+import { AdBanner } from "@/components/AdSense";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -322,6 +323,11 @@ export default function AttractionDetail() {
             </div>
           </div>
           
+          {/* Ad - After Main Content */}
+          <div className="mt-16">
+            <AdBanner />
+          </div>
+
           {/* Reviews Section */}
           <div className="mt-16">
             <ReviewsSection

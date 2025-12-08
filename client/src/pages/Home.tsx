@@ -9,6 +9,7 @@ import { HullNews } from "@/components/HullNews";
 import { WhatsOnToday } from "@/components/WhatsOnToday";
 import { CurrencyConverter } from "@/components/CurrencyConverter";
 import { HullRadioPlayer } from "@/components/HullRadioPlayer";
+import { AdBanner } from "@/components/AdSense";
 import { Link } from "wouter";
 import { Calendar, MapPin, Utensils, Hotel, Ship, Search, ArrowRight, Star, Clock } from "lucide-react";
 import { useState } from "react";
@@ -187,6 +188,11 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* Ad - After Featured Attractions */}
+      <div className="container py-8">
+        <AdBanner />
+      </div>
 
       {/* Upcoming Events - Horizontal Cards */}
       <section className="py-20 bg-background">
@@ -369,6 +375,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Ad - Before Interactive Tools */}
+      <div className="container py-8">
+        <AdBanner />
+      </div>
 
       {/* Interactive Tools Section */}
       <section className="container py-16">
