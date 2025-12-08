@@ -26,6 +26,8 @@ import AdminDashboard from "@/pages/AdminDashboard";
 import AttractionDetail from "./pages/AttractionDetail";
 import EventDetail from "./pages/EventDetail";
 import RestaurantDetail from "./pages/RestaurantDetail";
+import Venues from "./pages/Venues";
+import VenueDetail from "./pages/VenueDetail";
 
 function Router() {
   return (
@@ -38,8 +40,8 @@ function Router() {
       <Route path="/search" component={SearchResults} />
       <Route path={"/explore"} component={Explore} />
       <Route path={"/events"} component={Events} />
-      <Route path={"/eat-drink"} component={EatDrink} />
-      <Route path={"/stay"} component={Stay} />
+      <Route path={"/eat-drink"} component={EatDrink} />      <Route path={"/stay"} component={Stay} />
+      <Route path={"/venues"} component={Venues} />
       <Route path={"/blog"} component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path={"/maritime"} component={Maritime} />
@@ -50,9 +52,10 @@ function Router() {
       <Route path="/partner" component={Partner} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
-      <Route path={"/attraction/:slug"} component={AttractionDetail} />
-      <Route path={"/event/:slug"} component={EventDetail} />
-      <Route path={"/restaurant/:slug"} component={RestaurantDetail} />
+           <Route path="/attraction/:slug" component={AttractionDetail} />
+      <Route path="/event/:slug" component={EventDetail} />
+      <Route path="/restaurant/:slug" component={RestaurantDetail} />
+      <Route path="/venue/:slug" component={VenueDetail} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
       </Switch>

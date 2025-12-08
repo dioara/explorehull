@@ -71,6 +71,13 @@
       "when": 1765191837436,
       "tag": "0009_special_silver_sable",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1765196346604,
+      "tag": "0010_tough_cyclops",
+      "breakpoints": true
     }
   ]
 }

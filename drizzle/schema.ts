@@ -155,6 +155,33 @@ export type Tour = typeof tours.$inferSelect;
 export type InsertTour = typeof tours.$inferInsert;
 
 /**
+ * Venues table - event spaces, wedding venues, conference centers
+ */
+export const venues = mysqlTable("venues", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  description: text("description").notNull(),
+  category: varchar("category", { length: 100 }).notNull(), // e.g., "Wedding", "Conference", "Corporate", "Party"
+  capacity: int("capacity"), // Maximum guest capacity
+  address: text("address"),
+  latitude: varchar("latitude", { length: 50 }),
+  longitude: varchar("longitude", { length: 50 }),
+  amenities: text("amenities"), // JSON array of amenities
+  pricing: text("pricing"), // Pricing information
+  imageUrl: text("imageUrl"),
+  website: varchar("website", { length: 500 }),
+  phone: varchar("phone", { length: 50 }),
+  email: varchar("email", { length: 320 }),
+  featured: boolean("featured").default(false),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Venue = typeof venues.$inferSelect;
+export type InsertVenue = typeof venues.$inferInsert;
+
+/**
  * Blog posts table - articles and guides
  */
 export const blogPosts = mysqlTable("blog_posts", {

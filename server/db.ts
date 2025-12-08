@@ -28,7 +28,9 @@ import {
   reviews,
   InsertReview,
   itineraryItems,
-  InsertItineraryItem
+  InsertItineraryItem,
+  venues,
+  InsertVenue
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -279,6 +281,39 @@ export async function createTour(tour: InsertTour) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   await db.insert(tours).values(tour);
+}
+
+// ===== Venues =====
+
+export async function getAllVenues() {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(venues).orderBy(desc(venues.featured), venues.name);
+}
+
+export async function getVenuesByCategory(category: string) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(venues).where(eq(venues.category, category)).orderBy(desc(venues.featured), venues.name);
+}
+
+export async function getFeaturedVenues(limit: number = 4) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(venues).where(eq(venues.featured, true)).limit(limit);
+}
+
+export async function getVenueBySlug(slug: string) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(venues).where(eq(venues.slug, slug)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createVenue(venue: InsertVenue) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(venues).values(venue);
 }
 
 // ===== Blog Posts =====

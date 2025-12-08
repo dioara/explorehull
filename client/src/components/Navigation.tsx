@@ -26,6 +26,7 @@ export function Navigation() {
             <Link href="/events"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Events</a></Link>
             <Link href="/eat-drink"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Eat & Drink</a></Link>
             <Link href="/stay"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Stay</a></Link>
+            <Link href="/venues"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Venues</a></Link>
             <Link href="/blog"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Blog</a></Link>
             <Link href="/partner"><a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium">Partner</a></Link>
           </div>
@@ -68,6 +69,11 @@ export function Navigation() {
               <Link href="/stay">
                 <a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
                   Stay
+                </a>
+              </Link>
+              <Link href="/venues">
+                <a className="text-foreground hover:text-[oklch(0.70_0.15_200)] transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                  Venues
                 </a>
               </Link>
               <Link href="/blog">

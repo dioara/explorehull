@@ -1,0 +1,22 @@
+CREATE TABLE `venues` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`name` varchar(255) NOT NULL,
+	`slug` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`category` varchar(100) NOT NULL,
+	`capacity` int,
+	`address` text,
+	`latitude` varchar(50),
+	`longitude` varchar(50),
+	`amenities` text,
+	`pricing` text,
+	`imageUrl` text,
+	`website` varchar(500),
+	`phone` varchar(50),
+	`email` varchar(320),
+	`featured` boolean DEFAULT false,
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `venues_id` PRIMARY KEY(`id`),
+	CONSTRAINT `venues_slug_unique` UNIQUE(`slug`)
+);

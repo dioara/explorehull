@@ -883,3 +883,21 @@
 - [x] Replace regular img tags with OptimizedImage component on Events page
 - [x] Add lazy loading and blur placeholders to event images
 - [ ] Verify image optimization is working on live site
+
+## Phase 12: Venues Feature
+
+### Database & Backend
+- [x] Create venues table in database schema (name, description, category, capacity, address, amenities, pricing, images, website, phone)
+- [x] Add venues router to tRPC API (list, getById, getByCategory)
+- [ ] Write vitest tests for venues endpoints
+
+### Frontend Pages
+- [x] Create Venues listing page with category filters (Wedding, Conference, Corporate, Party, etc.)
+- [x] Create Venue detail page with image gallery and booking info
+- [x] Add Venues link to navigation menu
+
+### Content & Data
+- [x] Research real Hull venues (wedding venues, conference centers, event spaces)
+- [x] Generate AI images for venues
+- [x] Seed database with 19 real Hull venues
+- [x] Add venue categories and amenities data
