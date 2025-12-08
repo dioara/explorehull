@@ -2,8 +2,10 @@ import { eq } from "drizzle-orm";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
+import { findClosestMatch, COMMON_SEARCH_TERMS } from "./spellcheck";
 import { z } from "zod";
 import * as db from "./db";
+import { getAllAttractions, getAllEvents, getAllRestaurants } from "./db";
 import { attractions, restaurants, accommodations } from "../drizzle/schema";
 import { generateSitemap } from './sitemap';
 import { getHullNews } from './news';
@@ -281,6 +283,55 @@ export const appRouter = router({
       .input(z.object({ q: z.string() }))
       .query(async ({ input }) => {
         return await db.searchContent(input.q);
+      }),
+    
+    suggestions: publicProcedure
+      .input(z.object({ q: z.string() }))
+      .query(async ({ input }) => {
+        if (input.q.length < 2) return [];
+        
+        const results = await db.searchContent(input.q);
+        const suggestions: Array<{ id: number; name: string; type: string }> = [];
+        
+        // Add top 3 from each category
+        results.attractions.slice(0, 3).forEach(a => 
+          suggestions.push({ id: a.id, name: a.name, type: 'attraction' })
+        );
+        results.events.slice(0, 3).forEach(e => 
+          suggestions.push({ id: e.id, name: e.title, type: 'event' })
+        );
+        results.restaurants.slice(0, 2).forEach(r => 
+          suggestions.push({ id: r.id, name: r.name, type: 'restaurant' })
+        );
+        results.accommodations.slice(0, 2).forEach(a => 
+          suggestions.push({ id: a.id, name: a.name, type: 'accommodation' })
+        );
+        
+        return suggestions.slice(0, 5);
+      }),
+
+    spellcheck: publicProcedure
+      .input(z.object({ q: z.string() }))
+      .query(async ({ input }) => {
+        const { q } = input;
+        if (!q || q.length < 3) return null;
+
+        // Get all attraction/event/restaurant names from database
+        const [attractions, events, restaurants] = await Promise.all([
+          getAllAttractions(),
+          getAllEvents(),
+          getAllRestaurants(),
+        ]);
+
+        const allNames = [
+          ...attractions.map(a => a.name),
+          ...events.map(e => e.title),
+          ...restaurants.map(r => r.name),
+          ...COMMON_SEARCH_TERMS,
+        ];
+
+        const suggestion = findClosestMatch(q, allNames);
+        return suggestion;
       }),
   }),
 

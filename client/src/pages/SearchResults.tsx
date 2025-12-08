@@ -9,8 +9,9 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search, MapPin, Calendar, Utensils, Hotel, Loader2 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "wouter";
+import { SearchFilters, SearchFiltersState } from "@/components/SearchFilters";
 
 export default function SearchResults() {
   const [location] = useLocation();
@@ -20,10 +21,27 @@ export default function SearchResults() {
   
   const [searchQuery, setSearchQuery] = useState(initialQuery);
   const [activeTab, setActiveTab] = useState("all");
+  const [filters, setFilters] = useState<SearchFiltersState>({
+    priceRange: [0, 100],
+    categories: [],
+    minRating: 0,
+    openNow: false,
+  });
 
   const { data: searchResults, isLoading } = trpc.search.query.useQuery(
     { q: searchQuery },
     { enabled: searchQuery.length > 0 }
+  );
+
+  const hasNoResults = searchResults && 
+    searchResults.attractions.length === 0 && 
+    searchResults.events.length === 0 && 
+    searchResults.restaurants.length === 0 && 
+    searchResults.accommodations.length === 0;
+
+  const { data: spellingSuggestion } = trpc.search.spellcheck.useQuery(
+    { q: searchQuery },
+    { enabled: searchQuery.length > 0 && hasNoResults }
   );
 
   // Update search query when URL changes
@@ -44,6 +62,60 @@ export default function SearchResults() {
       handleSearch();
     }
   };
+
+  const handleFiltersChange = (newFilters: SearchFiltersState) => {
+    setFilters(newFilters);
+  };
+
+  const handleResetFilters = () => {
+    setFilters({
+      priceRange: [0, 100],
+      categories: [],
+      minRating: 0,
+      openNow: false,
+    });
+  };
+
+  // Apply filters to search results
+  const filteredResults = useMemo(() => {
+    if (!searchResults) return null;
+
+    const filterItems = (items: any[]) => {
+      return items.filter(item => {
+        // Price filter (if item has price)
+        if (item.price) {
+          const price = parseFloat(item.price);
+          if (price < filters.priceRange[0] || price > filters.priceRange[1]) {
+            return false;
+          }
+        }
+
+        // Category filter
+        if (filters.categories.length > 0 && item.category) {
+          const itemCategory = item.category.toLowerCase().replace(/\s+/g, '-');
+          if (!filters.categories.includes(itemCategory)) {
+            return false;
+          }
+        }
+
+        // Rating filter (if item has rating)
+        if (filters.minRating > 0 && item.rating) {
+          if (item.rating < filters.minRating) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+    };
+
+    return {
+      attractions: filterItems(searchResults.attractions),
+      events: filterItems(searchResults.events),
+      restaurants: filterItems(searchResults.restaurants),
+      accommodations: filterItems(searchResults.accommodations),
+    };
+  }, [searchResults, filters]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -97,35 +169,42 @@ export default function SearchResults() {
                 <h2 className="text-2xl font-bold mb-2">Start Your Search</h2>
                 <p className="text-muted-foreground">Enter a search term to find attractions, events, and more in Hull</p>
               </div>
-            ) : searchResults && (searchResults.attractions.length > 0 || searchResults.events.length > 0 || searchResults.restaurants.length > 0 || searchResults.accommodations.length > 0) ? (
+            ) : filteredResults && (filteredResults.attractions.length > 0 || filteredResults.events.length > 0 || filteredResults.restaurants.length > 0 || filteredResults.accommodations.length > 0) ? (
+              <>
+                <SearchFilters 
+                  filters={filters}
+                  onFiltersChange={handleFiltersChange}
+                  onReset={handleResetFilters}
+                />
+                
               <Tabs value={activeTab} onValueChange={setActiveTab}>
                 <TabsList className="mb-8">
                   <TabsTrigger value="all">
-                    All Results ({(searchResults.attractions.length + searchResults.events.length + searchResults.restaurants.length + searchResults.accommodations.length)})
+                    All Results ({(filteredResults.attractions.length + filteredResults.events.length + filteredResults.restaurants.length + filteredResults.accommodations.length)})
                   </TabsTrigger>
                   <TabsTrigger value="attractions">
-                    Attractions ({searchResults.attractions.length})
+                    Attractions ({filteredResults.attractions.length})
                   </TabsTrigger>
                   <TabsTrigger value="events">
-                    Events ({searchResults.events.length})
+                    Events ({filteredResults.events.length})
                   </TabsTrigger>
                   <TabsTrigger value="restaurants">
-                    Restaurants ({searchResults.restaurants.length})
+                    Restaurants ({filteredResults.restaurants.length})
                   </TabsTrigger>
                   <TabsTrigger value="accommodations">
-                    Accommodations ({searchResults.accommodations.length})
+                    Accommodations ({filteredResults.accommodations.length})
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="all" className="space-y-8">
-                  {searchResults.attractions.length > 0 && (
+                  {filteredResults.attractions.length > 0 && (
                     <div>
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <MapPin className="w-6 h-6" />
                         Attractions
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {searchResults.attractions.map((attraction: any) => (
+                        {filteredResults.attractions.map((attraction: any) => (
                           <Link key={attraction.id} href={`/attraction/${attraction.slug}`}>
                             <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                               <CardContent className="p-0">
@@ -157,14 +236,14 @@ export default function SearchResults() {
                     </div>
                   )}
 
-                  {searchResults.events.length > 0 && (
+                  {filteredResults.events.length > 0 && (
                     <div>
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Calendar className="w-6 h-6" />
                         Events
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {searchResults.events.map((event: any) => (
+                        {filteredResults.events.map((event: any) => (
                           <Link key={event.id} href={`/event/${event.slug}`}>
                             <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                               <CardContent className="p-0">
@@ -196,14 +275,14 @@ export default function SearchResults() {
                     </div>
                   )}
 
-                  {searchResults.restaurants.length > 0 && (
+                  {filteredResults.restaurants.length > 0 && (
                     <div>
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Utensils className="w-6 h-6" />
                         Restaurants
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {searchResults.restaurants.map((restaurant: any) => (
+                        {filteredResults.restaurants.map((restaurant: any) => (
                           <Link key={restaurant.id} href={`/restaurant/${restaurant.slug}`}>
                             <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                               <CardContent className="p-0">
@@ -234,14 +313,14 @@ export default function SearchResults() {
                     </div>
                   )}
 
-                  {searchResults.accommodations.length > 0 && (
+                  {filteredResults.accommodations.length > 0 && (
                     <div>
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Hotel className="w-6 h-6" />
                         Accommodations
                       </h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {searchResults.accommodations.map((accommodation: any) => (
+                        {filteredResults.accommodations.map((accommodation: any) => (
                           <Card key={accommodation.id} className="hover:shadow-lg transition-shadow h-full">
                             <CardContent className="p-0">
                               <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -280,7 +359,7 @@ export default function SearchResults() {
 
                 <TabsContent value="attractions">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {searchResults.attractions.map((attraction: any) => (
+                    {filteredResults.attractions.map((attraction: any) => (
                       <Link key={attraction.id} href={`/attraction/${attraction.slug}`}>
                         <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                           <CardContent className="p-0">
@@ -313,7 +392,7 @@ export default function SearchResults() {
 
                 <TabsContent value="events">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {searchResults.events.map((event: any) => (
+                    {filteredResults.events.map((event: any) => (
                       <Link key={event.id} href={`/event/${event.slug}`}>
                         <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                           <CardContent className="p-0">
@@ -346,7 +425,7 @@ export default function SearchResults() {
 
                 <TabsContent value="restaurants">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {searchResults.restaurants.map((restaurant: any) => (
+                    {filteredResults.restaurants.map((restaurant: any) => (
                       <Link key={restaurant.id} href={`/restaurant/${restaurant.slug}`}>
                         <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                           <CardContent className="p-0">
@@ -378,7 +457,7 @@ export default function SearchResults() {
 
                 <TabsContent value="accommodations">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {searchResults.accommodations.map((accommodation: any) => (
+                    {filteredResults.accommodations.map((accommodation: any) => (
                       <Card key={accommodation.id} className="hover:shadow-lg transition-shadow h-full">
                         <CardContent className="p-0">
                           <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -412,14 +491,29 @@ export default function SearchResults() {
                     ))}
                   </div>
                 </TabsContent>
-              </Tabs>
-            ) : (
-              <div className="text-center py-20">
+                </Tabs>
+              </>
+            ) : (<div className="text-center py-20">
                 <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                 <h2 className="text-2xl font-bold mb-2">No Results Found</h2>
-                <p className="text-muted-foreground mb-6">
-                  We couldn't find anything matching "{searchQuery}". Try a different search term.
+                <p className="text-muted-foreground mb-4">
+                  We couldn't find anything matching "{searchQuery}".
                 </p>
+                {spellingSuggestion && spellingSuggestion !== searchQuery && (
+                  <div className="mb-6">
+                    <p className="text-muted-foreground mb-2">Did you mean:</p>
+                    <Button 
+                      variant="outline"
+                      onClick={() => {
+                        setSearchQuery(spellingSuggestion);
+                        window.history.pushState({}, '', `/search?q=${encodeURIComponent(spellingSuggestion)}`);
+                      }}
+                      className="text-lg font-semibold"
+                    >
+                      {spellingSuggestion}
+                    </Button>
+                  </div>
+                )}
                 <Button asChild>
                   <Link href="/explore"><a>Browse All Attractions</a></Link>
                 </Button>

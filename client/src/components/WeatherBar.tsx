@@ -1,5 +1,6 @@
 import { trpc } from "@/lib/trpc";
 import { Cloud, CloudRain, CloudSnow, Sun, CloudDrizzle, CloudLightning } from "lucide-react";
+import { MiniRadioPlayer } from "@/components/MiniRadioPlayer";
 
 /**
  * Weather bar component that displays current Hull weather and date
@@ -61,8 +62,13 @@ export function WeatherBar() {
             )}
           </div>
 
+          {/* Mini Radio Player */}
+          <div className="hidden md:flex">
+            <MiniRadioPlayer />
+          </div>
+
           {/* Date */}
-          <div className="text-slate-300 hidden md:block">
+          <div className="text-slate-300 hidden lg:block">
             {currentDate}
           </div>
         </div>
