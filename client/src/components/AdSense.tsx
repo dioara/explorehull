@@ -25,22 +25,35 @@ export function AdSense({
 }: AdSenseProps) {
   useEffect(() => {
     try {
-      // Push ad to AdSense queue
-      if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-      }
+      // Wait for DOM to be ready and container to have width
+      const timer = setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        }
+      }, 100); // Small delay to ensure container is rendered
+      
+      return () => clearTimeout(timer);
     } catch (error) {
       console.error('AdSense error:', error);
     }
   }, []);
 
   return (
-    <div className={`adsense-container my-8 ${className}`} style={style}>
+    <div 
+      className={`adsense-container my-8 ${className}`} 
+      style={{ 
+        minWidth: '300px', 
+        width: '100%',
+        ...style 
+      }}
+    >
       <ins
         className="adsbygoogle"
         style={{
           display: 'block',
           textAlign: 'center',
+          minWidth: '300px',
+          width: '100%',
           ...style
         }}
         data-ad-client="ca-pub-1991880044399293"
