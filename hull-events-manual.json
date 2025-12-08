@@ -1,5 +1,71 @@
 [
   {
+    "title": "Sleeping Beauty - Christmas Pantomime",
+    "startDate": "2025-12-10",
+    "endDate": "2026-01-05",
+    "venue": "Hull New Theatre",
+    "category": "Pantomime",
+    "description": "The magical Christmas pantomime returns to Hull New Theatre! Join Princess Aurora in this spectacular production of Sleeping Beauty, featuring stunning sets, dazzling costumes, and plenty of laughs for all the family.",
+    "price": "£22.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
+    "imageUrl": "/images/events/beauty-beast-pantomime.jpg"
+  },
+  {
+    "title": "Christmas Carol Concert",
+    "startDate": "2025-12-15",
+    "endDate": "2025-12-15",
+    "venue": "Hull City Hall",
+    "category": "Classical Music",
+    "description": "Celebrate the festive season with traditional Christmas carols performed by local choirs and the Hull City Hall organ. A heartwarming evening of seasonal favorites.",
+    "price": "£15.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
+    "imageUrl": "/images/events/festival-carols-concert.jpg"
+  },
+  {
+    "title": "The Nutcracker Ballet",
+    "startDate": "2025-12-18",
+    "endDate": "2025-12-22",
+    "venue": "Hull New Theatre",
+    "category": "Theatre",
+    "description": "Experience the magic of Tchaikovsky's beloved ballet. Follow Clara's enchanting journey through the Land of Sweets in this timeless Christmas classic, performed by a professional ballet company.",
+    "price": "£28.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
+    "imageUrl": "/images/events/hull-theatre-performance.jpg"
+  },
+  {
+    "title": "Christmas Comedy Night",
+    "startDate": "2025-12-20",
+    "endDate": "2025-12-20",
+    "venue": "Hull City Hall: Mortimer Suite",
+    "category": "Comedy",
+    "description": "Laugh your way into the festive season with top comedians from the UK circuit. A hilarious night of stand-up comedy perfect for a Christmas night out.",
+    "price": "£18.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
+    "imageUrl": "/images/events/lol-comedy-club-show.jpg"
+  },
+  {
+    "title": "A Christmas Celebration Concert",
+    "startDate": "2025-12-23",
+    "endDate": "2025-12-23",
+    "venue": "Hull City Hall",
+    "category": "Classical Music",
+    "description": "Ring in the festive season with a spectacular Christmas concert featuring seasonal favorites, carols, and classical masterpieces performed by orchestra and choir.",
+    "price": "£25.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
+    "imageUrl": "/images/events/christmas-celebration-concert.jpg"
+  },
+  {
+    "title": "New Year's Eve Gala",
+    "startDate": "2025-12-31",
+    "endDate": "2025-12-31",
+    "venue": "Hull City Hall",
+    "category": "Music",
+    "description": "Welcome 2026 in style with our spectacular New Year's Eve Gala. An evening of music, dancing, and celebration with live band, DJ, and midnight champagne toast.",
+    "price": "£45.00",
+    "ticketUrl": "https://www.hulltheatres.co.uk/whats-on/",
+    "imageUrl": "/images/events/motown-tribute-show.jpg"
+  },
+  {
     "title": "Hull New Theatre Venue Tour - 2026",
     "startDate": "2026-01-15",
     "endDate": "2026-01-15",
