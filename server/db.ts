@@ -156,8 +156,8 @@ export async function createAttraction(attraction: InsertAttraction) {
 export async function getAllEvents() {
   const db = await getDb();
   if (!db) return [];
-  // Order by: featured first, then by start date descending (latest/upcoming first)
-  return db.select().from(events).orderBy(desc(events.featured), desc(events.startDate));
+  // Order by: start date ascending (closest events first)
+  return db.select().from(events).orderBy(events.startDate);
 }
 
 export async function getUpcomingEvents(limit?: number) {
