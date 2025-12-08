@@ -150,3 +150,66 @@ This partnership inquiry was submitted via the ExploreHull.com Partner page.
     text,
   });
 }
+
+
+/**
+ * Send welcome email to new newsletter subscriber
+ */
+export async function sendNewsletterWelcomeEmail(data: {
+  email: string;
+}): Promise<boolean> {
+  const html = `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+      <h2 style="color: #0ea5e9;">Welcome to Explore Hull!</h2>
+      
+      <p>Thank you for subscribing to the Explore Hull newsletter!</p>
+      
+      <p>You'll now receive regular updates about:</p>
+      <ul>
+        <li>Upcoming events and festivals in Hull</li>
+        <li>New attractions and things to do</li>
+        <li>Restaurant and dining recommendations</li>
+        <li>Special offers and exclusive deals</li>
+        <li>Hull's hidden gems and local secrets</li>
+      </ul>
+      
+      <p>We're excited to help you discover everything Hull has to offer!</p>
+      
+      <p style="margin-top: 30px;">
+        <a href="https://explorehull.com" style="background-color: #0ea5e9; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
+          Explore Hull Now
+        </a>
+      </p>
+      
+      <p style="color: #666; font-size: 12px; margin-top: 30px;">
+        If you didn't subscribe to this newsletter, please ignore this email.
+      </p>
+    </div>
+  `;
+
+  const text = `
+Welcome to Explore Hull!
+
+Thank you for subscribing to the Explore Hull newsletter!
+
+You'll now receive regular updates about:
+- Upcoming events and festivals in Hull
+- New attractions and things to do
+- Restaurant and dining recommendations
+- Special offers and exclusive deals
+- Hull's hidden gems and local secrets
+
+We're excited to help you discover everything Hull has to offer!
+
+Visit us at: https://explorehull.com
+
+If you didn't subscribe to this newsletter, please ignore this email.
+  `;
+
+  return await sendEmail({
+    to: data.email,
+    subject: 'Welcome to Explore Hull Newsletter!',
+    html,
+    text,
+  });
+}

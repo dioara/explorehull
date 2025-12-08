@@ -291,7 +291,19 @@ export const appRouter = router({
     subscribe: publicProcedure
       .input(z.object({ email: z.string().email() }))
       .mutation(async ({ input }) => {
-        return await db.subscribeToNewsletter(input.email);
+        // Save subscription to database
+        const result = await db.subscribeToNewsletter(input.email);
+        
+        // Send welcome email
+        try {
+          const { sendNewsletterWelcomeEmail } = await import('./email');
+          await sendNewsletterWelcomeEmail({ email: input.email });
+        } catch (error) {
+          console.error('Failed to send newsletter welcome email:', error);
+          // Continue even if email fails - subscription is saved
+        }
+        
+        return result;
       }),
   }),
 
