@@ -386,30 +386,20 @@ export const appRouter = router({
         // Save to database
         await db.savePartnerListing(input);
         
-        // Send notification to owner
-        const emailContent = `New Business Listing Submission from ExploreHull.com
-
-**Business Name:** ${input.businessName}
-**Listing Type:** ${input.listingType}
-**Contact Name:** ${input.contactName}
-**Email:** ${input.email}
-**Phone:** ${input.phone}
-**Website:** ${input.website}
-**Address:** ${input.address}
-
-**Description:**
-${input.businessDescription}
-
----
-This listing request was submitted via the ExploreHull.com Partner page.`;
-        
+        // Send email to contact@lampstand.consulting
         try {
-          await notifyOwner({
-            title: `New Listing Request: ${input.businessName}`,
-            content: emailContent,
+          const { sendPartnershipEmail } = await import('./email');
+          await sendPartnershipEmail({
+            organizationName: input.businessName,
+            contactName: input.contactName,
+            email: input.email,
+            phone: input.phone,
+            partnershipType: input.listingType,
+            proposal: `${input.businessDescription}\n\nWebsite: ${input.website}\nAddress: ${input.address}`,
           });
         } catch (error) {
-          console.error('Failed to send listing notification:', error);
+          console.error('Failed to send partnership email:', error);
+          // Continue even if email fails - submission is saved
         }
         
         return { success: true };
